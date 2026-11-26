@@ -1,0 +1,763 @@
+{
+  "num_documents_analyzed": 3306,
+  "total_entity_mentions": 42617,
+  "total_gene_mentions": 12651,
+  "rap_mapped_gene_mentions": 10708,
+  "total_trait_mentions": 29966,
+  "unique_genes_count": 2557,
+  "unique_traits_count": 388,
+  "unique_gene_trait_pairs_count": 5575,
+  "pubtator_gene_mentions": 1767,
+  "pubtator_mapped_to_rap": 473,
+  "sentence_cooccurrence_evidence_count": 9030,
+  "top_genes": [
+    {
+      "canonical_symbol": "DREB1A",
+      "rap_id": "Os09g0522200",
+      "count": 103
+    },
+    {
+      "canonical_symbol": "NCED3",
+      "rap_id": "Os07g0154100",
+      "count": 83
+    },
+    {
+      "canonical_symbol": "BZIP23",
+      "rap_id": "Os02g0766700",
+      "count": 80
+    },
+    {
+      "canonical_symbol": "ONAC2",
+      "rap_id": "Os03g0815100",
+      "count": 70
+    },
+    {
+      "canonical_symbol": "NAC6",
+      "rap_id": "Os01g0884300",
+      "count": 70
+    },
+    {
+      "canonical_symbol": "BZIP46",
+      "rap_id": "Os06g0211200",
+      "count": 68
+    },
+    {
+      "canonical_symbol": "DREB1B",
+      "rap_id": "Os09g0522000",
+      "count": 67
+    },
+    {
+      "canonical_symbol": "PIP2A",
+      "rap_id": "Os07g0448800",
+      "count": 65
+    },
+    {
+      "canonical_symbol": "LEA3-1",
+      "rap_id": "Os05g0542500",
+      "count": 62
+    },
+    {
+      "canonical_symbol": "P5CS",
+      "rap_id": "Os05g0455500",
+      "count": 59
+    },
+    {
+      "canonical_symbol": "DREB2A",
+      "rap_id": "Os01g0165000",
+      "count": 57
+    },
+    {
+      "canonical_symbol": "ABI5",
+      "rap_id": "Os01g0859300",
+      "count": 53
+    },
+    {
+      "canonical_symbol": "DST",
+      "rap_id": "Os03g0786400",
+      "count": 53
+    },
+    {
+      "canonical_symbol": "DRO1",
+      "rap_id": "Os09g0439800",
+      "count": 51
+    },
+    {
+      "canonical_symbol": "D1",
+      "rap_id": "Os05g0333200",
+      "count": 51
+    }
+  ],
+  "top_traits": [
+    {
+      "canonical_trait": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "count": 5824
+    },
+    {
+      "canonical_trait": "drought",
+      "rto_id": "WTO:0000218",
+      "count": 5422
+    },
+    {
+      "canonical_trait": "salt in the soil",
+      "rto_id": "WTO:0000581",
+      "count": 2452
+    },
+    {
+      "canonical_trait": "growth",
+      "rto_id": "WTO:0000021",
+      "count": 2081
+    },
+    {
+      "canonical_trait": "development",
+      "rto_id": "WTO:0000011",
+      "count": 1635
+    },
+    {
+      "canonical_trait": "water quantity",
+      "rto_id": "WTO:0000117",
+      "count": 1408
+    },
+    {
+      "canonical_trait": "abiotic stress",
+      "rto_id": "WTO:0000062",
+      "count": 988
+    },
+    {
+      "canonical_trait": "cold",
+      "rto_id": "WTO:0000129",
+      "count": 773
+    },
+    {
+      "canonical_trait": "crop yield",
+      "rto_id": "WTO:0000071",
+      "count": 712
+    },
+    {
+      "canonical_trait": "stress trait",
+      "rto_id": "TO:0000164",
+      "count": 669
+    },
+    {
+      "canonical_trait": "heat",
+      "rto_id": "WTO:0000152",
+      "count": 642
+    },
+    {
+      "canonical_trait": "soil property",
+      "rto_id": "WTO:0000109",
+      "count": 641
+    },
+    {
+      "canonical_trait": "quality",
+      "rto_id": "WTO:0000048",
+      "count": 366
+    },
+    {
+      "canonical_trait": "water stress",
+      "rto_id": "WTO:0000203",
+      "count": 279
+    },
+    {
+      "canonical_trait": "salt tolerance",
+      "rto_id": "TO:0006001",
+      "count": 252
+    }
+  ],
+  "top_gene_trait_pairs": [
+    {
+      "gene_symbol": "BZIP23",
+      "rap_id": "Os02g0766700",
+      "trait_name": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "evidence_sentences_count": 22
+    },
+    {
+      "gene_symbol": "DST",
+      "rap_id": "Os03g0786400",
+      "trait_name": "drought",
+      "rto_id": "WTO:0000218",
+      "evidence_sentences_count": 20
+    },
+    {
+      "gene_symbol": "ONAC2",
+      "rap_id": "Os03g0815100",
+      "trait_name": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "evidence_sentences_count": 20
+    },
+    {
+      "gene_symbol": "DREB2A",
+      "rap_id": "Os01g0165000",
+      "trait_name": "drought",
+      "rto_id": "WTO:0000218",
+      "evidence_sentences_count": 16
+    },
+    {
+      "gene_symbol": "DREB1A",
+      "rap_id": "Os09g0522200",
+      "trait_name": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "evidence_sentences_count": 16
+    },
+    {
+      "gene_symbol": "ONAC2",
+      "rap_id": "Os03g0815100",
+      "trait_name": "drought",
+      "rto_id": "WTO:0000218",
+      "evidence_sentences_count": 16
+    },
+    {
+      "gene_symbol": "P5CS",
+      "rap_id": "Os05g0455500",
+      "trait_name": "drought",
+      "rto_id": "WTO:0000218",
+      "evidence_sentences_count": 15
+    },
+    {
+      "gene_symbol": "DST",
+      "rap_id": "Os03g0786400",
+      "trait_name": "salt tolerance",
+      "rto_id": "TO:0006001",
+      "evidence_sentences_count": 15
+    },
+    {
+      "gene_symbol": "DRO1",
+      "rap_id": "Os09g0439800",
+      "trait_name": "drought",
+      "rto_id": "WTO:0000218",
+      "evidence_sentences_count": 14
+    },
+    {
+      "gene_symbol": "BZIP46",
+      "rap_id": "Os06g0211200",
+      "trait_name": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "evidence_sentences_count": 14
+    },
+    {
+      "gene_symbol": "NAC6",
+      "rap_id": "Os01g0884300",
+      "trait_name": "drought",
+      "rto_id": "WTO:0000218",
+      "evidence_sentences_count": 14
+    },
+    {
+      "gene_symbol": "LEA3-1",
+      "rap_id": "Os05g0542500",
+      "trait_name": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "evidence_sentences_count": 13
+    },
+    {
+      "gene_symbol": "NCED3",
+      "rap_id": "Os07g0154100",
+      "trait_name": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "evidence_sentences_count": 13
+    },
+    {
+      "gene_symbol": "LEA3-1",
+      "rap_id": "Os05g0542500",
+      "trait_name": "drought",
+      "rto_id": "WTO:0000218",
+      "evidence_sentences_count": 13
+    },
+    {
+      "gene_symbol": "NAC6",
+      "rap_id": "Os01g0884300",
+      "trait_name": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "evidence_sentences_count": 12
+    }
+  ],
+  "sample_evidence_records": [
+    {
+      "pmid": "42864607",
+      "sent_id": 1,
+      "gene_mention": "galactinol synthase",
+      "gene_canonical": "galactinol synthase",
+      "rap_id": "NCBIGene:548050",
+      "gene_source": "PubTator_Only",
+      "trait_mention": "drought",
+      "trait_canonical": "drought",
+      "rto_id": "WTO:0000218",
+      "sentence": "Genome-wide identification and characterization of the galactinol synthase (GmGolS) gene family and its expression under drought, heat, and combined stress in soybean."
+    },
+    {
+      "pmid": "42864607",
+      "sent_id": 1,
+      "gene_mention": "galactinol synthase",
+      "gene_canonical": "galactinol synthase",
+      "rap_id": "NCBIGene:548050",
+      "gene_source": "PubTator_Only",
+      "trait_mention": "heat",
+      "trait_canonical": "heat",
+      "rto_id": "WTO:0000152",
+      "sentence": "Genome-wide identification and characterization of the galactinol synthase (GmGolS) gene family and its expression under drought, heat, and combined stress in soybean."
+    },
+    {
+      "pmid": "42864607",
+      "sent_id": 2,
+      "gene_mention": "Galactinol synthase",
+      "gene_canonical": "Galactinol synthase",
+      "rap_id": "NCBIGene:548050",
+      "gene_source": "PubTator_Only",
+      "trait_mention": "abiotic stress",
+      "trait_canonical": "abiotic stress",
+      "rto_id": "WTO:0000062",
+      "sentence": "Galactinol synthase (GolS) catalyzes the first committed step in raffinose family oligosaccharide (RFO) biosynthesis and is implicated in plant adaptation to abiotic stress."
+    },
+    {
+      "pmid": "42864607",
+      "sent_id": 5,
+      "gene_mention": "GmGolS",
+      "gene_canonical": "GmGolS",
+      "rap_id": "NCBIGene:548050",
+      "gene_source": "PubTator_Only",
+      "trait_mention": "density",
+      "trait_canonical": "plant density",
+      "rto_id": "WTO:0000047",
+      "sentence": "The 25 GmGolS genes were distributed unevenly across 11 chromosomes, with chromosomes 3 and 19 showing the highest gene density."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 2,
+      "gene_mention": "OsDSR2",
+      "gene_canonical": "DSR2",
+      "rap_id": "Os01g0839200",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "drought",
+      "trait_canonical": "drought",
+      "rto_id": "WTO:0000218",
+      "sentence": "We previously identified seven members of the domain of unknown function 966 (DUF966) family in rice and showed that OsDSR2 and OsDSR3 regulate tolerance to drought, salinity and alkali stresses."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 2,
+      "gene_mention": "OsDSR2",
+      "gene_canonical": "DSR2",
+      "rap_id": "Os01g0839200",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "salinity",
+      "trait_canonical": "salt in the soil",
+      "rto_id": "WTO:0000581",
+      "sentence": "We previously identified seven members of the domain of unknown function 966 (DUF966) family in rice and showed that OsDSR2 and OsDSR3 regulate tolerance to drought, salinity and alkali stresses."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 2,
+      "gene_mention": "OsDSR3",
+      "gene_canonical": "OsDSR3",
+      "rap_id": "Os01g0975000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "drought",
+      "trait_canonical": "drought",
+      "rto_id": "WTO:0000218",
+      "sentence": "We previously identified seven members of the domain of unknown function 966 (DUF966) family in rice and showed that OsDSR2 and OsDSR3 regulate tolerance to drought, salinity and alkali stresses."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 2,
+      "gene_mention": "OsDSR3",
+      "gene_canonical": "OsDSR3",
+      "rap_id": "Os01g0975000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "salinity",
+      "trait_canonical": "salt in the soil",
+      "rto_id": "WTO:0000581",
+      "sentence": "We previously identified seven members of the domain of unknown function 966 (DUF966) family in rice and showed that OsDSR2 and OsDSR3 regulate tolerance to drought, salinity and alkali stresses."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 4,
+      "gene_mention": "OsDSR6",
+      "gene_canonical": "OsDSR6",
+      "rap_id": "Os08g0561600",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "salinity",
+      "trait_canonical": "salt in the soil",
+      "rto_id": "WTO:0000581",
+      "sentence": "In this study, we performed a systematic bioinformatic analysis of the structure and potential function of the rice DUF966 family and focused on the unidentified member OsDSR6 in salinity tolerance."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 12,
+      "gene_mention": "OsDSR6",
+      "gene_canonical": "OsDSR6",
+      "rap_id": "Os08g0561600",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "salt",
+      "trait_canonical": "salt in the soil",
+      "rto_id": "WTO:0000581",
+      "sentence": "Functional analysis showed that overexpression of OsDSR6 increases rice sensitivity to salt stress, and the transcript levels of stress-responsive genes, including Lea3, Rab16c, P5CS and OsNCED4, were decreased in OsDSR6-overexpressing plants."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 12,
+      "gene_mention": "Lea3",
+      "gene_canonical": "LEA3-1",
+      "rap_id": "Os05g0542500",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "salt",
+      "trait_canonical": "salt in the soil",
+      "rto_id": "WTO:0000581",
+      "sentence": "Functional analysis showed that overexpression of OsDSR6 increases rice sensitivity to salt stress, and the transcript levels of stress-responsive genes, including Lea3, Rab16c, P5CS and OsNCED4, were decreased in OsDSR6-overexpressing plants."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 12,
+      "gene_mention": "Rab16c",
+      "gene_canonical": "RAB16C",
+      "rap_id": "Os11g0454000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "salt",
+      "trait_canonical": "salt in the soil",
+      "rto_id": "WTO:0000581",
+      "sentence": "Functional analysis showed that overexpression of OsDSR6 increases rice sensitivity to salt stress, and the transcript levels of stress-responsive genes, including Lea3, Rab16c, P5CS and OsNCED4, were decreased in OsDSR6-overexpressing plants."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 12,
+      "gene_mention": "P5CS",
+      "gene_canonical": "P5CS",
+      "rap_id": "Os05g0455500",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "salt",
+      "trait_canonical": "salt in the soil",
+      "rto_id": "WTO:0000581",
+      "sentence": "Functional analysis showed that overexpression of OsDSR6 increases rice sensitivity to salt stress, and the transcript levels of stress-responsive genes, including Lea3, Rab16c, P5CS and OsNCED4, were decreased in OsDSR6-overexpressing plants."
+    },
+    {
+      "pmid": "42829187",
+      "sent_id": 12,
+      "gene_mention": "OsNCED4",
+      "gene_canonical": "NCED3",
+      "rap_id": "Os07g0154100",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "salt",
+      "trait_canonical": "salt in the soil",
+      "rto_id": "WTO:0000581",
+      "sentence": "Functional analysis showed that overexpression of OsDSR6 increases rice sensitivity to salt stress, and the transcript levels of stress-responsive genes, including Lea3, Rab16c, P5CS and OsNCED4, were decreased in OsDSR6-overexpressing plants."
+    },
+    {
+      "pmid": "42820932",
+      "sent_id": 9,
+      "gene_mention": "OsAKR",
+      "gene_canonical": "OsAKR",
+      "rap_id": "Os04g0339400",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "phenotype",
+      "trait_canonical": "phenotype",
+      "rto_id": "WTO:0000005",
+      "sentence": "Notably, MutMap+ analysis, supported by improved IR64 genome assembly, pinpointed the aldo-keto reductase OsAKR candidate gene on chromosome 4 as a major contributor to the drought-tolerant phenotype."
+    },
+    {
+      "pmid": "42820932",
+      "sent_id": 10,
+      "gene_mention": "OsAKR",
+      "gene_canonical": "OsAKR",
+      "rap_id": "Os04g0339400",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "drought stress",
+      "trait_canonical": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "sentence": "Elevated expression of OsAKR in the DD mutant was associated with enhanced detoxification of reactive carbonyl species, including methylglyoxal (MG) and malondialdehyde (MDA), under drought stress."
+    },
+    {
+      "pmid": "42794769",
+      "sent_id": 4,
+      "gene_mention": "OsHSP20",
+      "gene_canonical": "HSP18.0",
+      "rap_id": "Os03g0267000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "photosynthetic rate",
+      "trait_canonical": "photosynthetic rate",
+      "rto_id": "TO:0001015",
+      "sentence": "In this study, we generated knockout and overexpression lines for OsHSP20 which is encoding a member of the Hsp20/alpha crystallin family, LOC_Os10g30162.1 (It is also one of the four candidate genes discovered during our fine mapping of major QTLs for photosynthetic rate in rice."
+    },
+    {
+      "pmid": "42794769",
+      "sent_id": 6,
+      "gene_mention": "OsHSP20",
+      "gene_canonical": "HSP18.0",
+      "rap_id": "Os03g0267000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "morphology",
+      "trait_canonical": "morphology",
+      "rto_id": "WTO:0000044",
+      "sentence": "Phenotypic analyses revealed that OsHSP20 deficiency resulted in compromised plant architecture, leaf morphology, tillering, and panicle development, leading to a significant reduction in grain setting rate."
+    },
+    {
+      "pmid": "42794769",
+      "sent_id": 6,
+      "gene_mention": "OsHSP20",
+      "gene_canonical": "HSP18.0",
+      "rap_id": "Os03g0267000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "development",
+      "trait_canonical": "development",
+      "rto_id": "WTO:0000011",
+      "sentence": "Phenotypic analyses revealed that OsHSP20 deficiency resulted in compromised plant architecture, leaf morphology, tillering, and panicle development, leading to a significant reduction in grain setting rate."
+    },
+    {
+      "pmid": "42794769",
+      "sent_id": 7,
+      "gene_mention": "OsHSP20",
+      "gene_canonical": "HSP18.0",
+      "rap_id": "Os03g0267000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "drought tolerance",
+      "trait_canonical": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "sentence": "Conversely, OsHSP20 overexpression enhanced drought tolerance."
+    },
+    {
+      "pmid": "42794769",
+      "sent_id": 8,
+      "gene_mention": "OsHSP20",
+      "gene_canonical": "HSP18.0",
+      "rap_id": "Os03g0267000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "drought stress",
+      "trait_canonical": "drought tolerance",
+      "rto_id": "TO:0000276",
+      "sentence": "Mechanistically, transcriptomic and functional analyses demonstrated that OsHSP20 maintains protein homeostasis under drought stress via its chaperone activity; this function orchestrates a coordinated regulatory network involving lipid barrier formation, antioxidant defense, and carbon allocation."
+    },
+    {
+      "pmid": "42794769",
+      "sent_id": 9,
+      "gene_mention": "OsHSP20",
+      "gene_canonical": "HSP18.0",
+      "rap_id": "Os03g0267000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "drought",
+      "trait_canonical": "drought",
+      "rto_id": "WTO:0000218",
+      "sentence": "Our findings establish OsHSP20 as a positive regulator of both yield and drought resilience, improving crop adaptability by balancing growth and stress responses."
+    },
+    {
+      "pmid": "42794769",
+      "sent_id": 9,
+      "gene_mention": "OsHSP20",
+      "gene_canonical": "HSP18.0",
+      "rap_id": "Os03g0267000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "growth",
+      "trait_canonical": "growth",
+      "rto_id": "WTO:0000021",
+      "sentence": "Our findings establish OsHSP20 as a positive regulator of both yield and drought resilience, improving crop adaptability by balancing growth and stress responses."
+    },
+    {
+      "pmid": "42794769",
+      "sent_id": 10,
+      "gene_mention": "OsHSP20",
+      "gene_canonical": "HSP18.0",
+      "rap_id": "Os03g0267000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "photosynthetic rate",
+      "trait_canonical": "photosynthetic rate",
+      "rto_id": "TO:0001015",
+      "sentence": "In addition, our previous research has shown that OsHSP20 is actually one of the important components of the main QTL for rice photosynthetic rate."
+    },
+    {
+      "pmid": "42787373",
+      "sent_id": 2,
+      "gene_mention": "IMP",
+      "gene_canonical": "IMP1",
+      "rap_id": "Os03g0587000",
+      "gene_source": "Oryzabase_Dict",
+      "trait_mention": "growth",
+      "trait_canonical": "growth",
+      "rto_id": "WTO:0000021",
+      "sentence": "Inositol monophosphatase (IMP) is a key enzyme in the inositol signaling pathway and ascorbic acid (AsA) biosynthesis, playing crucial roles in plant growth, development, and abiotic stress responses."
+    }
+  ],
+  "ricemind_api_cross_check": {
+    "DREB1A": {
+      "query": "DREB1A",
+      "official_info": {
+        "primary_id": "Os09g0522200",
+        "standard_rap_id": "Os09g0522200",
+        "primary_symbol": "DREB1A",
+        "all_symbols_and_synonyms": [
+          "OsERF024",
+          "OsERF#024",
+          "Os DREB1A",
+          "OsDREB1A/OsCBF3",
+          "DREB1A",
+          "OsCBF3",
+          "ERF24",
+          "CBF3",
+          "AP2/EREBP#114",
+          "OsDREB1A",
+          "AP2/EREBP114",
+          "OsERF24",
+          "OsDREBL"
+        ],
+        "cgsnl_name": "DEHYDRATION-RESPONSIVE ELEMENT-BINDING PROTEIN 1A"
+      },
+      "cross_database_ids": {
+        "msu_id": [
+          "LOC_Os09g35030.1"
+        ],
+        "oryzabase_id": [
+          "OryzaGeneID:3111"
+        ],
+        "gramene_id": [],
+        "ensembl_id": [],
+        "protein_id": [
+          "AAN02486",
+          "AAQ06658",
+          "AAQ23983",
+          "BAD46704",
+          "BAF25626",
+          "BAT09026",
+          "AP008215",
+          "AP014965",
+          "AF300970",
+          "AF494422",
+          "AY345233",
+          "AP006859",
+          "AK105599",
+          "Q64MA1"
+        ]
+      },
+      "annotations": {
+        "explanation": "Expression of OsDREB1A is induced by cold. JN561151. A2Z389(indica), Q64MA1(japonica). AF300970. AY345233. AF494422. ObDREB1a is the orthologous gene in O. brachyantha. OsDREBL in Chen et al. 2003 and Lata, Prasad 2011 and Man et al. 2016.",
+        "trait_class": "Seed - Physiological traits - Dormancy,  Other,  Tolerance and resistance - Stress tolerance"
+      },
+      "omics_location": {
+        "chromosome": "9",
+        "start_pos": 20403413,
+        "end_pos": 20404332,
+        "strand": "-"
+      },
+      "external_platforms": {
+        "RAP-DB": "https://rapdb.dna.naro.go.jp/search/?q=Os09g0522200",
+        "Ensembl_Plants": "https://plants.ensembl.org/Oryza_sativa/Gene/Summary?g=Os09g0522200",
+        "Gramene": "https://ensembl.gramene.org/Oryza_sativa/Gene/Summary?g=Os09g0522200"
+      }
+    },
+    "NCED3": {
+      "query": "NCED3",
+      "official_info": {
+        "primary_id": "Os07g0154100",
+        "standard_rap_id": "Os07g0154100",
+        "primary_symbol": "NCED3",
+        "all_symbols_and_synonyms": [
+          "NCED4",
+          "OSNCED3",
+          "NCED2b",
+          "OsNCED3a",
+          "OsNCED-3",
+          "OsNECD2",
+          "OsNCED4",
+          "OsNCED3",
+          "OsNCED2b",
+          "NCED3",
+          "NCED3a"
+        ],
+        "cgsnl_name": "9-CIS-EPOXYCAROTENOID DIOXYGENASE 3"
+      },
+      "cross_database_ids": {
+        "msu_id": [
+          "LOC_Os07g05940.1"
+        ],
+        "oryzabase_id": [
+          "OryzaGeneID:7301"
+        ],
+        "gramene_id": [],
+        "ensembl_id": [],
+        "protein_id": [
+          "AAW21320",
+          "BAD31592",
+          "BAF20827",
+          "BAT00112",
+          "EAZ38731",
+          "BAG99785",
+          "Q69NX5",
+          "AP008213",
+          "AP014963",
+          "CM000144",
+          "AP005632",
+          "AY838900",
+          "AK119780"
+        ]
+      },
+      "annotations": {
+        "explanation": "AP005632. AY838900. OsNCED4 in Welsch et al. 2008, Xu et al. 2013, Liang et al. 2014, Teng et al. 2014, Xiong et al. 2014, Du et al. 2015, Liu et al. 2016, Zhao et al. 2016, Hong et al. 2016, Zong et al. 2016, He et al. 2018, Fu et al. 2018, Zhang et al. 2018, Hwang et al., 2018, Gong et al. 2019, Kim et al. 2019, Liang et al. 2019, Liu et al. 2019, Cao et al. 2020, Suriyasak et al. 2020, Santosh et al. 2021, Li et al. 2021, Wang et al. 2021, Zhou et al. 2022, Li et al. 2022, Wen et al. 2022, Shi et al. 2020, Li et al. 2023, Long et al. 2023, Liu et al. 2023,, Xie et al. 2024, Wang et al. 2024, Wang et al. 2025. an ABA biosynthesis gene. OsNECD2 in Du et al. 2015, Dong et al. 2021. OsNCED2b in Dai et al. 2024. GO:1902584: positive regulation of response to water deprivation. TO:0000949: seedling growth and development trait. GO:0090351: seedling development.",
+        "trait_class": "Biochemical character,  Seed - Physiological traits - Dormancy,  Vegetative organ - Culm,  Tolerance and resistance - Disease resistance,  Tolerance and resistance - Stress tolerance,  Vegetative organ - Leaf,  Character as QTL - Germination"
+      },
+      "omics_location": {
+        "chromosome": "7",
+        "start_pos": 2870686,
+        "end_pos": 2872829,
+        "strand": "+"
+      },
+      "external_platforms": {
+        "RAP-DB": "https://rapdb.dna.naro.go.jp/search/?q=Os07g0154100",
+        "Ensembl_Plants": "https://plants.ensembl.org/Oryza_sativa/Gene/Summary?g=Os07g0154100",
+        "Gramene": "https://ensembl.gramene.org/Oryza_sativa/Gene/Summary?g=Os07g0154100"
+      }
+    },
+    "BZIP23": {
+      "query": "BZIP23",
+      "official_info": {
+        "primary_id": "Os02g0766700",
+        "standard_rap_id": "Os02g0766700",
+        "primary_symbol": "BZIP23",
+        "all_symbols_and_synonyms": [
+          "OsAREB2",
+          "ZIP23",
+          "OsZIP23",
+          "OsAREB1",
+          "Osbzip23",
+          "OsbZIP23",
+          "OsABF2",
+          "BZIP23"
+        ],
+        "cgsnl_name": "b-ZIP TRANSCRIPTION FACTOR 23"
+      },
+      "cross_database_ids": {
+        "msu_id": [
+          "LOC_Os02g52780.2",
+          "LOC_Os02g52780.1"
+        ],
+        "oryzabase_id": [
+          "OryzaGeneID:9808"
+        ],
+        "gramene_id": [],
+        "ensembl_id": [],
+        "protein_id": [
+          "BAD17130",
+          "BAD17318",
+          "BAF10139",
+          "BAS81069",
+          "BAG92808",
+          "AP014958",
+          "AP008208",
+          "AP004817",
+          "AP005287",
+          "AK072062",
+          "Q6Z312"
+        ]
+      },
+      "annotations": {
+        "explanation": "basic region/leucine zipper motif transcription factor. OsAREB2 in Ke et al. 2014, Li et al. 2017. GO:1901001: negative regulation of response to salt stress. OsbZIP23 promoter from O. rufipogon (KP779639), OsbZIP23 promoter from IR20 (KP779640), OsbZIP23 CDS from O. rufipogon (KP779637), OsbZIP23 CDS from O. nivara (KP779638). target gene of osa-miR1846a/b/c-5p. GO:1901698: response to nitrogen compound. GO:1902584: positive regulation of response to water deprivation. GO:0098754: detoxification. GO:0090693: plant organ senescence. GO:0140547: acquisition of seed longevity.",
+        "trait_class": "Seed - Physiological traits - Dormancy,  Tolerance and resistance - Stress tolerance,  Character as QTL - Grain quality,  Character as QTL - Germination,  Other"
+      },
+      "omics_location": {
+        "chromosome": "2",
+        "start_pos": 32276662,
+        "end_pos": 32281580,
+        "strand": "-"
+      },
+      "external_platforms": {
+        "RAP-DB": "https://rapdb.dna.naro.go.jp/search/?q=Os02g0766700",
+        "Ensembl_Plants": "https://plants.ensembl.org/Oryza_sativa/Gene/Summary?g=Os02g0766700",
+        "Gramene": "https://ensembl.gramene.org/Oryza_sativa/Gene/Summary?g=Os02g0766700"
+      }
+    }
+  }
+}

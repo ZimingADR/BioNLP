@@ -1,0 +1,7 @@
+﻿Figure,File,Panels,Content,Source
+Fig. 1,fig1_ttr_heaps.pdf,"a,b",Heaps law / TTR head vs shuf,part1_lexical_and_tfidf_summary.json
+Fig. 2,fig3_pipeline_ablation.pdf,"a,b",PubTator vs dual-dictionary ablation; KG scale,part2_normalization_and_evidence_report.json
+Fig. 3,fig4_top_genes_traits.pdf,"a,b",Top14 genes and traits,part2_normalization_and_evidence_report.json
+Fig. 4,fig5_sdp_framework.pdf,"a,b,c",SDP path example; filtering funnel; polarity composition,"sdp_relations.tsv, sdp_summary.json"
+Fig. 5,fig6_evaluation_enrichment.pdf,"a,b",Audited P/R/F1; TO/RTO enrichment,"sdp_audit_summary.json, part4_enrichment_summary.json"
+Fig. 6,fig7_gene_trait_network.pdf,single,Top gene-trait bipartite network,"part4_network_nodes.csv, part4_network_edges.csv"

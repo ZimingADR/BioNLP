@@ -1,0 +1,535 @@
+{
+  "input_candidate_pairs": 7868,
+  "processed_pairs": 7868,
+  "rice_only_pairs": 7868,
+  "rice_only_unique_gene_trait_pairs": 4678,
+  "supported_relations_total": 884,
+  "supported_relations_rice": 884,
+  "supported_unique_pairs_rice": 693,
+  "positive_relations_rice": 575,
+  "negative_relations_rice": 150,
+  "relation_counts": {
+    "regulation": 159,
+    "rice_regulation": 159,
+    "excluded_direction": 5489,
+    "rice_excluded_direction": 5489,
+    "positive_regulation": 575,
+    "rice_positive_regulation": 575,
+    "association": 1379,
+    "rice_association": 1379,
+    "no_effect": 35,
+    "rice_no_effect": 35,
+    "unsupported": 33,
+    "rice_unsupported": 33,
+    "negative_regulation": 150,
+    "rice_negative_regulation": 150,
+    "excluded_respectively": 48,
+    "rice_excluded_respectively": 48
+  },
+  "polarity_counts": {
+    "neutral": 678,
+    "rice_neutral": 678,
+    "unknown": 4574,
+    "rice_unknown": 4574,
+    "positive": 2013,
+    "rice_positive": 2013,
+    "negative": 490,
+    "rice_negative": 490,
+    "no_effect": 113,
+    "rice_no_effect": 113
+  },
+  "pattern_counts": {
+    "active": 1401,
+    "rice_active": 1401,
+    "": 425,
+    "rice_": 425,
+    "subtree_only": 5082,
+    "rice_subtree_only": 5082,
+    "chain": 831,
+    "rice_chain": 831,
+    "no_path": 33,
+    "rice_no_path": 33,
+    "nominalized": 25,
+    "rice_nominalized": 25,
+    "light_verb_adjective": 64,
+    "rice_light_verb_adjective": 64,
+    "passive": 7,
+    "rice_passive": 7
+  },
+  "confidence_counts": {
+    "high": 640,
+    "medium": 957,
+    "low": 6271
+  },
+  "rice_confidence_counts": {
+    "high": 640,
+    "medium": 957,
+    "low": 6271
+  },
+  "predicate_top": [
+    [
+      "regulate",
+      583
+    ],
+    [
+      "induce",
+      480
+    ],
+    [
+      "be",
+      436
+    ],
+    [
+      "enhance",
+      375
+    ],
+    [
+      "increase",
+      281
+    ],
+    [
+      "show",
+      275
+    ],
+    [
+      "improve",
+      271
+    ],
+    [
+      "play",
+      200
+    ],
+    [
+      "exhibit",
+      191
+    ],
+    [
+      "confer",
+      150
+    ],
+    [
+      "involve",
+      129
+    ],
+    [
+      "reduce",
+      102
+    ],
+    [
+      "result",
+      100
+    ],
+    [
+      "upregulate",
+      98
+    ],
+    [
+      "have",
+      97
+    ],
+    [
+      "promote",
+      94
+    ],
+    [
+      "affect",
+      91
+    ],
+    [
+      "decrease",
+      90
+    ],
+    [
+      "reveal",
+      87
+    ],
+    [
+      "link",
+      82
+    ],
+    [
+      "identify",
+      75
+    ],
+    [
+      "lead",
+      73
+    ],
+    [
+      "modulate",
+      65
+    ],
+    [
+      "use",
+      65
+    ],
+    [
+      "display",
+      64
+    ]
+  ],
+  "respectively_stats": {
+    "no_respectively": 7742,
+    "respectively_insufficient_lists": 53,
+    "respectively_aligned": 24,
+    "respectively_mismatch_g0_t1": 11,
+    "respectively_mismatch_g0_t2": 4,
+    "respectively_mismatch_g1_t0": 7,
+    "respectively_mismatch_g1_t2": 4,
+    "respectively_mismatch_g2_t0": 3,
+    "respectively_mismatch_g2_t1": 3,
+    "respectively_mismatch_g3_t0": 1,
+    "respectively_mismatch_g3_t1": 1,
+    "respectively_mismatch_g3_t2": 2,
+    "respectively_mismatch_g4_t0": 1,
+    "respectively_mismatch_g4_t1": 1,
+    "respectively_mismatch_g4_t2": 2,
+    "respectively_mismatch_g1_t3": 1,
+    "respectively_mismatch_g2_t3": 1,
+    "respectively_mismatch_g4_t3": 1,
+    "respectively_mismatch_g5_t2": 1,
+    "respectively_mismatch_g5_t3": 1,
+    "respectively_mismatch_g6_t2": 1,
+    "respectively_mismatch_g6_t3": 1,
+    "respectively_mismatch_g7_t2": 1,
+    "respectively_mismatch_g7_t3": 1
+  },
+  "error_cases": 6680,
+  "examples": {
+    "regulation": [
+      {
+        "PMID": "42829187",
+        "sent_id": "2",
+        "gene": "DSR2",
+        "trait": "drought",
+        "predicate": "regulate",
+        "polarity": "neutral",
+        "relation": "regulation",
+        "confidence": "high",
+        "pattern": "active",
+        "sdp_path": "OsDSR2/nsubj -> regulate/ccomp -> to/prep -> drought/pobj",
+        "sentence": "We previously identified seven members of the domain of unknown function 966 (DUF966) family in rice and showed that OsDSR2 and OsDSR3 regulate tolerance to drought, salinity and alkali stresses."
+      },
+      {
+        "PMID": "42829187",
+        "sent_id": "2",
+        "gene": "DSR2",
+        "trait": "salt in the soil",
+        "predicate": "regulate",
+        "polarity": "neutral",
+        "relation": "regulation",
+        "confidence": "high",
+        "pattern": "active",
+        "sdp_path": "OsDSR2/nsubj -> regulate/ccomp -> to/prep -> drought/pobj -> salinity/conj",
+        "sentence": "We previously identified seven members of the domain of unknown function 966 (DUF966) family in rice and showed that OsDSR2 and OsDSR3 regulate tolerance to drought, salinity and alkali stresses."
+      },
+      {
+        "PMID": "42829187",
+        "sent_id": "2",
+        "gene": "OsDSR3",
+        "trait": "drought",
+        "predicate": "regulate",
+        "polarity": "neutral",
+        "relation": "regulation",
+        "confidence": "high",
+        "pattern": "active",
+        "sdp_path": "OsDSR3/conj -> OsDSR2/nsubj -> regulate/ccomp -> to/prep -> drought/pobj",
+        "sentence": "We previously identified seven members of the domain of unknown function 966 (DUF966) family in rice and showed that OsDSR2 and OsDSR3 regulate tolerance to drought, salinity and alkali stresses."
+      }
+    ],
+    "excluded_direction": [
+      {
+        "PMID": "42829187",
+        "sent_id": "4",
+        "gene": "OsDSR6",
+        "trait": "salt in the soil",
+        "predicate": "",
+        "polarity": "unknown",
+        "relation": "excluded_direction",
+        "confidence": "low",
+        "pattern": "",
+        "sdp_path": "OsDSR6/pobj -> in/prep -> tolerance/pobj -> salinity/compound",
+        "sentence": "In this study, we performed a systematic bioinformatic analysis of the structure and potential function of the rice DUF966 family and focused on the unidentified member OsDSR6 in salinity tolerance."
+      },
+      {
+        "PMID": "42829187",
+        "sent_id": "12",
+        "gene": "LEA3-1",
+        "trait": "salt in the soil",
+        "predicate": "decreased",
+        "polarity": "negative",
+        "relation": "excluded_direction",
+        "confidence": "low",
+        "pattern": "subtree_only",
+        "sdp_path": "Lea3/pobj -> including/prep -> genes/pobj -> of/prep -> levels/nsubjpass -> decreased/conj -> showed/ROOT -> increases/ccomp -> salt/advcl",
+        "sentence": "Functional analysis showed that overexpression of OsDSR6 increases rice sensitivity to salt stress, and the transcript levels of stress-responsive genes, including Lea3, Rab16c, P5CS and OsNCED4, were decreased in OsDSR6-overexpressing plants."
+      },
+      {
+        "PMID": "42829187",
+        "sent_id": "12",
+        "gene": "RAB16C",
+        "trait": "salt in the soil",
+        "predicate": "decreased",
+        "polarity": "negative",
+        "relation": "excluded_direction",
+        "confidence": "low",
+        "pattern": "subtree_only",
+        "sdp_path": "Rab16c/appos -> Lea3/pobj -> including/prep -> genes/pobj -> of/prep -> levels/nsubjpass -> decreased/conj -> showed/ROOT -> increases/ccomp -> salt/advcl",
+        "sentence": "Functional analysis showed that overexpression of OsDSR6 increases rice sensitivity to salt stress, and the transcript levels of stress-responsive genes, including Lea3, Rab16c, P5CS and OsNCED4, were decreased in OsDSR6-overexpressing plants."
+      }
+    ],
+    "positive_regulation": [
+      {
+        "PMID": "42829187",
+        "sent_id": "12",
+        "gene": "OsDSR6",
+        "trait": "salt in the soil",
+        "predicate": "increases",
+        "polarity": "positive",
+        "relation": "positive_regulation",
+        "confidence": "high",
+        "pattern": "active",
+        "sdp_path": "OsDSR6/pobj -> of/prep -> overexpression/nsubj -> increases/ccomp -> salt/advcl",
+        "sentence": "Functional analysis showed that overexpression of OsDSR6 increases rice sensitivity to salt stress, and the transcript levels of stress-responsive genes, including Lea3, Rab16c, P5CS and OsNCED4, were decreased in OsDSR6-overexpressing plants."
+      },
+      {
+        "PMID": "42794769",
+        "sent_id": "7",
+        "gene": "HSP18.0",
+        "trait": "drought tolerance",
+        "predicate": "enhanced",
+        "polarity": "positive",
+        "relation": "positive_regulation",
+        "confidence": "high",
+        "pattern": "active",
+        "sdp_path": "OsHSP20/compound -> overexpression/nsubj -> enhanced/ROOT -> tolerance/dobj",
+        "sentence": "Conversely, OsHSP20 overexpression enhanced drought tolerance."
+      },
+      {
+        "PMID": "42716227",
+        "sent_id": "11",
+        "gene": "RFP1",
+        "trait": "stomatal opening",
+        "predicate": "promotes",
+        "polarity": "positive",
+        "relation": "positive_regulation",
+        "confidence": "medium",
+        "pattern": "chain",
+        "sdp_path": "OsRFP1/nsubj -> is/ROOT -> promotes/conj -> opening/dobj",
+        "sentence": "OsRFP1 is a RING-finger E3 ubiquitin ligase and promotes stomatal opening."
+      }
+    ],
+    "association": [
+      {
+        "PMID": "42794769",
+        "sent_id": "10",
+        "gene": "HSP18.0",
+        "trait": "photosynthetic rate",
+        "predicate": "is",
+        "polarity": "unknown",
+        "relation": "association",
+        "confidence": "low",
+        "pattern": "active",
+        "sdp_path": "OsHSP20/nsubj -> is/ccomp -> one/attr -> of/prep -> components/pobj -> of/prep -> QTL/pobj -> for/prep -> rate/pobj",
+        "sentence": "In addition, our previous research has shown that OsHSP20 is actually one of the important components of the main QTL for rice photosynthetic rate."
+      },
+      {
+        "PMID": "42787373",
+        "sent_id": "2",
+        "gene": "IMP1",
+        "trait": "growth",
+        "predicate": "playing",
+        "polarity": "unknown",
+        "relation": "association",
+        "confidence": "low",
+        "pattern": "chain",
+        "sdp_path": "IMP/appos -> monophosphatase/nsubj -> is/ROOT -> playing/advcl -> roles/dobj -> in/prep -> growth/pobj",
+        "sentence": "Inositol monophosphatase (IMP) is a key enzyme in the inositol signaling pathway and ascorbic acid (AsA) biosynthesis, playing crucial roles in plant growth, development, and abiotic stress responses."
+      },
+      {
+        "PMID": "42787373",
+        "sent_id": "2",
+        "gene": "IMP1",
+        "trait": "development",
+        "predicate": "playing",
+        "polarity": "unknown",
+        "relation": "association",
+        "confidence": "low",
+        "pattern": "chain",
+        "sdp_path": "IMP/appos -> monophosphatase/nsubj -> is/ROOT -> playing/advcl -> roles/dobj -> in/prep -> growth/pobj -> development/conj",
+        "sentence": "Inositol monophosphatase (IMP) is a key enzyme in the inositol signaling pathway and ascorbic acid (AsA) biosynthesis, playing crucial roles in plant growth, development, and abiotic stress responses."
+      }
+    ],
+    "no_effect": [
+      {
+        "PMID": "42698207",
+        "sent_id": "4",
+        "gene": "FLZ20",
+        "trait": "growth",
+        "predicate": "affect",
+        "polarity": "no_effect",
+        "relation": "no_effect",
+        "confidence": "low",
+        "pattern": "chain",
+        "sdp_path": "OsFLZ20/compound -> transcription/nsubjpass -> induced/ROOT -> show/conj -> affect/ccomp -> growth/dobj",
+        "sentence": "OsFLZ20 transcription is rapidly and robustly induced by drought, and transgenic analyses show that it does not affect normal growth or yield but instead acts as a positive regulator of drought tolerance by increasing soluble sugar accumulation and alleviating oxidative damage."
+      },
+      {
+        "PMID": "42419297",
+        "sent_id": "5",
+        "gene": "NAC4",
+        "trait": "crop yield",
+        "predicate": "compromising",
+        "polarity": "no_effect",
+        "relation": "no_effect",
+        "confidence": "low",
+        "pattern": "chain",
+        "sdp_path": "osnac4/compound -> mutants/nsubj -> reduce/ROOT -> without/prep -> compromising/pcomp -> yield/dobj",
+        "sentence": "Loss-of-function osnac4 mutants significantly reduce grain Cd accumulation by 30%-50% across diverse genetic backgrounds without compromising grain yield or agronomic traits."
+      },
+      {
+        "PMID": "42406130",
+        "sent_id": "12",
+        "gene": "CTB3",
+        "trait": "salt tolerance",
+        "predicate": "improving",
+        "polarity": "no_effect",
+        "relation": "no_effect",
+        "confidence": "low",
+        "pattern": "chain",
+        "sdp_path": "OsCAMTA4/amod -> gene/pobj -> of/prep -> presence/nsubj -> has/ROOT -> supporting/advcl -> potential/dobj -> for/prep -> improving/pcomp -> tolerance/dobj",
+        "sentence": "Notably, the actual presence of the OsCAMTA4 gene has no significant effect on rice yield over wild type, supporting its potential for improving salt tolerance and disease resistance without yield loss."
+      }
+    ],
+    "unsupported": [
+      {
+        "PMID": "42693639",
+        "sent_id": "7",
+        "gene": "D53",
+        "trait": "drought",
+        "predicate": "",
+        "polarity": "positive",
+        "relation": "unsupported",
+        "confidence": "medium",
+        "pattern": "no_path",
+        "sdp_path": "",
+        "sentence": "SLs negatively regulate drought acclimation by promoting degradation of the repressor protein DWARF53 (D53)."
+      },
+      {
+        "PMID": "41305982",
+        "sent_id": "7",
+        "gene": "BHLH148",
+        "trait": "drought tolerance",
+        "predicate": "",
+        "polarity": "unknown",
+        "relation": "unsupported",
+        "confidence": "low",
+        "pattern": "no_path",
+        "sdp_path": "",
+        "sentence": "At the transcriptional level, OsbHLH148 and OsMYC2 (JA-associated) and OsWRKY71 (ABA/stress-associated), and the GA-related transcription factors OsPIL14 and OsPIL15 were all upregulated, indicating that OsJAZ9NZ influences a broad set of hormone-responsive pathways that coordinate growth and stress responses.These findings indicate that structural modification of OsJAZ9 alters JA-GA signaling balance and is associated with transcriptional reprogramming that affects both growth and drought tolerance."
+      },
+      {
+        "PMID": "41305982",
+        "sent_id": "7",
+        "gene": "BHLH9",
+        "trait": "drought tolerance",
+        "predicate": "",
+        "polarity": "unknown",
+        "relation": "unsupported",
+        "confidence": "low",
+        "pattern": "no_path",
+        "sdp_path": "",
+        "sentence": "At the transcriptional level, OsbHLH148 and OsMYC2 (JA-associated) and OsWRKY71 (ABA/stress-associated), and the GA-related transcription factors OsPIL14 and OsPIL15 were all upregulated, indicating that OsJAZ9NZ influences a broad set of hormone-responsive pathways that coordinate growth and stress responses.These findings indicate that structural modification of OsJAZ9 alters JA-GA signaling balance and is associated with transcriptional reprogramming that affects both growth and drought tolerance."
+      }
+    ],
+    "negative_regulation": [
+      {
+        "PMID": "42503271",
+        "sent_id": "7",
+        "gene": "SALT",
+        "trait": "cold tolerance",
+        "predicate": "regulating",
+        "polarity": "negative",
+        "relation": "negative_regulation",
+        "confidence": "medium",
+        "pattern": "chain",
+        "sdp_path": "OsMBL1/nsubj -> modulates/ccomp -> regulating/advcl -> tolerance/dobj",
+        "sentence": "Reverse genetic assays have verified that OsMBL1 positively modulates rice tolerance to salt, drought, and rice blast, while negatively regulating cold tolerance, making it a candidate molecular indicator for salt and drought stress research in rice."
+      },
+      {
+        "PMID": "42481044",
+        "sent_id": "8",
+        "gene": "RLCK216",
+        "trait": "drought tolerance",
+        "predicate": "regulates",
+        "polarity": "negative",
+        "relation": "negative_regulation",
+        "confidence": "high",
+        "pattern": "active",
+        "sdp_path": "OsRRK1/nsubj -> regulates/ccomp -> tolerance/dobj",
+        "sentence": "Collectively, our findings provide evidence to indicate that OsRRK1 negatively regulates drought tolerance by modulating OsFBA6-dependent glycolysis via phosphorylation."
+      },
+      {
+        "PMID": "42361178",
+        "sent_id": "4",
+        "gene": "CML27",
+        "trait": "drought tolerance",
+        "predicate": "regulates",
+        "polarity": "negative",
+        "relation": "negative_regulation",
+        "confidence": "high",
+        "pattern": "active",
+        "sdp_path": "OsCML27/nsubj -> regulates/ROOT -> tolerance/dobj",
+        "sentence": "OsCML27 negatively regulates drought tolerance of rice where the overexpression lines showed a faster water loss rate and a lower survival rate under drought, while the oscml27 mutants exhibited a slower dehydration rate and a slightly lower survival rate as compared to wild type."
+      }
+    ],
+    "excluded_respectively": [
+      {
+        "PMID": "39458871",
+        "sent_id": "8",
+        "gene": "MKK1",
+        "trait": "salt in the soil",
+        "predicate": "induced",
+        "polarity": "positive",
+        "relation": "excluded_respectively",
+        "confidence": "low",
+        "pattern": "subtree_only",
+        "sdp_path": "OsMKK1/nsubjpass -> induced/pcomp -> with/prep -> altered/acomp -> were/ROOT -> repressed/conj -> under/prep -> treatments/pobj -> salt/nmod",
+        "sentence": "The expression levels of all OsMKKs were more or less altered under exogenous hormone and abiotic stress treatments, with OsMKK1, OsMKK6, and OsMKK3 being induced under almost all treatments, while the expression of OsMKK4 and OsMKK10-2 was repressed under salt and drought treatments and IAA treatment, respectively."
+      },
+      {
+        "PMID": "39458871",
+        "sent_id": "8",
+        "gene": "MKK1",
+        "trait": "drought",
+        "predicate": "induced",
+        "polarity": "positive",
+        "relation": "excluded_respectively",
+        "confidence": "low",
+        "pattern": "subtree_only",
+        "sdp_path": "OsMKK1/nsubjpass -> induced/pcomp -> with/prep -> altered/acomp -> were/ROOT -> repressed/conj -> under/prep -> treatments/pobj -> salt/nmod -> drought/conj",
+        "sentence": "The expression levels of all OsMKKs were more or less altered under exogenous hormone and abiotic stress treatments, with OsMKK1, OsMKK6, and OsMKK3 being induced under almost all treatments, while the expression of OsMKK4 and OsMKK10-2 was repressed under salt and drought treatments and IAA treatment, respectively."
+      },
+      {
+        "PMID": "39458871",
+        "sent_id": "8",
+        "gene": "MKK6",
+        "trait": "abiotic stress",
+        "predicate": "induced",
+        "polarity": "positive",
+        "relation": "excluded_respectively",
+        "confidence": "low",
+        "pattern": "subtree_only",
+        "sdp_path": "OsMKK6/conj -> OsMKK1/nsubjpass -> induced/pcomp -> with/prep -> altered/acomp -> under/prep -> hormone/pobj -> treatments/conj -> stress/compound",
+        "sentence": "The expression levels of all OsMKKs were more or less altered under exogenous hormone and abiotic stress treatments, with OsMKK1, OsMKK6, and OsMKK3 being induced under almost all treatments, while the expression of OsMKK4 and OsMKK10-2 was repressed under salt and drought treatments and IAA treatment, respectively."
+      }
+    ]
+  },
+  "offset_alignment": {
+    "missing_entity_span": 0,
+    "char_span_failed": 0,
+    "head_failed": 0,
+    "entity_sentence_mismatch": 0,
+    "entity_ambiguity_filtered": 0
+  }
+}

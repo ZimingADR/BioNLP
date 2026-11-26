@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>从零搞懂水稻抗旱 BioNLP：原理与交互实验室</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --card-hover: #26354d;
+      --border: #334155;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --green: #4ade80;
+      --amber: #fbbf24;
+      --rose: #fb7185;
+      --purple: #c084fc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding-bottom: 60px;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 24px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #38bdf8, #4ade80);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p {
+      color: var(--muted);
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      background: #131c31;
+      padding: 8px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .tab-btn {
+      flex: 1;
+      min-width: 180px;
+      padding: 12px 16px;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #0f172a;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+    }
+    .section { display: none; }
+    .section.active { display: block; animation: fadeIn 0.25s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      margin: 16px 0 8px;
+      color: var(--green);
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .badge-blue { background: rgba(56,189,248,0.15); color: var(--accent); border: 1px solid rgba(56,189,248,0.35); }
+    .badge-green { background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.35); }
+    .badge-amber { background: rgba(251,191,36,0.15); color: var(--amber); border: 1px solid rgba(251,191,36,0.35); }
+    .badge-rose { background: rgba(251,113,133,0.15); color: var(--rose); border: 1px solid rgba(251,113,133,0.35); }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+      margin-top: 14px;
+    }
+    .step-box {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .step-box h4 {
+      color: var(--amber);
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    code, pre {
+      font-family: "JetBrains Mono", Consolas, Monaco, monospace;
+      font-size: 0.88rem;
+    }
+    pre {
+      background: #090d16;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      overflow-x: auto;
+      margin-top: 10px;
+      color: #e2e8f0;
+    }
+    .interactive-panel {
+      background: #131c31;
+      border: 1px solid #38bdf855;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+    .btn {
+      background: var(--accent);
+      color: #0f172a;
+      border: none;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.15s;
+    }
+    .btn:hover { filter: brightness(1.1); }
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .entity-gene {
+      background: rgba(56, 189, 248, 0.25);
+      border-bottom: 2px solid var(--accent);
+      padding: 2px 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .entity-trait {
+      background: rgba(74, 222, 128, 0.25);
+      border-bottom: 2px solid var(--green);
+      padding: 2px 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th { background: rgba(255,255,255,0.05); color: var(--accent); }
+    input[type="text"], select {
+      background: #0f172a;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 9px 12px;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      width: 100%;
+    }
+    .pipeline-flow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .flow-node {
+      flex: 1;
+      min-width: 150px;
+      background: #162238;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .flow-node:hover, .flow-node.selected {
+      border-color: var(--accent);
+      background: #1d3152;
+      transform: translateY(-2px);
+    }
+    .flow-arrow { color: var(--muted); font-weight: bold; font-size: 1.2rem; }
+    .callout {
+      border-left: 4px solid var(--amber);
+      background: rgba(251, 191, 36, 0.08);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 12px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌾 水稻抗旱 BioNLP：从零开始的交互式原理实验室</h1>
+  <p>专为《生物自然语言处理与知识发现》打造 —— 10 分钟彻底弄懂“文献获取 + 词汇统计 + 基因同义词归一化 + 本体对齐”</p>
+</header>
+
+<div class="container">
+  <div class="nav-tabs">
+    <button class="tab-btn active" onclick="switchTab('tab1')">① 全局沙盘：我们到底在做什么？</button>
+    <button class="tab-btn" onclick="switchTab('tab2')">② Part 1：PubMed 下载与 sleep 5.8s</button>
+    <button class="tab-btn" onclick="switchTab('tab3')">③ Part 2：水稻基因别名与本体归一化</button>
+    <button class="tab-btn" onclick="switchTab('tab4')">④ 动手体验：句子级证据抽取器</button>
+  </div>
+
+  <!-- TAB 1: 全局沙盘 -->
+  <div id="tab1" class="section active">
+    <div class="card">
+      <h2>🎯 一句话讲明白：你的论文到底在干一件什么事？</h2>
+      <p>
+        全世界的科学家已经发表了<strong>成千上万篇</strong>关于“水稻抗旱（Rice Drought Resistance）”的英文论文。但是这些宝贵的知识（比如“某基因能提高抗旱性”）全都被埋在一段段英文句子里。<br/>
+        <strong>你的任务</strong>就是写一套自动化程序（Pipeline），把这些英文摘要下载下来，自动找出句子里的<strong>【水稻基因】</strong>和<strong>【抗旱表型】</strong>，并给它们贴上统一的“国际标准身份证号（RAP ID 和 RTO ID）”，整理成一张清晰、可查证的表格！
+      </p>
+
+      <h3>👇 点击下方流水线卡片，查看每一步的通俗解释：</h3>
+      <div class="pipeline-flow">
+        <div class="flow-node selected" onclick="showFlowDetail(0)" id="fnode-0">
+          <span class="badge badge-blue">第 1 步</span>
+          <h4 style="margin-top:8px;">去图书馆抓书</h4>
+          <p style="font-size:0.8rem;color:var(--muted);">PubMed & PubTator</p>
+        </div>
+        <span class="flow-arrow">➔</span>
+        <div class="flow-node" onclick="showFlowDetail(1)" id="fnode-1">
+          <span class="badge badge-blue">第 2 步</span>
+          <h4 style="margin-top:8px;">盘点词汇家底</h4>
+          <p style="font-size:0.8rem;color:var(--muted);">NLTK & TTR / TF-IDF</p>
+        </div>
+        <span class="flow-arrow">➔</span>
+        <div class="flow-node" onclick="showFlowDetail(2)" id="fnode-2">
+          <span class="badge badge-green">第 3 步</span>
+          <h4 style="margin-top:8px;">统一小名与外号</h4>
+          <p style="font-size:0.8rem;color:var(--muted);">Oryzabase & RTO 词典</p>
+        </div>
+        <span class="flow-arrow">➔</span>
+        <div class="flow-node" onclick="showFlowDetail(3)" id="fnode-3">
+          <span class="badge badge-amber">第 4 步</span>
+          <h4 style="margin-top:8px;">产出句子证据表</h4>
+          <p style="font-size:0.8rem;color:var(--muted);">对齐 RiceMind 标准</p>
+        </div>
+      </div>
+
+      <div id="flow-detail-box" class="interactive-panel">
+        <!-- JS 动态填充 -->
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🤝 我们的黄金分工：哪些我帮你做，哪些需要你做？</h2>
+      <div class="grid-2">
+        <div class="step-box">
+          <h4>🤖 我（AI）替你搞定的苦力活</h4>
+          <ul style="padding-left:18px; color:var(--text);">
+            <li><strong>写好全部脚本</strong>：包含 Shell 下载脚本（严格加好 <code>sleep 5.8s</code>）和带断点续传的 Python 脚本。</li>
+            <li><strong>处理近 2 万行脏数据</strong>：我已经帮你把 <code>OryzabaseGeneListEn.txt</code>（1.6 万行）下载好，并写好正则清洗逻辑，把里面乱七八糟的星号 <code>*</code>、括号同义词全部拆解成干净的词典。</li>
+            <li><strong>自动跑通统计与画图</strong>：自动算出 TTR、TF-IDF 高频词表、句子级证据 TSV 表。</li>
+          </ul>
+        </div>
+        <div class="step-box">
+          <h4>🙋‍♂️ 只有你能做的核心决策</h4>
+          <ul style="padding-left:18px; color:var(--text);">
+            <li><strong>理解核心原理</strong>：通过本网页搞懂“为什么要 sleep 5.8s”、“什么是字符偏移（Offset）”、“为什么要归一化到 RAP ID”。</li>
+            <li><strong>抽样检查 10 个句子（老师课件 P56 必考！）</strong>：代码跑出来的句子表，你需要肉眼看 10 条，挑出 1 条<strong>“匹配错了（比如缩写撞车）”</strong>或<strong>“虽然同句出现但不是因果关系”</strong>的例子写进报告——老师最看重这种独立思考！</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: Part 1 -->
+  <div id="tab2" class="section">
+    <div class="card">
+      <h2>📥 Part 1 详解：从 PubMed 检索到 PubTator 批量下载</h2>
+      <p>在夏老师的课件《8. PubMed 中的生物实体识别、Shell 编程与 NLTK 实现》中，Part 1 分为三个紧密衔接的小动作：</p>
+
+      <div class="grid-2">
+        <div class="step-box">
+          <h4>动作 1：用 esearch 拿“文献身份证号 (PMID)”</h4>
+          <p style="font-size:0.9rem;color:var(--muted);">
+            PubMed 里每篇论文都有一个唯一的数字编号叫 <strong>PMID</strong>。为了<strong>既不漏检（兼顾拉丁学名 <code>Oryza sativa</code> 与俗名 <code>rice</code>，以及 <code>drought</code> 下的 tolerance/resistance/stress 全表述）</strong>，又<strong>消除歧义（排除作者姓 Rice 或莱斯大学）</strong>，我们限定在标题/摘要/主题词中检索：
+          </p>
+          <pre>curl -s -G "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi" \
+  --data-urlencode "db=pubmed" \
+  --data-urlencode 'term=("Oryza sativa"[Title/Abstract] OR "Oryza sativa"[MeSH Terms] OR "rice"[Title/Abstract]) AND "drought"[Title/Abstract]' \
+  --data-urlencode "retmax=9999" > pmid_raw.xml
+cat pmid_raw.xml | grep "&lt;Id&gt;" | sed 's/&lt;[^&gt;]*&gt;//g' | sed 's/[[:blank:]]//g' > pmid_list.txt</pre>
+        </div>
+
+        <div class="step-box">
+          <h4>动作 2：去 PubTator 拿“带标注的摘要”（重点：sleep 5.8s！）</h4>
+          <p style="font-size:0.9rem;color:var(--muted);">
+            为什么不直接去 PubMed 下纯文本，而要去 <strong>PubTator</strong>？因为 PubTator 是 NCBI 官方的 AI 预标注库，它不仅给你标题和摘要，还会顺手帮你把里面的常见基因、物种、化学物先标出来！
+          </p>
+          <div class="callout">
+            <strong>⚠️ 课件第 31 页核心考点：为什么要 <code>sleep 5.8s</code>？</strong><br/>
+            全校同学都在华农校园网（共用少数几个公网 IP）下跑实验。如果不加等待，1 秒钟发几十个请求，NCBI 服务器会认为华农在发起黑客攻击（DDoS），直接把整个学校 IP 封掉！<br/>
+            每抓一篇休息 <strong>5.8 秒</strong>（相当于 1 分钟抓 10 篇），既绝对安全，还能在终端优雅地看到进度！
+          </div>
+        </div>
+      </div>
+
+      <h3>🔬 交互实验 1：算一算下载耗时 & 体验 PubTator 字符偏移量（Offset）验证</h3>
+      <div class="interactive-panel">
+        <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin-bottom:16px;">
+          <label>你想下载多少篇水稻抗旱文献？</label>
+          <input type="range" id="pmidCountSlider" min="20" max="500" step="20" value="100" oninput="updateDownloadTime()" style="width:220px;" />
+          <span id="pmidCountLabel" class="badge badge-amber" style="font-size:1rem;">100 篇</span>
+          <span>预计安全下载耗时：<strong id="downloadTimeResult" style="color:var(--green);">约 9.7 分钟</strong>（含 5.8s/篇 间隔）</span>
+        </div>
+
+        <hr style="border-color:var(--border); margin:16px 0;" />
+
+        <h4>🎯 课件 P41-42 必考概念：什么是 PubTator 的“字符偏移量 (begin / end)”？</h4>
+        <p style="font-size:0.9rem; color:var(--muted); margin-bottom:10px;">
+          PubTator 返回的文件长下面这样：前两行是 <code>|t|标题</code> 和 <code>|a|摘要</code>，后面每一行告诉你：从第几个字符到第几个字符是什么实体。<strong>点击下方表格中的任意一行，看看程序是怎么用 <code>text[begin:end]</code> 精确抠出实体的：</strong>
+        </p>
+
+        <div id="pubtator-text-display" style="background:#090d16; padding:14px; border-radius:8px; border:1px solid var(--border); font-family:monospace; font-size:0.95rem; line-height:1.8;">
+          Overexpression of OsDREB1A improves drought tolerance in transgenic Oryza sativa seedlings.
+        </div>
+        <div id="offset-check-msg" style="margin-top:8px; color:var(--green); font-weight:600; font-size:0.9rem;">
+          👆 点击下方任意一行标注，自动检验 text[begin:end] == mention 是否成立！
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>PMID</th>
+              <th>begin (起始下标)</th>
+              <th>end (结束下标)</th>
+              <th>mention (原文提及)</th>
+              <th>type (类型)</th>
+              <th>标准 ID</th>
+              <th>点击测试</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr onclick="highlightSpan(18, 26, 'OsDREB1A', 'Gene (Os09g0522200)')" style="cursor:pointer;">
+              <td>31002911</td><td>18</td><td>26</td><td><strong>OsDREB1A</strong></td><td><span class="badge badge-blue">Gene</span></td><td>Os09g0522200</td><td><button class="btn" style="padding:4px 10px;font-size:0.8rem;">验证 [18:26]</button></td>
+            </tr>
+            <tr onclick="highlightSpan(36, 53, 'drought tolerance', 'Trait (TO:0000276)')" style="cursor:pointer;">
+              <td>31002911</td><td>36</td><td>53</td><td><strong>drought tolerance</strong></td><td><span class="badge badge-green">Trait</span></td><td>TO:0000276</td><td><button class="btn" style="padding:4px 10px;font-size:0.8rem;">验证 [36:53]</button></td>
+            </tr>
+            <tr onclick="highlightSpan(68, 80, 'Oryza sativa', 'Species (4530)')" style="cursor:pointer;">
+              <td>31002911</td><td>68</td><td>80</td><td><strong>Oryza sativa</strong></td><td><span class="badge badge-amber">Species</span></td><td>NCBITaxon:4530</td><td><button class="btn" style="padding:4px 10px;font-size:0.8rem;">验证 [68:80]</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3: Part 2 -->
+  <div id="tab3" class="section">
+    <div class="card">
+      <h2>🧬 Part 2 详解：为什么老师说“水稻基因和表型词典归一化”很复杂？</h2>
+      <p>
+        如果你直接用 PubTator，你会发现两个致命问题（这也是课件第 57 页《面向水稻数据的自主实体识别开发》的核心原因）：
+      </p>
+      <div class="grid-2">
+        <div class="step-box">
+          <h4>痛点 1：水稻基因“千人千面”（同义词极多）</h4>
+          <p style="font-size:0.9rem;color:var(--muted);">
+            不同实验室给同一个水稻基因起了不同的名字！比如：
+            <br/>• A 实验室叫它 <code>HD6</code>
+            <br/>• B 实验室叫它 <code>OsCKA2</code> 或 <code>CK2alpha</code>
+            <br/>• C 实验室叫它 <code>Heading date 6</code>
+            <br/>如果不做<strong>归一化（Normalization）</strong>，电脑会以为这是 4 个毫无关系的基因！而老师让你去下载的 <strong>Oryzabase 词典</strong>，就是一本把所有小名都指向唯一身份证号 <strong>RAP ID (<code>Os03g0762000</code>)</strong> 的“户籍总册”！
+          </p>
+        </div>
+        <div class="step-box">
+          <h4>痛点 2：PubTator 根本不认识“农业性状”</h4>
+          <p style="font-size:0.9rem;color:var(--muted);">
+            PubTator 是给人类医学看病开发的，它认识“癌症、发烧”，但<strong>完全不认识</strong>水稻的“抗旱性 (<code>drought tolerance</code>)”、“卷叶 (<code>leaf rolling</code>)”、“千粒重 (<code>1000-grain weight</code>)”。<br/>
+            所以我们需要用华农自己研发的 <strong>RTO（水稻性状本体，<code>RTO-1.0.obo</code>）</strong>，把文章里各种关于抗旱的表述，统一对齐到标准的 <code>TO / RTO ID</code>！
+          </p>
+        </div>
+      </div>
+
+      <h3>🔍 真实解剖：你在 Oryzabase 截图中红框圈出的列到底长什么样？</h3>
+      <p style="font-size:0.9rem;color:var(--muted);">
+        下面是我刚刚从 <code>https://shigen.nig.ac.jp/rice/oryzabase/download/gene</code> 帮你抓下来的真实数据（第 501、506、520 行），看看里面藏着什么坑：
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>CGSNL 标准名</th>
+            <th>Gene symbol synonym(s) (符号同义词——注意看里面的脏符号！)</th>
+            <th>Allele (等位基因)</th>
+            <th>目标 RAP ID (唯一身份证)</th>
+            <th>Trait Ontology (自带表型标注)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>HD6</strong></td>
+            <td><code>Hd6(t)*, OSCKA2, OsCKA2, CKA2, OsCKA2-1, Hd6/CK2alpha</code></td>
+            <td>-</td>
+            <td><span class="badge badge-blue">Os03g0762000</span></td>
+            <td>TO:0002616 - flowering time</td>
+          </tr>
+          <tr>
+            <td><strong>RCH10</strong></td>
+            <td><code>RCH10*, OsRCH10, Cht13, OsCht13, Rcht2, Chit4, OsChit4</code></td>
+            <td><code>chit4-ko</code></td>
+            <td><span class="badge badge-blue">Os03g0418000</span></td>
+            <td>TO:0000255 - disease resistance</td>
+          </tr>
+          <tr>
+            <td><strong>Z3</strong></td>
+            <td><code>OsZ3, z3, SIET4, OsSIET4</code></td>
+            <td><code>z3-1, siet4-1</code></td>
+            <td><span class="badge badge-blue">Os03g0147400</span></td>
+            <td>TO:0000326 - leaf color</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout" style="margin-top:16px;">
+        <strong>💡 为什么你自己直接用 txt 会不知道怎么做？因为有 3 个工程坑（我已经写好代码帮你填平了）：</strong><br/>
+        1. <strong>星号与括号干扰</strong>：词典里写的是 <code>Hd6(t)*</code> 或 <code>pms2*(Pms2,pgms)</code>，但论文原文里只会写 <code>Hd6</code> 或 <code>Pms2</code>。必须用正则表达式去掉 <code>*</code> 并把括号拆开。<br/>
+        2. <strong>短词灾难</strong>：Oryzabase 第 502 行有个基因叫 <code>L</code>（Lethal Factor），还有基因叫 <code>S</code>、<code>A</code>。如果不加过滤直接匹配，英文句子里的字母 A 和 S 全变成基因了！因此必须过滤掉长度 ≤ 2 的常见冲突短词。<br/>
+        3. <strong>大小写与连字符统一</strong>：原文可能写 <code>OsDREB1A</code>、<code>Osdreb1a</code> 或 <code>Os-DREB1A</code>，词典匹配时需要做大小写与连字符规范化。
+      </div>
+
+      <h3>🧪 交互实验 2：水稻基因 & 抗旱表型“别名归一化”测试沙盒</h3>
+      <div class="interactive-panel">
+        <p style="font-size:0.9rem;color:var(--muted);margin-bottom:10px;">
+          试试点击下方常见的文献写法，或者输入任意别名，看看我们的归一化引擎如何把它变成标准 ID：
+        </p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+          <button class="btn btn-outline" onclick="testNorm('OsCKA2-1')">测试基因别名: OsCKA2-1</button>
+          <button class="btn btn-outline" onclick="testNorm('SNAC1')">测试抗旱基因: SNAC1</button>
+          <button class="btn btn-outline" onclick="testNorm('OsbZIP23')">测试抗旱基因: OsbZIP23</button>
+          <button class="btn btn-outline" onclick="testNorm('water deficit resistance')">测试表型同义词: water deficit resistance</button>
+          <button class="btn btn-outline" onclick="testNorm('leaf rolling')">测试抗旱相关表型: leaf rolling</button>
+        </div>
+        <div id="norm-result-box" style="background:#090d16; padding:16px; border-radius:8px; border:1px solid var(--border);">
+          👈 点击上方按钮查看归一化映射过程
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 4: 动手体验句子级证据抽取 -->
+  <div id="tab4" class="section">
+    <div class="card">
+      <h2>⚡ 终极合成：从一段英文摘要到“句子级证据表”（课件 P50-P60）</h2>
+      <p>
+        把 Part 1 下载的摘要，经过 NLTK 分句（<code>sent_tokenize</code>），再用 Part 2 的 <strong>Oryzabase 基因词典</strong> + <strong>RTO 性状本体词典</strong> 进行扫描，只要<strong>同一个句子里同时出现了【水稻基因】和【抗旱表型】</strong>，就提取为一条候选证据！
+      </p>
+
+      <div class="interactive-panel">
+        <h4>👇 点击“一键运行抽取流水线”，观察电脑是如何一步步处理这篇真实水稻抗旱摘要的：</h4>
+        <div style="margin: 12px 0;">
+          <button class="btn" onclick="runDemoPipeline()">▶ 一键运行：分句 + 词典匹配 + 归一化对齐</button>
+        </div>
+
+        <div id="demo-abstract-box" style="background:#090d16; padding:16px; border-radius:8px; border:1px solid var(--border); line-height:1.9;">
+          <strong>PMID: 29410885 | 原始摘要：</strong><br/>
+          Drought stress severely restricts rice production worldwide. In this study, we report that overexpression of OsbZIP23 (also known as LOC_Os02g52780) significantly enhances drought tolerance and reduces leaf rolling in rice. Furthermore, SNAC1 directly regulates stomatal closure under water deficit conditions. However, unlike OsbZIP23, OsCKA2 did not alter grain yield under normal irrigation.
+        </div>
+
+        <div id="demo-pipeline-output" style="margin-top:18px; display:none;">
+          <h4 style="color:var(--green); margin-bottom:8px;">✅ 抽取结果：结构化句子级证据表（Sentence-level Evidence Table）</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>PMID</th>
+                <th>sent_id</th>
+                <th>原文基因提及</th>
+                <th>归一化标准名 & RAP ID</th>
+                <th>原文性状提及</th>
+                <th>归一化 RTO/TO ID</th>
+                <th>复核状态（课件 P54 思考题）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>29410885</td>
+                <td>2</td>
+                <td><span class="entity-gene">OsbZIP23</span></td>
+                <td><strong>OsbZIP23</strong> (<code>Os02g0766700</code>)</td>
+                <td><span class="entity-trait">drought tolerance</span>, <span class="entity-trait">leaf rolling</span></td>
+                <td><code>TO:0000276</code>, <code>TO:0000085</code></td>
+                <td><span class="badge badge-green">✔ 真实正向调控证据</span></td>
+              </tr>
+              <tr>
+                <td>29410885</td>
+                <td>3</td>
+                <td><span class="entity-gene">SNAC1</span></td>
+                <td><strong>ONAC002 / SNAC1</strong> (<code>Os03g0815100</code>)</td>
+                <td><span class="entity-trait">stomatal closure</span>, <span class="entity-trait">water deficit</span></td>
+                <td><code>GO:0090332</code>, <code>TO:0000276</code></td>
+                <td><span class="badge badge-green">✔ 真实正向调控证据</span></td>
+              </tr>
+              <tr>
+                <td>29410885</td>
+                <td>4</td>
+                <td><span class="entity-gene">OsCKA2</span></td>
+                <td><strong>HD6</strong> (<code>Os03g0762000</code>)</td>
+                <td><span class="entity-trait">grain yield</span></td>
+                <td><code>TO:0000396</code></td>
+                <td><span class="badge badge-rose">⚠️ 共现但否定 (did not alter) — 绝佳的报告案例！</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout" style="margin-top:14px;">
+            <strong>🎓 看懂第 4 句（sent_id = 4）了吗？这就是你在实验报告和论文里最出彩的地方！</strong><br/>
+            夏老师在课件第 59 页专门指出：<code>“unlike OsX, grain yield ... did not alter”</code> 在词典共现层面会被抽出来，但它表达的是“没有改变”。这就完美解释了为什么你的论文在<strong>下一阶段（提交日-3）</strong>要引入 <strong>spaCy 依存句法树</strong> 来识别否定词和调控动词！前两步与第三步环环相扣！
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const flowDetails = [
+    {
+      title: "第 1 步：去图书馆抓书（PubMed E-utilities + PubTator API）",
+      html: `<p><strong>输入：</strong>布尔检索式 <code>("Oryza sativa"[Title/Abstract] OR "Oryza sativa"[MeSH Terms] OR "rice"[Title/Abstract]) AND "drought"[Title/Abstract]</code><br/>
+             <strong>过程：</strong>先用 <code>esearch</code> 拿到所有相关论文的 PMID 编号列表；再用循环脚本（每篇间隔 <code>sleep 5.8s</code> 防止华农校园网 IP 被封）去 PubTator 下载摘要原文和基础标注。<br/>
+             <strong>输出：</strong><code>result_Pubtator.txt</code>（包含论文标题、摘要和基础注释）。</p>`
+    },
+    {
+      title: "第 2 步：盘点词汇家底（NLTK 分句分词 + TTR 与 TF-IDF）",
+      html: `<p><strong>输入：</strong>下载好的抗旱文献摘要集合<br/>
+             <strong>过程：</strong>用 NLTK 把长段落切成句子和单词，统计一共有多少词（Token）、多少不重复的词（Type），算出词汇丰富度 TTR；再用 TF-IDF 算法找出水稻抗旱领域最核心的专业词汇（如脱落酸 ABA、气孔关闭、脯氨酸等）。<br/>
+             <strong>输出：</strong>词汇统计表与 TF-IDF 高频术语排行榜（直接放进论文第 1 节结果！）。</p>`
+    },
+    {
+      title: "第 3 步：统一小名与外号（Oryzabase 基因词典 + RTO 性状本体）",
+      html: `<p><strong>输入：</strong>老师给的 <code>OryzabaseGeneListEn.txt</code> 和实验室的 <code>RTO-1.0.obo</code><br/>
+             <strong>过程：</strong>清洗基因同义词里的星号和括号，建立【任意基因别名 ➔ 唯一 RAP ID】映射表；同时解析 RTO 本体建立【任意表型同义词 ➔ 唯一 RTO/TO ID】映射表。<br/>
+             <strong>输出：</strong>标准化的水稻基因词典与性状本体词典。</p>`
+    },
+    {
+      title: "第 4 步：产出可复核的句子级证据表（Sentence-level Evidence）",
+      html: `<p><strong>输入：</strong>分好句的摘要 + 基因词典 + 性状词典<br/>
+             <strong>过程：</strong>在每个句子里同时扫描水稻基因和抗旱表型，记录它们在原文中的精确字符位置（begin/end），并附上归一化后的 RAP ID 和 RTO ID。<br/>
+             <strong>输出：</strong><code>rice_drought_sentence_evidence.tsv</code>（每行包含：PMID + 句子编号 + 基因 + RAP_ID + 性状 + RTO_ID + 原句）。</p>`
+    }
+  ];
+
+  function showFlowDetail(idx) {
+    for (let i = 0; i < 4; i++) {
+      document.getElementById('fnode-' + i).classList.toggle('selected', i === idx);
+    }
+    const d = flowDetails[idx];
+    document.getElementById('flow-detail-box').innerHTML = `<h4 style="color:var(--accent);margin-bottom:8px;">${d.title}</h4>${d.html}`;
+  }
+  showFlowDetail(0);
+
+  function switchTab(tabId) {
+    document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    const idx = ['tab1','tab2','tab3','tab4'].indexOf(tabId);
+    document.querySelectorAll('.tab-btn')[idx].classList.add('active');
+  }
+
+  function updateDownloadTime() {
+    const n = parseInt(document.getElementById('pmidCountSlider').value, 10);
+    document.getElementById('pmidCountLabel').textContent = n + ' 篇';
+    const mins = ((n * 5.8) / 60).toFixed(1);
+    document.getElementById('downloadTimeResult').textContent = `约 ${mins} 分钟`;
+  }
+
+  const rawText = "Overexpression of OsDREB1A improves drought tolerance in transgenic Oryza sativa seedlings.";
+  function highlightSpan(begin, end, mention, label) {
+    const before = rawText.slice(0, begin);
+    const mid = rawText.slice(begin, end);
+    const after = rawText.slice(end);
+    document.getElementById('pubtator-text-display').innerHTML =
+      `${before}<span style="background:#38bdf844;border:2px solid #38bdf8;padding:2px 4px;border-radius:4px;color:#fff;font-weight:bold;">${mid}</span>${after}`;
+    document.getElementById('offset-check-msg').innerHTML =
+      `✅ 自动验证通过：<code>text[${begin}:${end}]</code> 切出来的字符串正好是 <code>"${mid}"</code> == <code>"${mention}"</code>！实体类别与标准号：<strong>${label}</strong>`;
+  }
+
+  const normData = {
+    'OsCKA2-1': {
+      type: '水稻基因 (Gene)',
+      input: 'OsCKA2-1',
+      symbol: 'HD6 (HEADING DATE 6)',
+      id: 'Os03g0762000 (RAP ID)',
+      otherSyns: 'Hd6(t)*, OSCKA2, OsCKA2, CKA2, Hd6/CK2alpha',
+      source: 'OryzabaseGeneListEn.txt (Row 501)'
+    },
+    'SNAC1': {
+      type: '水稻抗旱明星基因 (Gene)',
+      input: 'SNAC1',
+      symbol: 'ONAC002 / SNAC1 (STRESS-RESPONSIVE NAC 1)',
+      id: 'Os03g0815100 (RAP ID)',
+      otherSyns: 'OsNAC6-like, STRESS-RESPONSIVE NAC 1, LOC_Os03g60080',
+      source: 'OryzabaseGeneListEn.txt'
+    },
+    'OsbZIP23': {
+      type: '水稻抗旱转录因子 (Gene)',
+      input: 'OsbZIP23',
+      symbol: 'BZIP23 (BASIC LEUCINE ZIPPER 23)',
+      id: 'Os02g0766700 (RAP ID)',
+      otherSyns: 'OsbZIP23, LOC_Os02g52780',
+      source: 'OryzabaseGeneListEn.txt'
+    },
+    'water deficit resistance': {
+      type: '水稻表型性状 (Trait)',
+      input: 'water deficit resistance',
+      symbol: 'drought tolerance',
+      id: 'TO:0000276 / RTO:0000276',
+      otherSyns: 'drought resistance, tolerance to drought, water stress tolerance',
+      source: 'RTO-1.0.obo (华农水稻性状本体)'
+    },
+    'leaf rolling': {
+      type: '水稻抗旱相关形态表型 (Trait)',
+      input: 'leaf rolling',
+      symbol: 'leaf rolling',
+      id: 'TO:0000085',
+      otherSyns: 'rolled leaf, leaf curling under drought',
+      source: 'RTO-1.0.obo (华农水稻性状本体)'
+    }
+  };
+
+  function testNorm(key) {
+    const d = normData[key];
+    document.getElementById('norm-result-box').innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div>
+          <span class="badge badge-blue">输入文献原文提及</span>
+          <h3 style="color:#fff;margin-top:6px;">"${d.input}"</h3>
+          <p style="font-size:0.85rem;color:var(--muted);">实体类别：${d.type}<br/>词典来源：${d.source}</p>
+        </div>
+        <div style="border-left:2px solid var(--border);padding-left:14px;">
+          <span class="badge badge-green">归一化标准结果</span>
+          <h3 style="color:var(--green);margin-top:6px;">标准 ID：${d.id}</h3>
+          <p style="font-size:0.85rem;color:var(--text);">标准正名：<strong>${d.symbol}</strong><br/>该实体的其他同义词：<code>${d.otherSyns}</code></p>
+        </div>
+      </div>
+    `;
+  }
+
+  function runDemoPipeline() {
+    document.getElementById('demo-abstract-box').innerHTML = `
+      <strong>PMID: 29410885 | 分句与实体扫描高亮结果：</strong><br/>
+      <span style="color:var(--muted);">[Sent 1]</span> <span class="entity-trait" title="TO:0000276">Drought stress</span> severely restricts rice production worldwide.<br/>
+      <span style="color:var(--muted);">[Sent 2]</span> In this study, we report that overexpression of <span class="entity-gene" title="RAP ID: Os02g0766700">OsbZIP23</span> (also known as <span class="entity-gene" title="RAP ID: Os02g0766700">LOC_Os02g52780</span>) significantly enhances <span class="entity-trait" title="TO:0000276">drought tolerance</span> and reduces <span class="entity-trait" title="TO:0000085">leaf rolling</span> in rice.<br/>
+      <span style="color:var(--muted);">[Sent 3]</span> Furthermore, <span class="entity-gene" title="RAP ID: Os03g0815100">SNAC1</span> directly regulates <span class="entity-trait" title="GO:0090332">stomatal closure</span> under <span class="entity-trait" title="TO:0000276">water deficit</span> conditions.<br/>
+      <span style="color:var(--muted);">[Sent 4]</span> However, unlike <span class="entity-gene" title="RAP ID: Os02g0766700">OsbZIP23</span>, <span class="entity-gene" title="Standard: HD6 | RAP ID: Os03g0762000">OsCKA2</span> did not alter <span class="entity-trait" title="TO:0000396">grain yield</span> under normal irrigation.
+    `;
+    document.getElementById('demo-pipeline-output').style.display = 'block';
+  }
+</script>
+</body>
+</html>

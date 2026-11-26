@@ -1,0 +1,16 @@
+﻿Rank,Trait,RTO_ID,Mentions
+1,drought tolerance,TO:0000276,5824
+2,drought,WTO:0000218,5422
+3,salt in the soil,WTO:0000581,2452
+4,growth,WTO:0000021,2081
+5,development,WTO:0000011,1635
+6,water quantity,WTO:0000117,1408
+7,abiotic stress,WTO:0000062,988
+8,cold,WTO:0000129,773
+9,crop yield,WTO:0000071,712
+10,stress trait,TO:0000164,669
+11,heat,WTO:0000152,642
+12,soil property,WTO:0000109,641
+13,quality,WTO:0000048,366
+14,water stress,WTO:0000203,279
+15,salt tolerance,TO:0006001,252

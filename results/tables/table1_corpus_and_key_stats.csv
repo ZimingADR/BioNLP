@@ -1,0 +1,31 @@
+﻿Metric,Value,Note
+PubMed_hits,3311,esearch 命中
+PubTator_documents_parsed,3306,5 篇 2026 新文献未被 PubTator 索引
+Sentences,35345,NLTK sent_tokenize
+Tokens,795401,小写词元
+Types,34247,独立词型
+Raw_TTR,0.0431,V/N
+PubTator_entities,47157,
+PubTator_offset_verified,47156,text[b:e]==mention
+Total_entity_mentions,42617,基因+性状
+RAP_mapped_gene_mentions,10708,水稻基因
+Trait_mentions,29966,RTO 归一化
+PubTator_only_gene_mentions,1943,非水稻/未映射
+Rice_candidate_pairs,7868,RAP ID 以 Os 开头
+Rice_unique_pairs,4678,
+Rice_unique_genes,1344,
+Rice_unique_traits,190,
+SDP_causal_relations,884,positive/negative/regulation
+SDP_unique_causal_pairs,693,
+SDP_association_relations,1379,
+SDP_audit_precision,0.86,100 条分层审计
+SDP_audit_recall,0.27993637140248034,分层外推
+SDP_audit_F1,0.42238371446985357,
+SDP_polarity_accuracy,0.8823529411764706,34 条可判极性
+Enrichment_significant_terms_top100,53,BH q<0.05
+RiceMind_coverage_top100,0.99,
+RiceMind_stress_annotated_top100,85,
+RiceMind_drought_annotated_top100,13,
+Novel_annotation_gap_candidates,13,
+Network_nodes,457,
+Network_edges,693,

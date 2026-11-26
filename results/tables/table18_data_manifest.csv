@@ -1,0 +1,23 @@
+﻿File,Rows,Size_KB,Type
+all_sentence_entities.tsv,42617,10751.6,tsv
+key_numbers.json,JSON object,1.7,json
+part1_lexical_and_tfidf_summary.json,JSON object,9.7,json
+part1_tfidf_top_terms.tsv,60,2.8,tsv
+part2_normalization_and_evidence_report.json,JSON object,26.5,json
+part2_rice_only_stats.json,JSON object,6.3,json
+part4_enrichment_all_terms.csv,1088,139.0,csv
+part4_enrichment_significant.csv,207,50.5,csv
+part4_enrichment_summary.json,JSON object,60.5,json
+part4_network_edges.csv,125,5.1,csv
+part4_network_nodes.csv,60,2.2,csv
+part4_novel_targets.csv,13,3.2,csv
+part4_ricemind_crosscheck.csv,100,25.5,csv
+part4_summary.json,JSON object,25.4,json
+rice_drought_sentence_evidence.tsv,9030,2627.5,tsv
+sdp_audit_100.csv,100,45.5,csv
+sdp_audit_labels.json,JSON object,8.9,json
+sdp_audit_summary.json,JSON object,10.4,json
+sdp_causal_stats.json,JSON object,6.8,json
+sdp_error_cases.tsv,6680,3872.6,tsv
+sdp_relations.tsv,7868,4496.2,tsv
+sdp_summary.json,JSON object,19.9,json

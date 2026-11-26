@@ -1,0 +1,1824 @@
+{
+  "sdp_causal_relations": 884,
+  "sdp_unique_genes": 385,
+  "background_genes": 2218,
+  "terms_tested": 272,
+  "top_genes": [
+    {
+      "RAP_ID": "Os07g0164100",
+      "relations": 9,
+      "unique_pairs": 6,
+      "unique_pmids": 3,
+      "high_conf": 8,
+      "positive": 5,
+      "negative": 2,
+      "neutral": 2,
+      "top_traits": [
+        [
+          "stomatal resistance",
+          3
+        ],
+        [
+          "drought",
+          2
+        ],
+        [
+          "drought tolerance",
+          1
+        ],
+        [
+          "plant density",
+          1
+        ],
+        [
+          "plant height",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os03g0815100",
+      "relations": 10,
+      "unique_pairs": 6,
+      "unique_pmids": 5,
+      "high_conf": 7,
+      "positive": 8,
+      "negative": 0,
+      "neutral": 2,
+      "top_traits": [
+        [
+          "drought tolerance",
+          4
+        ],
+        [
+          "drought",
+          2
+        ],
+        [
+          "salt tolerance",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ],
+        [
+          "crop yield",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os01g0823500",
+      "relations": 7,
+      "unique_pairs": 6,
+      "unique_pmids": 1,
+      "high_conf": 4,
+      "positive": 3,
+      "negative": 0,
+      "neutral": 4,
+      "top_traits": [
+        [
+          "growth",
+          2
+        ],
+        [
+          "development",
+          1
+        ],
+        [
+          "response to water deficiency",
+          1
+        ],
+        [
+          "plant density",
+          1
+        ],
+        [
+          "drought",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os01g0839200",
+      "relations": 15,
+      "unique_pairs": 5,
+      "unique_pmids": 3,
+      "high_conf": 9,
+      "positive": 4,
+      "negative": 9,
+      "neutral": 2,
+      "top_traits": [
+        [
+          "salt in the soil",
+          7
+        ],
+        [
+          "drought",
+          5
+        ],
+        [
+          "drought tolerance",
+          1
+        ],
+        [
+          "abscisic acid sensitivity",
+          1
+        ],
+        [
+          "abiotic stress",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os03g0267000",
+      "relations": 7,
+      "unique_pairs": 5,
+      "unique_pmids": 2,
+      "high_conf": 7,
+      "positive": 7,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "heat",
+          3
+        ],
+        [
+          "drought tolerance",
+          1
+        ],
+        [
+          "salt tolerance",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ],
+        [
+          "stress trait",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os03g0786400",
+      "relations": 7,
+      "unique_pairs": 5,
+      "unique_pmids": 5,
+      "high_conf": 5,
+      "positive": 3,
+      "negative": 2,
+      "neutral": 2,
+      "top_traits": [
+        [
+          "stomatal resistance",
+          3
+        ],
+        [
+          "heat tolerance",
+          1
+        ],
+        [
+          "grain number",
+          1
+        ],
+        [
+          "plant density",
+          1
+        ],
+        [
+          "drought",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os03g0688300",
+      "relations": 7,
+      "unique_pairs": 5,
+      "unique_pmids": 2,
+      "high_conf": 3,
+      "positive": 7,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "drought tolerance",
+          3
+        ],
+        [
+          "stomatal resistance",
+          1
+        ],
+        [
+          "abiotic stress trait",
+          1
+        ],
+        [
+          "spikelet fertility",
+          1
+        ],
+        [
+          "abscisic acid sensitivity",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os01g0191300",
+      "relations": 6,
+      "unique_pairs": 5,
+      "unique_pmids": 2,
+      "high_conf": 3,
+      "positive": 6,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "drought",
+          2
+        ],
+        [
+          "oxidative stress",
+          1
+        ],
+        [
+          "heat",
+          1
+        ],
+        [
+          "drought tolerance",
+          1
+        ],
+        [
+          "stress trait",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os09g0522200",
+      "relations": 6,
+      "unique_pairs": 5,
+      "unique_pmids": 3,
+      "high_conf": 3,
+      "positive": 6,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "drought tolerance",
+          2
+        ],
+        [
+          "stress trait",
+          1
+        ],
+        [
+          "abiotic stress",
+          1
+        ],
+        [
+          "drought",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os01g0605400",
+      "relations": 5,
+      "unique_pairs": 5,
+      "unique_pmids": 1,
+      "high_conf": 3,
+      "positive": 3,
+      "negative": 0,
+      "neutral": 2,
+      "top_traits": [
+        [
+          "development",
+          1
+        ],
+        [
+          "stress trait",
+          1
+        ],
+        [
+          "spikelet fertility",
+          1
+        ],
+        [
+          "pollen fertility",
+          1
+        ],
+        [
+          "oxidative stress",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os04g0594100",
+      "relations": 7,
+      "unique_pairs": 5,
+      "unique_pmids": 1,
+      "high_conf": 2,
+      "positive": 2,
+      "negative": 5,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "drought tolerance",
+          2
+        ],
+        [
+          "root length",
+          2
+        ],
+        [
+          "growth",
+          1
+        ],
+        [
+          "lateral root length",
+          1
+        ],
+        [
+          "plant density",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os06g0693700",
+      "relations": 7,
+      "unique_pairs": 5,
+      "unique_pmids": 1,
+      "high_conf": 2,
+      "positive": 7,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "salt in the soil",
+          3
+        ],
+        [
+          "response to water deficiency",
+          1
+        ],
+        [
+          "drought",
+          1
+        ],
+        [
+          "water quantity",
+          1
+        ],
+        [
+          "drought tolerance",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os06g0659100",
+      "relations": 6,
+      "unique_pairs": 5,
+      "unique_pmids": 3,
+      "high_conf": 2,
+      "positive": 2,
+      "negative": 2,
+      "neutral": 2,
+      "top_traits": [
+        [
+          "drought tolerance",
+          2
+        ],
+        [
+          "crop yield",
+          1
+        ],
+        [
+          "development",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ],
+        [
+          "stomatal resistance",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os04g0517100",
+      "relations": 9,
+      "unique_pairs": 5,
+      "unique_pmids": 2,
+      "high_conf": 1,
+      "positive": 6,
+      "negative": 0,
+      "neutral": 3,
+      "top_traits": [
+        [
+          "cold",
+          3
+        ],
+        [
+          "development",
+          2
+        ],
+        [
+          "drought tolerance",
+          2
+        ],
+        [
+          "stress trait",
+          1
+        ],
+        [
+          "response to water deficiency",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os11g0544700",
+      "relations": 6,
+      "unique_pairs": 5,
+      "unique_pmids": 2,
+      "high_conf": 1,
+      "positive": 5,
+      "negative": 0,
+      "neutral": 1,
+      "top_traits": [
+        [
+          "drought tolerance",
+          2
+        ],
+        [
+          "salt tolerance",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ],
+        [
+          "water quantity",
+          1
+        ],
+        [
+          "development",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os11g0126900",
+      "relations": 6,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 4,
+      "positive": 6,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "crop yield",
+          2
+        ],
+        [
+          "drought",
+          2
+        ],
+        [
+          "drought tolerance",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os05g0125000",
+      "relations": 5,
+      "unique_pairs": 4,
+      "unique_pmids": 3,
+      "high_conf": 4,
+      "positive": 4,
+      "negative": 0,
+      "neutral": 1,
+      "top_traits": [
+        [
+          "heat",
+          2
+        ],
+        [
+          "development",
+          1
+        ],
+        [
+          "drought tolerance",
+          1
+        ],
+        [
+          "drought",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os01g0859300",
+      "relations": 5,
+      "unique_pairs": 4,
+      "unique_pmids": 4,
+      "high_conf": 4,
+      "positive": 3,
+      "negative": 2,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "drought tolerance",
+          2
+        ],
+        [
+          "abscisic acid sensitivity",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ],
+        [
+          "stress trait",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os05g0516600",
+      "relations": 5,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 4,
+      "positive": 5,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "drought",
+          2
+        ],
+        [
+          "heat tolerance",
+          1
+        ],
+        [
+          "crop yield",
+          1
+        ],
+        [
+          "heat",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os02g0226801",
+      "relations": 4,
+      "unique_pairs": 4,
+      "unique_pmids": 2,
+      "high_conf": 4,
+      "positive": 2,
+      "negative": 0,
+      "neutral": 2,
+      "top_traits": [
+        [
+          "drought",
+          1
+        ],
+        [
+          "Magnaporthe oryzae",
+          1
+        ],
+        [
+          "cold",
+          1
+        ],
+        [
+          "drought tolerance",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os01g0497400",
+      "relations": 4,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 4,
+      "positive": 4,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "heat",
+          1
+        ],
+        [
+          "stress trait",
+          1
+        ],
+        [
+          "abiotic stress trait",
+          1
+        ],
+        [
+          "hydrogen peroxide content",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os07g0622000",
+      "relations": 6,
+      "unique_pairs": 4,
+      "unique_pmids": 3,
+      "high_conf": 3,
+      "positive": 3,
+      "negative": 0,
+      "neutral": 3,
+      "top_traits": [
+        [
+          "salt in the soil",
+          3
+        ],
+        [
+          "growth",
+          1
+        ],
+        [
+          "development",
+          1
+        ],
+        [
+          "salt tolerance",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os01g0165000",
+      "relations": 5,
+      "unique_pairs": 4,
+      "unique_pmids": 2,
+      "high_conf": 3,
+      "positive": 4,
+      "negative": 0,
+      "neutral": 1,
+      "top_traits": [
+        [
+          "salt tolerance",
+          2
+        ],
+        [
+          "drought tolerance",
+          1
+        ],
+        [
+          "abiotic stress trait",
+          1
+        ],
+        [
+          "drought",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os01g0955100",
+      "relations": 5,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 3,
+      "positive": 5,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "drought",
+          2
+        ],
+        [
+          "salt tolerance",
+          1
+        ],
+        [
+          "abscisic acid sensitivity",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os03g0285800",
+      "relations": 4,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 3,
+      "positive": 3,
+      "negative": 1,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "drought",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ],
+        [
+          "cold tolerance",
+          1
+        ],
+        [
+          "disease resistance",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os05g0457200",
+      "relations": 5,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 2,
+      "positive": 1,
+      "negative": 4,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "crop yield",
+          2
+        ],
+        [
+          "response to water deficiency",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ],
+        [
+          "abscisic acid sensitivity",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os05g0518600",
+      "relations": 5,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 2,
+      "positive": 5,
+      "negative": 0,
+      "neutral": 0,
+      "top_traits": [
+        [
+          "abiotic stress trait",
+          2
+        ],
+        [
+          "cold",
+          1
+        ],
+        [
+          "salt in the soil",
+          1
+        ],
+        [
+          "drought",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os05g0491100",
+      "relations": 4,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 2,
+      "positive": 1,
+      "negative": 0,
+      "neutral": 3,
+      "top_traits": [
+        [
+          "abiotic stress trait",
+          1
+        ],
+        [
+          "growth",
+          1
+        ],
+        [
+          "heat",
+          1
+        ],
+        [
+          "stress trait",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os02g0539200",
+      "relations": 4,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 2,
+      "positive": 0,
+      "negative": 3,
+      "neutral": 1,
+      "top_traits": [
+        [
+          "crop yield",
+          1
+        ],
+        [
+          "grain size",
+          1
+        ],
+        [
+          "drought tolerance",
+          1
+        ],
+        [
+          "drought",
+          1
+        ]
+      ]
+    },
+    {
+      "RAP_ID": "Os10g0564500",
+      "relations": 4,
+      "unique_pairs": 4,
+      "unique_pmids": 1,
+      "high_conf": 2,
+      "positive": 2,
+      "negative": 0,
+      "neutral": 2,
+      "top_traits": [
+        [
+          "drought tolerance",
+          1
+        ],
+        [
+          "crop yield",
+          1
+        ],
+        [
+          "tiller number",
+          1
+        ],
+        [
+          "grain size",
+          1
+        ]
+      ]
+    }
+  ],
+  "sets": {
+    "top100": {
+      "query_size": 100,
+      "mapped_to_background": 100,
+      "hit_terms": 151,
+      "significant_terms_q_lt_0.05": 53
+    },
+    "top50": {
+      "query_size": 50,
+      "mapped_to_background": 50,
+      "hit_terms": 126,
+      "significant_terms_q_lt_0.05": 46
+    },
+    "top20": {
+      "query_size": 20,
+      "mapped_to_background": 20,
+      "hit_terms": 97,
+      "significant_terms_q_lt_0.05": 40
+    },
+    "core14": {
+      "query_size": 14,
+      "mapped_to_background": 14,
+      "hit_terms": 121,
+      "significant_terms_q_lt_0.05": 68
+    }
+  },
+  "top_significant": {
+    "top100": [
+      {
+        "Term": "drought tolerance (TO:0000276)",
+        "x_overlap": 84,
+        "k_query_mapped": 100,
+        "m_term_in_background": 803,
+        "N_background": 2218,
+        "fold_enrichment": 2.3201992528019924,
+        "P-value": 9.497137436153201e-24,
+        "Adjusted P-value": 2.5832213826336708e-21,
+        "Genes": "Os01g0104200;Os01g0141000;Os01g0165000;Os01g0178600;Os01g0191300;Os01g0197700;Os01g0348900;Os01g0605400;Os01g0615100;Os01g0675800;Os01g0797600;Os01g0823500;Os01g0839200;Os01g0859300;Os01g0863500;Os01g0939100;Os01g0955100;Os01g0975300;Os02g0125200;Os02g0126400;Os02g0202000;Os02g0215200;Os02g0226801;Os02g0539200;Os02g0543000;Os02g0592833;Os02g0643800;Os02g0654700;Os02g0656600;Os02g0666200;Os03g0183000;Os03g0267000;Os03g0285800;Os03g0356414;Os03g0688300;Os03g0694500;Os03g0764600;Os03g0786400;Os03g0815100;Os03g0860100;Os04g0429100;Os04g0462500;Os04g0489800;Os04g0517100;Os04g0553000;Os04g0594100;Os04g0623300;Os04g0624500;Os04g0644400;Os04g0656500;Os04g0671700;Os05g0125000;Os05g0128200;Os05g0213500;Os05g0286100;Os05g0333200;Os05g0349800;Os05g0491100;Os05g0518000;Os06g0130100;Os06g0211200;Os06g0612800;Os06g0659100;Os06g0693700;Os07g0154100;Os07g0164100;Os07g0261200;Os07g0622000;Os07g0684900;Os08g0112700;Os08g0174500;Os08g0292000;Os08g0492100;Os09g0135700;Os09g0306400;Os09g0439800;Os09g0522200;Os10g0477600;Os10g0564500;Os10g0565600;Os11g0126900;Os11g0544700;Os12g0162100;Os12g0602966"
+      },
+      {
+        "Term": "drought (WTO:0000218)",
+        "x_overlap": 84,
+        "k_query_mapped": 100,
+        "m_term_in_background": 867,
+        "N_background": 2218,
+        "fold_enrichment": 2.1489273356401384,
+        "P-value": 4.049755649826022e-21,
+        "Adjusted P-value": 5.50766768376339e-19,
+        "Genes": "Os01g0104100;Os01g0104200;Os01g0141000;Os01g0165000;Os01g0178600;Os01g0191300;Os01g0197700;Os01g0227300;Os01g0348900;Os01g0497400;Os01g0615100;Os01g0675800;Os01g0743800;Os01g0797600;Os01g0823500;Os01g0839200;Os01g0859300;Os01g0863500;Os01g0939100;Os01g0955100;Os01g0975000;Os01g0975300;Os02g0125200;Os02g0126400;Os02g0202000;Os02g0215200;Os02g0226801;Os02g0539200;Os02g0543000;Os02g0592833;Os02g0643800;Os02g0654700;Os02g0656600;Os02g0666200;Os03g0128700;Os03g0183000;Os03g0267000;Os03g0285800;Os03g0356414;Os03g0411100;Os03g0688300;Os03g0786400;Os03g0815100;Os03g0860100;Os04g0462500;Os04g0465600;Os04g0517100;Os04g0553000;Os04g0644400;Os04g0656500;Os05g0125000;Os05g0128200;Os05g0187000;Os05g0213500;Os05g0286100;Os05g0333200;Os05g0349800;Os05g0491100;Os05g0516600;Os05g0518000;Os05g0518600;Os06g0130100;Os06g0211200;Os06g0612800;Os06g0693700;Os07g0154100;Os07g0164100;Os07g0261200;Os07g0622000;Os07g0684800;Os08g0174500;Os08g0292000;Os08g0492100;Os08g0546800;Os09g0306400;Os09g0439800;Os09g0522200;Os10g0477600;Os10g0564500;Os10g0565600;Os11g0126900;Os12g0162100;Os12g0572400;Os12g0602966"
+      },
+      {
+        "Term": "salt in the soil (WTO:0000581)",
+        "x_overlap": 66,
+        "k_query_mapped": 100,
+        "m_term_in_background": 531,
+        "N_background": 2218,
+        "fold_enrichment": 2.7568361581920904,
+        "P-value": 6.601535972839554e-20,
+        "Adjusted P-value": 5.985392615374529e-18,
+        "Genes": "Os01g0104100;Os01g0165000;Os01g0191300;Os01g0197700;Os01g0348900;Os01g0615100;Os01g0675800;Os01g0743800;Os01g0797600;Os01g0839200;Os01g0859300;Os01g0939100;Os01g0955100;Os01g0975000;Os01g0975300;Os02g0126400;Os02g0139000;Os02g0202000;Os02g0215200;Os02g0226801;Os02g0543000;Os02g0654700;Os02g0656600;Os02g0666200;Os03g0128700;Os03g0267000;Os03g0285800;Os03g0356414;Os03g0411100;Os03g0688300;Os03g0786400;Os03g0815100;Os04g0465600;Os04g0624500;Os04g0656500;Os04g0671700;Os05g0125000;Os05g0213500;Os05g0286100;Os05g0333200;Os05g0349800;Os05g0457200;Os05g0491100;Os05g0518600;Os06g0130100;Os06g0211200;Os06g0612800;Os06g0659100;Os06g0693700;Os07g0154100;Os07g0164100;Os07g0261200;Os07g0622000;Os07g0684800;Os08g0112700;Os08g0174500;Os08g0492100;Os08g0546800;Os09g0306400;Os09g0439800;Os09g0522200;Os11g0126900;Os11g0544700;Os12g0162100;Os12g0572400;Os12g0602966"
+      },
+      {
+        "Term": "growth (WTO:0000021)",
+        "x_overlap": 43,
+        "k_query_mapped": 100,
+        "m_term_in_background": 315,
+        "N_background": 2218,
+        "fold_enrichment": 3.0277460317460316,
+        "P-value": 5.52498080865152e-13,
+        "Adjusted P-value": 3.756986949883034e-11,
+        "Genes": "Os01g0165000;Os01g0348900;Os01g0497400;Os01g0615100;Os01g0675800;Os01g0743800;Os01g0797600;Os01g0823500;Os01g0859300;Os01g0939100;Os02g0126400;Os02g0139000;Os02g0215200;Os02g0539200;Os02g0592833;Os02g0656600;Os02g0666200;Os03g0128700;Os03g0267000;Os03g0764600;Os03g0815100;Os04g0462500;Os04g0594100;Os04g0623300;Os04g0624500;Os05g0125000;Os05g0128200;Os05g0187000;Os05g0213500;Os05g0333200;Os05g0457200;Os05g0491100;Os06g0211200;Os07g0154100;Os07g0261200;Os07g0622000;Os07g0684900;Os08g0174500;Os08g0292000;Os09g0439800;Os09g0522200;Os10g0477600;Os11g0126900"
+      },
+      {
+        "Term": "crop yield (WTO:0000071)",
+        "x_overlap": 24,
+        "k_query_mapped": 100,
+        "m_term_in_background": 97,
+        "N_background": 2218,
+        "fold_enrichment": 5.487835051546392,
+        "P-value": 7.916552720579135e-13,
+        "Adjusted P-value": 4.30660467999505e-11,
+        "Genes": "Os01g0197700;Os01g0227300;Os01g0615100;Os01g0675800;Os01g0797600;Os02g0539200;Os02g0654700;Os03g0688300;Os03g0815100;Os04g0429100;Os04g0623300;Os05g0128200;Os05g0187000;Os05g0457200;Os05g0516600;Os06g0659100;Os07g0261200;Os07g0622000;Os08g0112700;Os08g0292000;Os09g0439800;Os10g0477600;Os10g0564500;Os11g0126900"
+      },
+      {
+        "Term": "abscisic acid sensitivity (TO:0002667)",
+        "x_overlap": 13,
+        "k_query_mapped": 100,
+        "m_term_in_background": 27,
+        "N_background": 2218,
+        "fold_enrichment": 10.67925925925926,
+        "P-value": 1.7338015790960496e-11,
+        "Adjusted P-value": 7.859900491902092e-10,
+        "Genes": "Os01g0104200;Os01g0191300;Os01g0839200;Os01g0859300;Os01g0955100;Os02g0215200;Os02g0592833;Os03g0688300;Os05g0349800;Os05g0457200;Os06g0211200;Os07g0164100;Os10g0565600"
+      },
+      {
+        "Term": "abiotic stress trait (TO:0000168)",
+        "x_overlap": 21,
+        "k_query_mapped": 100,
+        "m_term_in_background": 86,
+        "N_background": 2218,
+        "fold_enrichment": 5.416046511627907,
+        "P-value": 3.601892577114121e-11,
+        "Adjusted P-value": 1.3995925442500584e-09,
+        "Genes": "Os01g0165000;Os01g0497400;Os01g0743800;Os01g0975300;Os02g0126400;Os02g0654700;Os02g0656600;Os03g0128700;Os03g0267000;Os03g0688300;Os03g0786400;Os03g0815100;Os04g0656500;Os04g0671700;Os05g0125000;Os05g0213500;Os05g0491100;Os05g0518600;Os07g0154100;Os07g0261200;Os09g0522200"
+      },
+      {
+        "Term": "salt tolerance (TO:0006001)",
+        "x_overlap": 21,
+        "k_query_mapped": 100,
+        "m_term_in_background": 91,
+        "N_background": 2218,
+        "fold_enrichment": 5.118461538461538,
+        "P-value": 1.1572614004094918e-10,
+        "Adjusted P-value": 3.934688761392272e-09,
+        "Genes": "Os01g0165000;Os01g0197700;Os01g0859300;Os01g0955100;Os01g0975300;Os02g0215200;Os02g0543000;Os03g0128700;Os03g0267000;Os03g0688300;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0164100;Os07g0622000;Os07g0684800;Os08g0546800;Os09g0306400;Os09g0522200;Os11g0544700;Os12g0602966"
+      },
+      {
+        "Term": "development (WTO:0000011)",
+        "x_overlap": 35,
+        "k_query_mapped": 100,
+        "m_term_in_background": 262,
+        "N_background": 2218,
+        "fold_enrichment": 2.962977099236641,
+        "P-value": 4.090375993954611e-10,
+        "Adjusted P-value": 1.2362025226173937e-08,
+        "Genes": "Os01g0165000;Os01g0605400;Os01g0797600;Os01g0823500;Os01g0939100;Os01g0975300;Os02g0125200;Os02g0126400;Os02g0139000;Os02g0656600;Os03g0183000;Os03g0267000;Os03g0786400;Os03g0815100;Os04g0517100;Os04g0553000;Os04g0594100;Os04g0624500;Os05g0125000;Os05g0128200;Os05g0187000;Os05g0286100;Os05g0333200;Os05g0491100;Os06g0659100;Os07g0154100;Os07g0261200;Os07g0622000;Os07g0684900;Os08g0112700;Os08g0174500;Os08g0492100;Os09g0439800;Os09g0522200;Os11g0544700"
+      },
+      {
+        "Term": "stress trait (TO:0000164)",
+        "x_overlap": 29,
+        "k_query_mapped": 100,
+        "m_term_in_background": 187,
+        "N_background": 2218,
+        "fold_enrichment": 3.4396791443850265,
+        "P-value": 5.898352578329282e-10,
+        "Adjusted P-value": 1.6043519013055647e-08,
+        "Genes": "Os01g0141000;Os01g0165000;Os01g0191300;Os01g0227300;Os01g0497400;Os01g0605400;Os01g0743800;Os01g0859300;Os01g0939100;Os01g0975000;Os02g0215200;Os02g0226801;Os02g0656600;Os03g0128700;Os03g0267000;Os03g0694500;Os03g0815100;Os04g0517100;Os05g0125000;Os05g0128200;Os05g0213500;Os05g0491100;Os06g0130100;Os06g0211200;Os07g0154100;Os07g0622000;Os08g0174500;Os08g0492100;Os09g0522200"
+      },
+      {
+        "Term": "cold (WTO:0000129)",
+        "x_overlap": 32,
+        "k_query_mapped": 100,
+        "m_term_in_background": 231,
+        "N_background": 2218,
+        "fold_enrichment": 3.0725541125541125,
+        "P-value": 1.1953185900701061e-09,
+        "Adjusted P-value": 2.955696877264262e-08,
+        "Genes": "Os01g0104100;Os01g0165000;Os01g0178600;Os01g0191300;Os01g0348900;Os01g0823500;Os01g0839200;Os01g0859300;Os01g0939100;Os01g0955100;Os01g0975000;Os01g0975300;Os02g0226801;Os02g0543000;Os02g0654700;Os02g0656600;Os03g0128700;Os03g0285800;Os03g0688300;Os03g0815100;Os04g0517100;Os05g0128200;Os05g0333200;Os05g0349800;Os05g0491100;Os05g0518600;Os06g0211200;Os06g0612800;Os07g0154100;Os08g0492100;Os08g0546800;Os09g0522200"
+      },
+      {
+        "Term": "stomatal resistance (TO:0000522)",
+        "x_overlap": 17,
+        "k_query_mapped": 100,
+        "m_term_in_background": 68,
+        "N_background": 2218,
+        "fold_enrichment": 5.545,
+        "P-value": 2.303747661753446e-09,
+        "Adjusted P-value": 5.2218280333078105e-08,
+        "Genes": "Os01g0104200;Os01g0859300;Os02g0226801;Os02g0543000;Os03g0356414;Os03g0688300;Os03g0786400;Os03g0815100;Os04g0429100;Os04g0624500;Os05g0491100;Os06g0659100;Os07g0164100;Os07g0622000;Os08g0292000;Os09g0135700;Os10g0477600"
+      },
+      {
+        "Term": "water quantity (WTO:0000117)",
+        "x_overlap": 23,
+        "k_query_mapped": 100,
+        "m_term_in_background": 137,
+        "N_background": 2218,
+        "fold_enrichment": 3.7236496350364963,
+        "P-value": 1.1298950715740526e-08,
+        "Adjusted P-value": 2.3640881497549407e-07,
+        "Genes": "Os01g0165000;Os01g0191300;Os01g0197700;Os01g0823500;Os01g0859300;Os02g0202000;Os02g0543000;Os02g0666200;Os03g0356414;Os03g0815100;Os04g0429100;Os04g0465600;Os04g0594100;Os04g0624500;Os05g0187000;Os05g0333200;Os06g0659100;Os06g0693700;Os07g0154100;Os07g0164100;Os07g0622000;Os09g0522200;Os11g0544700"
+      },
+      {
+        "Term": "grain size (TO:0000397)",
+        "x_overlap": 8,
+        "k_query_mapped": 100,
+        "m_term_in_background": 20,
+        "N_background": 2218,
+        "fold_enrichment": 8.872,
+        "P-value": 1.039668270900653e-06,
+        "Adjusted P-value": 2.0199269263212686e-05,
+        "Genes": "Os01g0197700;Os02g0539200;Os03g0786400;Os04g0644400;Os07g0261200;Os08g0174500;Os10g0477600;Os10g0564500"
+      },
+      {
+        "Term": "development (RTO:0001542)",
+        "x_overlap": 8,
+        "k_query_mapped": 100,
+        "m_term_in_background": 22,
+        "N_background": 2218,
+        "fold_enrichment": 8.065454545454546,
+        "P-value": 2.4476828168830892e-06,
+        "Adjusted P-value": 4.438464841281335e-05,
+        "Genes": "Os01g0165000;Os01g0859300;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0154100;Os09g0439800;Os09g0522200"
+      },
+      {
+        "Term": "abiotic stress (WTO:0000062)",
+        "x_overlap": 24,
+        "k_query_mapped": 100,
+        "m_term_in_background": 204,
+        "N_background": 2218,
+        "fold_enrichment": 2.6094117647058828,
+        "P-value": 5.444901218329942e-06,
+        "Adjusted P-value": 9.256332071160902e-05,
+        "Genes": "Os01g0165000;Os01g0178600;Os01g0191300;Os01g0348900;Os01g0497400;Os01g0605400;Os01g0743800;Os01g0839200;Os01g0859300;Os01g0863500;Os02g0539200;Os02g0543000;Os02g0656600;Os03g0267000;Os03g0786400;Os03g0815100;Os04g0671700;Os05g0125000;Os05g0286100;Os05g0333200;Os05g0518000;Os06g0211200;Os09g0439800;Os09g0522200"
+      },
+      {
+        "Term": "heat (WTO:0000152)",
+        "x_overlap": 19,
+        "k_query_mapped": 100,
+        "m_term_in_background": 138,
+        "N_background": 2218,
+        "fold_enrichment": 3.053768115942029,
+        "P-value": 6.281950182417635e-06,
+        "Adjusted P-value": 0.00010051120291868216,
+        "Genes": "Os01g0165000;Os01g0191300;Os01g0227300;Os01g0348900;Os01g0497400;Os01g0839200;Os01g0939100;Os01g0955100;Os02g0656600;Os03g0267000;Os05g0125000;Os05g0286100;Os05g0333200;Os05g0491100;Os05g0516600;Os06g0211200;Os06g0612800;Os08g0546800;Os09g0522200"
+      },
+      {
+        "Term": "phenotype (WTO:0000005)",
+        "x_overlap": 16,
+        "k_query_mapped": 100,
+        "m_term_in_background": 102,
+        "N_background": 2218,
+        "fold_enrichment": 3.47921568627451,
+        "P-value": 6.814005998526745e-06,
+        "Adjusted P-value": 0.00010296720175551525,
+        "Genes": "Os01g0605400;Os01g0797600;Os01g0859300;Os02g0139000;Os02g0543000;Os03g0694500;Os03g0815100;Os04g0465600;Os04g0623300;Os04g0624500;Os05g0213500;Os05g0349800;Os07g0261200;Os07g0622000;Os09g0522200;Os10g0477600"
+      },
+      {
+        "Term": "water quantity (RTO:0001628)",
+        "x_overlap": 7,
+        "k_query_mapped": 100,
+        "m_term_in_background": 20,
+        "N_background": 2218,
+        "fold_enrichment": 7.763,
+        "P-value": 1.4693766252271887e-05,
+        "Adjusted P-value": 0.00021035286424305017,
+        "Genes": "Os01g0165000;Os01g0859300;Os03g0786400;Os03g0815100;Os07g0154100;Os09g0439800;Os09g0522200"
+      },
+      {
+        "Term": "abiotic stress (RTO:0001593)",
+        "x_overlap": 8,
+        "k_query_mapped": 100,
+        "m_term_in_background": 29,
+        "N_background": 2218,
+        "fold_enrichment": 6.118620689655172,
+        "P-value": 2.5245011036281663e-05,
+        "Adjusted P-value": 0.0003217821348455585,
+        "Genes": "Os01g0165000;Os01g0859300;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0154100;Os09g0439800;Os09g0522200"
+      }
+    ],
+    "top50": [
+      {
+        "Term": "drought tolerance (TO:0000276)",
+        "x_overlap": 43,
+        "k_query_mapped": 50,
+        "m_term_in_background": 803,
+        "N_background": 2218,
+        "fold_enrichment": 2.3754420921544206,
+        "P-value": 2.7278770160188007e-13,
+        "Adjusted P-value": 7.419825483571138e-11,
+        "Genes": "Os01g0141000;Os01g0165000;Os01g0178600;Os01g0191300;Os01g0348900;Os01g0605400;Os01g0675800;Os01g0797600;Os01g0823500;Os01g0839200;Os01g0859300;Os01g0939100;Os01g0955100;Os02g0125200;Os02g0226801;Os02g0539200;Os03g0267000;Os03g0285800;Os03g0688300;Os03g0786400;Os03g0815100;Os03g0860100;Os04g0517100;Os04g0594100;Os04g0624500;Os04g0656500;Os05g0125000;Os05g0128200;Os05g0491100;Os06g0130100;Os06g0211200;Os06g0659100;Os06g0693700;Os07g0154100;Os07g0164100;Os07g0622000;Os08g0292000;Os09g0135700;Os09g0522200;Os10g0477600;Os10g0564500;Os11g0126900;Os11g0544700"
+      },
+      {
+        "Term": "drought (WTO:0000218)",
+        "x_overlap": 43,
+        "k_query_mapped": 50,
+        "m_term_in_background": 867,
+        "N_background": 2218,
+        "fold_enrichment": 2.200092272202999,
+        "P-value": 5.8826058463519785e-12,
+        "Adjusted P-value": 8.000343951038691e-10,
+        "Genes": "Os01g0104100;Os01g0141000;Os01g0165000;Os01g0178600;Os01g0191300;Os01g0227300;Os01g0348900;Os01g0497400;Os01g0675800;Os01g0743800;Os01g0797600;Os01g0823500;Os01g0839200;Os01g0859300;Os01g0939100;Os01g0955100;Os02g0125200;Os02g0226801;Os02g0539200;Os03g0267000;Os03g0285800;Os03g0688300;Os03g0786400;Os03g0815100;Os03g0860100;Os04g0517100;Os04g0656500;Os05g0125000;Os05g0128200;Os05g0491100;Os05g0516600;Os05g0518600;Os06g0130100;Os06g0211200;Os06g0693700;Os07g0154100;Os07g0164100;Os07g0622000;Os08g0292000;Os09g0522200;Os10g0477600;Os10g0564500;Os11g0126900"
+      },
+      {
+        "Term": "stress trait (TO:0000164)",
+        "x_overlap": 21,
+        "k_query_mapped": 50,
+        "m_term_in_background": 187,
+        "N_background": 2218,
+        "fold_enrichment": 4.981604278074866,
+        "P-value": 7.24367218068466e-11,
+        "Adjusted P-value": 6.567596110487425e-09,
+        "Genes": "Os01g0141000;Os01g0165000;Os01g0191300;Os01g0227300;Os01g0497400;Os01g0605400;Os01g0743800;Os01g0859300;Os01g0939100;Os02g0226801;Os03g0267000;Os03g0815100;Os04g0517100;Os05g0125000;Os05g0128200;Os05g0491100;Os06g0130100;Os06g0211200;Os07g0154100;Os07g0622000;Os09g0522200"
+      },
+      {
+        "Term": "salt in the soil (WTO:0000581)",
+        "x_overlap": 33,
+        "k_query_mapped": 50,
+        "m_term_in_background": 531,
+        "N_background": 2218,
+        "fold_enrichment": 2.7568361581920904,
+        "P-value": 2.0839248578571405e-10,
+        "Adjusted P-value": 1.4170689033428556e-08,
+        "Genes": "Os01g0104100;Os01g0165000;Os01g0191300;Os01g0348900;Os01g0675800;Os01g0743800;Os01g0797600;Os01g0839200;Os01g0859300;Os01g0939100;Os01g0955100;Os02g0226801;Os03g0267000;Os03g0285800;Os03g0688300;Os03g0786400;Os03g0815100;Os04g0624500;Os04g0656500;Os05g0125000;Os05g0457200;Os05g0491100;Os05g0518600;Os06g0130100;Os06g0211200;Os06g0659100;Os06g0693700;Os07g0154100;Os07g0164100;Os07g0622000;Os09g0522200;Os11g0126900;Os11g0544700"
+      },
+      {
+        "Term": "crop yield (WTO:0000071)",
+        "x_overlap": 15,
+        "k_query_mapped": 50,
+        "m_term_in_background": 97,
+        "N_background": 2218,
+        "fold_enrichment": 6.859793814432989,
+        "P-value": 8.853982806219876e-10,
+        "Adjusted P-value": 4.329645292596955e-08,
+        "Genes": "Os01g0227300;Os01g0675800;Os01g0797600;Os02g0539200;Os03g0688300;Os03g0815100;Os05g0128200;Os05g0457200;Os05g0516600;Os06g0659100;Os07g0622000;Os08g0292000;Os10g0477600;Os10g0564500;Os11g0126900"
+      },
+      {
+        "Term": "stomatal resistance (TO:0000522)",
+        "x_overlap": 13,
+        "k_query_mapped": 50,
+        "m_term_in_background": 68,
+        "N_background": 2218,
+        "fold_enrichment": 8.480588235294118,
+        "P-value": 9.550688145434458e-10,
+        "Adjusted P-value": 4.329645292596955e-08,
+        "Genes": "Os01g0859300;Os02g0226801;Os03g0688300;Os03g0786400;Os03g0815100;Os04g0624500;Os05g0491100;Os06g0659100;Os07g0164100;Os07g0622000;Os08g0292000;Os09g0135700;Os10g0477600"
+      },
+      {
+        "Term": "growth (WTO:0000021)",
+        "x_overlap": 25,
+        "k_query_mapped": 50,
+        "m_term_in_background": 315,
+        "N_background": 2218,
+        "fold_enrichment": 3.5206349206349206,
+        "P-value": 1.1596702812468265e-09,
+        "Adjusted P-value": 4.5061473785590975e-08,
+        "Genes": "Os01g0165000;Os01g0348900;Os01g0497400;Os01g0675800;Os01g0743800;Os01g0797600;Os01g0823500;Os01g0859300;Os01g0939100;Os02g0539200;Os03g0267000;Os03g0815100;Os04g0594100;Os04g0624500;Os05g0125000;Os05g0128200;Os05g0457200;Os05g0491100;Os06g0211200;Os07g0154100;Os07g0622000;Os08g0292000;Os09g0522200;Os10g0477600;Os11g0126900"
+      },
+      {
+        "Term": "cold (WTO:0000129)",
+        "x_overlap": 21,
+        "k_query_mapped": 50,
+        "m_term_in_background": 231,
+        "N_background": 2218,
+        "fold_enrichment": 4.032727272727273,
+        "P-value": 4.21123792046665e-09,
+        "Adjusted P-value": 1.431820892958661e-07,
+        "Genes": "Os01g0104100;Os01g0165000;Os01g0178600;Os01g0191300;Os01g0348900;Os01g0823500;Os01g0839200;Os01g0859300;Os01g0939100;Os01g0955100;Os02g0226801;Os03g0285800;Os03g0688300;Os03g0815100;Os04g0517100;Os05g0128200;Os05g0491100;Os05g0518600;Os06g0211200;Os07g0154100;Os09g0522200"
+      },
+      {
+        "Term": "abiotic stress trait (TO:0000168)",
+        "x_overlap": 13,
+        "k_query_mapped": 50,
+        "m_term_in_background": 86,
+        "N_background": 2218,
+        "fold_enrichment": 6.705581395348837,
+        "P-value": 1.9851444678970238e-08,
+        "Adjusted P-value": 5.999547725199894e-07,
+        "Genes": "Os01g0165000;Os01g0497400;Os01g0743800;Os03g0267000;Os03g0688300;Os03g0786400;Os03g0815100;Os04g0656500;Os05g0125000;Os05g0491100;Os05g0518600;Os07g0154100;Os09g0522200"
+      },
+      {
+        "Term": "abscisic acid sensitivity (TO:0002667)",
+        "x_overlap": 8,
+        "k_query_mapped": 50,
+        "m_term_in_background": 27,
+        "N_background": 2218,
+        "fold_enrichment": 13.143703703703705,
+        "P-value": 6.008100096349785e-08,
+        "Adjusted P-value": 1.6342032262071415e-06,
+        "Genes": "Os01g0191300;Os01g0839200;Os01g0859300;Os01g0955100;Os03g0688300;Os05g0457200;Os06g0211200;Os07g0164100"
+      },
+      {
+        "Term": "development (WTO:0000011)",
+        "x_overlap": 20,
+        "k_query_mapped": 50,
+        "m_term_in_background": 262,
+        "N_background": 2218,
+        "fold_enrichment": 3.386259541984733,
+        "P-value": 2.444035693984517e-07,
+        "Adjusted P-value": 5.749502822897785e-06,
+        "Genes": "Os01g0165000;Os01g0605400;Os01g0797600;Os01g0823500;Os01g0939100;Os02g0125200;Os03g0267000;Os03g0786400;Os03g0815100;Os04g0517100;Os04g0594100;Os04g0624500;Os05g0125000;Os05g0128200;Os05g0491100;Os06g0659100;Os07g0154100;Os07g0622000;Os09g0522200;Os11g0544700"
+      },
+      {
+        "Term": "development (RTO:0001542)",
+        "x_overlap": 7,
+        "k_query_mapped": 50,
+        "m_term_in_background": 22,
+        "N_background": 2218,
+        "fold_enrichment": 14.114545454545455,
+        "P-value": 2.53654536304314e-07,
+        "Adjusted P-value": 5.749502822897785e-06,
+        "Genes": "Os01g0165000;Os01g0859300;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0154100;Os09g0522200"
+      },
+      {
+        "Term": "salt tolerance (TO:0006001)",
+        "x_overlap": 12,
+        "k_query_mapped": 50,
+        "m_term_in_background": 91,
+        "N_background": 2218,
+        "fold_enrichment": 5.849670329670329,
+        "P-value": 3.6989349829459374e-07,
+        "Adjusted P-value": 7.739310118163806e-06,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0955100;Os03g0267000;Os03g0688300;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0164100;Os07g0622000;Os09g0522200;Os11g0544700"
+      },
+      {
+        "Term": "heat (RTO:0001655)",
+        "x_overlap": 6,
+        "k_query_mapped": 50,
+        "m_term_in_background": 16,
+        "N_background": 2218,
+        "fold_enrichment": 16.634999999999998,
+        "P-value": 6.523413969208655e-07,
+        "Adjusted P-value": 1.2674061425891101e-05,
+        "Genes": "Os01g0165000;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0154100;Os09g0522200"
+      },
+      {
+        "Term": "water quantity (WTO:0000117)",
+        "x_overlap": 14,
+        "k_query_mapped": 50,
+        "m_term_in_background": 137,
+        "N_background": 2218,
+        "fold_enrichment": 4.533138686131387,
+        "P-value": 8.384321427056658e-07,
+        "Adjusted P-value": 1.5203569521062741e-05,
+        "Genes": "Os01g0165000;Os01g0191300;Os01g0823500;Os01g0859300;Os03g0815100;Os04g0594100;Os04g0624500;Os06g0659100;Os06g0693700;Os07g0154100;Os07g0164100;Os07g0622000;Os09g0522200;Os11g0544700"
+      },
+      {
+        "Term": "heat (WTO:0000152)",
+        "x_overlap": 14,
+        "k_query_mapped": 50,
+        "m_term_in_background": 138,
+        "N_background": 2218,
+        "fold_enrichment": 4.500289855072464,
+        "P-value": 9.18241493915843e-07,
+        "Adjusted P-value": 1.561010539656933e-05,
+        "Genes": "Os01g0165000;Os01g0191300;Os01g0227300;Os01g0348900;Os01g0497400;Os01g0839200;Os01g0939100;Os01g0955100;Os03g0267000;Os05g0125000;Os05g0491100;Os05g0516600;Os06g0211200;Os09g0522200"
+      },
+      {
+        "Term": "abiotic stress (RTO:0001593)",
+        "x_overlap": 7,
+        "k_query_mapped": 50,
+        "m_term_in_background": 29,
+        "N_background": 2218,
+        "fold_enrichment": 10.70758620689655,
+        "P-value": 2.0580635652938236e-06,
+        "Adjusted P-value": 3.109962720888445e-05,
+        "Genes": "Os01g0165000;Os01g0859300;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0154100;Os09g0522200"
+      },
+      {
+        "Term": "growth (RTO:0001552)",
+        "x_overlap": 7,
+        "k_query_mapped": 50,
+        "m_term_in_background": 29,
+        "N_background": 2218,
+        "fold_enrichment": 10.70758620689655,
+        "P-value": 2.0580635652938236e-06,
+        "Adjusted P-value": 3.109962720888445e-05,
+        "Genes": "Os01g0165000;Os01g0859300;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0154100;Os09g0522200"
+      },
+      {
+        "Term": "drought tolerance (RTO:0000273)",
+        "x_overlap": 7,
+        "k_query_mapped": 50,
+        "m_term_in_background": 30,
+        "N_background": 2218,
+        "fold_enrichment": 10.350666666666667,
+        "P-value": 2.6386342093716784e-06,
+        "Adjusted P-value": 3.777413183942613e-05,
+        "Genes": "Os01g0165000;Os01g0859300;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0154100;Os09g0522200"
+      },
+      {
+        "Term": "water quantity (RTO:0001628)",
+        "x_overlap": 6,
+        "k_query_mapped": 50,
+        "m_term_in_background": 20,
+        "N_background": 2218,
+        "fold_enrichment": 13.308,
+        "P-value": 2.947488379380909e-06,
+        "Adjusted P-value": 4.0085841959580364e-05,
+        "Genes": "Os01g0165000;Os01g0859300;Os03g0786400;Os03g0815100;Os07g0154100;Os09g0522200"
+      }
+    ],
+    "top20": [
+      {
+        "Term": "drought tolerance (TO:0000276)",
+        "x_overlap": 19,
+        "k_query_mapped": 20,
+        "m_term_in_background": 803,
+        "N_background": 2218,
+        "fold_enrichment": 2.624034869240349,
+        "P-value": 4.7657238926499604e-08,
+        "Adjusted P-value": 8.655754798375848e-06,
+        "Genes": "Os01g0191300;Os01g0605400;Os01g0823500;Os01g0839200;Os01g0859300;Os02g0226801;Os03g0267000;Os03g0688300;Os03g0786400;Os03g0815100;Os04g0517100;Os04g0594100;Os05g0125000;Os06g0659100;Os06g0693700;Os07g0164100;Os09g0522200;Os11g0126900;Os11g0544700"
+      },
+      {
+        "Term": "water quantity (WTO:0000117)",
+        "x_overlap": 10,
+        "k_query_mapped": 20,
+        "m_term_in_background": 137,
+        "N_background": 2218,
+        "fold_enrichment": 8.094890510948906,
+        "P-value": 6.364525587041064e-08,
+        "Adjusted P-value": 8.655754798375848e-06,
+        "Genes": "Os01g0191300;Os01g0823500;Os01g0859300;Os03g0815100;Os04g0594100;Os06g0659100;Os06g0693700;Os07g0164100;Os09g0522200;Os11g0544700"
+      },
+      {
+        "Term": "salt tolerance (TO:0006001)",
+        "x_overlap": 8,
+        "k_query_mapped": 20,
+        "m_term_in_background": 91,
+        "N_background": 2218,
+        "fold_enrichment": 9.749450549450549,
+        "P-value": 4.966172089830826e-07,
+        "Adjusted P-value": 4.502662694779949e-05,
+        "Genes": "Os01g0859300;Os03g0267000;Os03g0688300;Os03g0786400;Os03g0815100;Os07g0164100;Os09g0522200;Os11g0544700"
+      },
+      {
+        "Term": "stomatal resistance (TO:0000522)",
+        "x_overlap": 7,
+        "k_query_mapped": 20,
+        "m_term_in_background": 68,
+        "N_background": 2218,
+        "fold_enrichment": 11.416176470588235,
+        "P-value": 1.0538676535991706e-06,
+        "Adjusted P-value": 7.16630004447436e-05,
+        "Genes": "Os01g0859300;Os02g0226801;Os03g0688300;Os03g0786400;Os03g0815100;Os06g0659100;Os07g0164100"
+      },
+      {
+        "Term": "salt in the soil (WTO:0000581)",
+        "x_overlap": 15,
+        "k_query_mapped": 20,
+        "m_term_in_background": 531,
+        "N_background": 2218,
+        "fold_enrichment": 3.132768361581921,
+        "P-value": 1.878771290360046e-06,
+        "Adjusted P-value": 0.0001022051581955865,
+        "Genes": "Os01g0191300;Os01g0839200;Os01g0859300;Os02g0226801;Os03g0267000;Os03g0688300;Os03g0786400;Os03g0815100;Os05g0125000;Os06g0659100;Os06g0693700;Os07g0164100;Os09g0522200;Os11g0126900;Os11g0544700"
+      },
+      {
+        "Term": "abscisic acid sensitivity (TO:0002667)",
+        "x_overlap": 5,
+        "k_query_mapped": 20,
+        "m_term_in_background": 27,
+        "N_background": 2218,
+        "fold_enrichment": 20.537037037037038,
+        "P-value": 2.480638329003402e-06,
+        "Adjusted P-value": 0.00011245560424815423,
+        "Genes": "Os01g0191300;Os01g0839200;Os01g0859300;Os03g0688300;Os07g0164100"
+      },
+      {
+        "Term": "development (WTO:0000011)",
+        "x_overlap": 11,
+        "k_query_mapped": 20,
+        "m_term_in_background": 262,
+        "N_background": 2218,
+        "fold_enrichment": 4.656106870229007,
+        "P-value": 3.2342992625267666e-06,
+        "Adjusted P-value": 0.00012567562848675434,
+        "Genes": "Os01g0605400;Os01g0823500;Os03g0267000;Os03g0786400;Os03g0815100;Os04g0517100;Os04g0594100;Os05g0125000;Os06g0659100;Os09g0522200;Os11g0544700"
+      },
+      {
+        "Term": "heat tolerance (TO:0000259)",
+        "x_overlap": 4,
+        "k_query_mapped": 20,
+        "m_term_in_background": 15,
+        "N_background": 2218,
+        "fold_enrichment": 29.573333333333338,
+        "P-value": 6.169491135973815e-06,
+        "Adjusted P-value": 0.0002097626986231097,
+        "Genes": "Os01g0191300;Os03g0786400;Os05g0125000;Os05g0516600"
+      },
+      {
+        "Term": "stress trait (TO:0000164)",
+        "x_overlap": 9,
+        "k_query_mapped": 20,
+        "m_term_in_background": 187,
+        "N_background": 2218,
+        "fold_enrichment": 5.337433155080213,
+        "P-value": 1.3225039474072851e-05,
+        "Adjusted P-value": 0.0003996900818830906,
+        "Genes": "Os01g0191300;Os01g0605400;Os01g0859300;Os02g0226801;Os03g0267000;Os03g0815100;Os04g0517100;Os05g0125000;Os09g0522200"
+      },
+      {
+        "Term": "water quantity (RTO:0001628)",
+        "x_overlap": 4,
+        "k_query_mapped": 20,
+        "m_term_in_background": 20,
+        "N_background": 2218,
+        "fold_enrichment": 22.18,
+        "P-value": 2.1271516280951737e-05,
+        "Adjusted P-value": 0.0005785852428418873,
+        "Genes": "Os01g0859300;Os03g0786400;Os03g0815100;Os09g0522200"
+      },
+      {
+        "Term": "abiotic stress (WTO:0000062)",
+        "x_overlap": 9,
+        "k_query_mapped": 20,
+        "m_term_in_background": 204,
+        "N_background": 2218,
+        "fold_enrichment": 4.892647058823529,
+        "P-value": 2.7109728124516085e-05,
+        "Adjusted P-value": 0.0006641978981734189,
+        "Genes": "Os01g0191300;Os01g0605400;Os01g0839200;Os01g0859300;Os03g0267000;Os03g0786400;Os03g0815100;Os05g0125000;Os09g0522200"
+      },
+      {
+        "Term": "development (RTO:0001542)",
+        "x_overlap": 4,
+        "k_query_mapped": 20,
+        "m_term_in_background": 22,
+        "N_background": 2218,
+        "fold_enrichment": 20.163636363636364,
+        "P-value": 3.1744752486229584e-05,
+        "Adjusted P-value": 0.0006641978981734189,
+        "Genes": "Os01g0859300;Os03g0786400;Os03g0815100;Os09g0522200"
+      },
+      {
+        "Term": "response to water deficiency (WTO:0000259)",
+        "x_overlap": 4,
+        "k_query_mapped": 20,
+        "m_term_in_background": 22,
+        "N_background": 2218,
+        "fold_enrichment": 20.163636363636364,
+        "P-value": 3.1744752486229584e-05,
+        "Adjusted P-value": 0.0006641978981734189,
+        "Genes": "Os01g0823500;Os03g0815100;Os04g0517100;Os06g0693700"
+      },
+      {
+        "Term": "salt tolerance (RTO:0001257)",
+        "x_overlap": 4,
+        "k_query_mapped": 20,
+        "m_term_in_background": 24,
+        "N_background": 2218,
+        "fold_enrichment": 18.483333333333334,
+        "P-value": 4.55805024602031e-05,
+        "Adjusted P-value": 0.0008265264446116829,
+        "Genes": "Os01g0859300;Os03g0786400;Os03g0815100;Os09g0522200"
+      },
+      {
+        "Term": "spikelet fertility (TO:0000180)",
+        "x_overlap": 4,
+        "k_query_mapped": 20,
+        "m_term_in_background": 24,
+        "N_background": 2218,
+        "fold_enrichment": 18.483333333333334,
+        "P-value": 4.55805024602031e-05,
+        "Adjusted P-value": 0.0008265264446116829,
+        "Genes": "Os01g0605400;Os03g0688300;Os03g0815100;Os09g0522200"
+      },
+      {
+        "Term": "abiotic stress trait (TO:0000168)",
+        "x_overlap": 6,
+        "k_query_mapped": 20,
+        "m_term_in_background": 86,
+        "N_background": 2218,
+        "fold_enrichment": 7.737209302325581,
+        "P-value": 7.145508589468607e-05,
+        "Adjusted P-value": 0.0011894702218050405,
+        "Genes": "Os03g0267000;Os03g0688300;Os03g0786400;Os03g0815100;Os05g0125000;Os09g0522200"
+      },
+      {
+        "Term": "cold (WTO:0000129)",
+        "x_overlap": 9,
+        "k_query_mapped": 20,
+        "m_term_in_background": 231,
+        "N_background": 2218,
+        "fold_enrichment": 4.320779220779221,
+        "P-value": 7.434188886281503e-05,
+        "Adjusted P-value": 0.0011894702218050405,
+        "Genes": "Os01g0191300;Os01g0823500;Os01g0839200;Os01g0859300;Os02g0226801;Os03g0688300;Os03g0815100;Os04g0517100;Os09g0522200"
+      },
+      {
+        "Term": "abiotic stress (RTO:0001593)",
+        "x_overlap": 4,
+        "k_query_mapped": 20,
+        "m_term_in_background": 29,
+        "N_background": 2218,
+        "fold_enrichment": 15.296551724137931,
+        "P-value": 9.896119533742336e-05,
+        "Adjusted P-value": 0.0013458722565889577,
+        "Genes": "Os01g0859300;Os03g0786400;Os03g0815100;Os09g0522200"
+      },
+      {
+        "Term": "growth (RTO:0001552)",
+        "x_overlap": 4,
+        "k_query_mapped": 20,
+        "m_term_in_background": 29,
+        "N_background": 2218,
+        "fold_enrichment": 15.296551724137931,
+        "P-value": 9.896119533742336e-05,
+        "Adjusted P-value": 0.0013458722565889577,
+        "Genes": "Os01g0859300;Os03g0786400;Os03g0815100;Os09g0522200"
+      },
+      {
+        "Term": "plant density (WTO:0000047)",
+        "x_overlap": 4,
+        "k_query_mapped": 20,
+        "m_term_in_background": 29,
+        "N_background": 2218,
+        "fold_enrichment": 15.296551724137931,
+        "P-value": 9.896119533742336e-05,
+        "Adjusted P-value": 0.0013458722565889577,
+        "Genes": "Os01g0823500;Os03g0786400;Os04g0594100;Os07g0164100"
+      }
+    ],
+    "core14": [
+      {
+        "Term": "drought tolerance (RTO:0000273)",
+        "x_overlap": 14,
+        "k_query_mapped": 14,
+        "m_term_in_background": 30,
+        "N_background": 2218,
+        "fold_enrichment": 73.93333333333334,
+        "P-value": 1.8942328775369005e-28,
+        "Adjusted P-value": 3.0191200583815997e-26,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os07g0448800;Os09g0439800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "water quantity (RTO:0001628)",
+        "x_overlap": 13,
+        "k_query_mapped": 14,
+        "m_term_in_background": 20,
+        "N_background": 2218,
+        "fold_enrichment": 102.97857142857143,
+        "P-value": 2.219941219398235e-28,
+        "Adjusted P-value": 3.0191200583815997e-26,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os07g0154100;Os07g0448800;Os09g0439800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "development (RTO:0001542)",
+        "x_overlap": 13,
+        "k_query_mapped": 14,
+        "m_term_in_background": 22,
+        "N_background": 2218,
+        "fold_enrichment": 93.6168831168831,
+        "P-value": 1.423258993862658e-27,
+        "Adjusted P-value": 1.2904214877688098e-25,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os09g0439800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "salt in the soil (RTO:0002036)",
+        "x_overlap": 14,
+        "k_query_mapped": 14,
+        "m_term_in_background": 38,
+        "N_background": 2218,
+        "fold_enrichment": 58.36842105263158,
+        "P-value": 1.2595276003100434e-26,
+        "Adjusted P-value": 8.564787682108295e-25,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os07g0448800;Os09g0439800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "drought (RTO:0001709)",
+        "x_overlap": 14,
+        "k_query_mapped": 14,
+        "m_term_in_background": 43,
+        "N_background": 2218,
+        "fold_enrichment": 51.581395348837205,
+        "P-value": 1.0209412226880947e-25,
+        "Adjusted P-value": 5.553920251423235e-24,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os07g0448800;Os09g0439800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "abiotic stress (RTO:0001593)",
+        "x_overlap": 13,
+        "k_query_mapped": 14,
+        "m_term_in_background": 29,
+        "N_background": 2218,
+        "fold_enrichment": 71.01970443349754,
+        "P-value": 1.9360322830345484e-25,
+        "Adjusted P-value": 7.522868299791388e-24,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os09g0439800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "growth (RTO:0001552)",
+        "x_overlap": 13,
+        "k_query_mapped": 14,
+        "m_term_in_background": 29,
+        "N_background": 2218,
+        "fold_enrichment": 71.01970443349754,
+        "P-value": 1.9360322830345484e-25,
+        "Adjusted P-value": 7.522868299791388e-24,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os09g0439800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "stress trait (RTO:0000162)",
+        "x_overlap": 13,
+        "k_query_mapped": 14,
+        "m_term_in_background": 33,
+        "N_background": 2218,
+        "fold_enrichment": 62.41125541125541,
+        "P-value": 1.6323650541225132e-24,
+        "Adjusted P-value": 5.550041184016545e-23,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os07g0448800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "plant stress response trait (TO:0000164)",
+        "x_overlap": 12,
+        "k_query_mapped": 14,
+        "m_term_in_background": 24,
+        "N_background": 2218,
+        "fold_enrichment": 79.21428571428572,
+        "P-value": 8.480936776264316e-24,
+        "Adjusted P-value": 2.5631275590487713e-22,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os07g0448800;Os09g0522000"
+      },
+      {
+        "Term": "salt tolerance (RTO:0001257)",
+        "x_overlap": 11,
+        "k_query_mapped": 14,
+        "m_term_in_background": 24,
+        "N_background": 2218,
+        "fold_enrichment": 72.61309523809524,
+        "P-value": 5.723733554517121e-21,
+        "Adjusted P-value": 1.5568555268286568e-19,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "cold (RTO:0001637)",
+        "x_overlap": 12,
+        "k_query_mapped": 14,
+        "m_term_in_background": 41,
+        "N_background": 2218,
+        "fold_enrichment": 46.36933797909408,
+        "P-value": 2.4419235429386576e-20,
+        "Adjusted P-value": 6.038210942539226e-19,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os07g0448800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "heat (RTO:0001655)",
+        "x_overlap": 9,
+        "k_query_mapped": 14,
+        "m_term_in_background": 16,
+        "N_background": 2218,
+        "fold_enrichment": 89.11607142857143,
+        "P-value": 6.409891262212346e-18,
+        "Adjusted P-value": 1.3411464794782754e-16,
+        "Genes": "Os01g0165000;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "phenotype (RTO:0001536)",
+        "x_overlap": 9,
+        "k_query_mapped": 14,
+        "m_term_in_background": 16,
+        "N_background": 2218,
+        "fold_enrichment": 89.11607142857143,
+        "P-value": 6.409891262212346e-18,
+        "Adjusted P-value": 1.3411464794782754e-16,
+        "Genes": "Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os06g0211200;Os07g0448800;Os09g0439800;Os09g0522000"
+      },
+      {
+        "Term": "abiotic plant stress response trait (TO:0000168)",
+        "x_overlap": 9,
+        "k_query_mapped": 14,
+        "m_term_in_background": 22,
+        "N_background": 2218,
+        "fold_enrichment": 64.8116883116883,
+        "P-value": 2.7530517918653483e-16,
+        "Adjusted P-value": 4.992200582582498e-15,
+        "Genes": "Os01g0165000;Os01g0884300;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os07g0154100;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "abiotic stress trait (RTO:0000166)",
+        "x_overlap": 9,
+        "k_query_mapped": 14,
+        "m_term_in_background": 22,
+        "N_background": 2218,
+        "fold_enrichment": 64.8116883116883,
+        "P-value": 2.7530517918653483e-16,
+        "Adjusted P-value": 4.992200582582498e-15,
+        "Genes": "Os01g0165000;Os01g0884300;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os07g0154100;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "crop yield (RTO:0001599)",
+        "x_overlap": 8,
+        "k_query_mapped": 14,
+        "m_term_in_background": 16,
+        "N_background": 2218,
+        "fold_enrichment": 79.21428571428571,
+        "P-value": 2.642682419445112e-15,
+        "Adjusted P-value": 4.49256011305669e-14,
+        "Genes": "Os01g0884300;Os03g0786400;Os03g0815100;Os05g0542500;Os06g0211200;Os09g0439800;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "salt tolerance (TO:0006001)",
+        "x_overlap": 11,
+        "k_query_mapped": 14,
+        "m_term_in_background": 91,
+        "N_background": 2218,
+        "fold_enrichment": 19.150706436420723,
+        "P-value": 9.966094215009549e-14,
+        "Adjusted P-value": 1.5945750744015278e-12,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "water quantity (WTO:0000117)",
+        "x_overlap": 10,
+        "k_query_mapped": 14,
+        "m_term_in_background": 137,
+        "N_background": 2218,
+        "fold_enrichment": 11.564129301355578,
+        "P-value": 4.75872781918447e-10,
+        "Adjusted P-value": 7.190966482323199e-09,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0815100;Os05g0455500;Os05g0542500;Os07g0154100;Os07g0448800;Os09g0522200"
+      },
+      {
+        "Term": "cold tolerance (RTO:0000300)",
+        "x_overlap": 6,
+        "k_query_mapped": 14,
+        "m_term_in_background": 22,
+        "N_background": 2218,
+        "fold_enrichment": 43.2077922077922,
+        "P-value": 1.2979100154425088e-09,
+        "Adjusted P-value": 1.858060653686118e-08,
+        "Genes": "Os01g0884300;Os02g0766700;Os05g0542500;Os06g0211200;Os09g0522000;Os09g0522200"
+      },
+      {
+        "Term": "salt in the soil (WTO:0000581)",
+        "x_overlap": 14,
+        "k_query_mapped": 14,
+        "m_term_in_background": 531,
+        "N_background": 2218,
+        "fold_enrichment": 4.1770244821092275,
+        "P-value": 1.7809437407241048e-09,
+        "Adjusted P-value": 2.4220834873847826e-08,
+        "Genes": "Os01g0165000;Os01g0859300;Os01g0884300;Os02g0766700;Os03g0786400;Os03g0815100;Os05g0455500;Os05g0542500;Os06g0211200;Os07g0154100;Os07g0448800;Os09g0439800;Os09g0522000;Os09g0522200"
+      }
+    ]
+  }
+}

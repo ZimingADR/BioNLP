@@ -1,0 +1,271 @@
+{
+  "causal_relations": 884,
+  "unique_pairs": 693,
+  "unique_genes": 385,
+  "unique_traits": 72,
+  "unique_pmids": 414,
+  "unique_sentences": 647,
+  "confidence": {
+    "high": 511,
+    "medium": 200,
+    "low": 173
+  },
+  "patterns": {
+    "active": 635,
+    "chain": 182,
+    "light_verb_adjective": 64,
+    "passive": 3
+  },
+  "constructs": {
+    "direct_gene_subject": 557,
+    "gain_of_function_construct": 254,
+    "loss_of_function_construct": 73
+  },
+  "relation_counts": {
+    "regulation": 159,
+    "positive_regulation": 575,
+    "negative_regulation": 150
+  },
+  "top_causal_pairs": [
+    {
+      "gene": "WOX11",
+      "RAP_ID": "Os07g0684900",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 5
+    },
+    {
+      "gene": "WRKY76",
+      "RAP_ID": "Os09g0417600",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 4
+    },
+    {
+      "gene": "WFP",
+      "RAP_ID": "Os08g0509600",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 4
+    },
+    {
+      "gene": "DSR2",
+      "RAP_ID": "Os01g0839200",
+      "trait": "salt in the soil",
+      "RTO_ID": "WTO:0000581",
+      "relation": "negative_regulation",
+      "evidence_sentences": 4
+    },
+    {
+      "gene": "WRKY28",
+      "RAP_ID": "Os06g0649000",
+      "trait": "salt in the soil",
+      "RTO_ID": "WTO:0000581",
+      "relation": "positive_regulation",
+      "evidence_sentences": 4
+    },
+    {
+      "gene": "SDIR1",
+      "RAP_ID": "Os03g0272300",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 4
+    },
+    {
+      "gene": "BZIP23",
+      "RAP_ID": "Os02g0766700",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "SALT",
+      "RAP_ID": "Os01g0348900",
+      "trait": "salt in the soil",
+      "RTO_ID": "WTO:0000581",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "ERF74",
+      "RAP_ID": "Os05g0497300",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "AP2",
+      "RAP_ID": "Os01g0141000",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "negative_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "WOX11",
+      "RAP_ID": "Os07g0684900",
+      "trait": "development",
+      "RTO_ID": "WTO:0000011",
+      "relation": "regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "CDPK9",
+      "RAP_ID": "Os03g0688300",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "ONAC2",
+      "RAP_ID": "Os03g0815100",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "C3H33",
+      "RAP_ID": "Os05g0128200",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "PTM97-1",
+      "RAP_ID": "Os02g0676400",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "NAC23",
+      "RAP_ID": "Os02g0214500",
+      "trait": "drought",
+      "RTO_ID": "WTO:0000218",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "WRKY97",
+      "RAP_ID": "Os12g0116400",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "CIPK17",
+      "RAP_ID": "Os05g0136200",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "HSFA3",
+      "RAP_ID": "Os02g0527300",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "HSP18.0",
+      "RAP_ID": "Os03g0267000",
+      "trait": "heat",
+      "RTO_ID": "WTO:0000152",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "BZIP42",
+      "RAP_ID": "Os05g0489700",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "SIDP366",
+      "RAP_ID": "Os06g0693700",
+      "trait": "salt in the soil",
+      "RTO_ID": "WTO:0000581",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "BZIP46",
+      "RAP_ID": "Os06g0211200",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "OsMYB4",
+      "RAP_ID": "Os04g0517100",
+      "trait": "cold",
+      "RTO_ID": "WTO:0000129",
+      "relation": "positive_regulation",
+      "evidence_sentences": 3
+    },
+    {
+      "gene": "NAC120",
+      "RAP_ID": "Os10g0477600",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "negative_regulation",
+      "evidence_sentences": 2
+    },
+    {
+      "gene": "DIS1",
+      "RAP_ID": "Os03g0356414",
+      "trait": "drought",
+      "RTO_ID": "WTO:0000218",
+      "relation": "negative_regulation",
+      "evidence_sentences": 2
+    },
+    {
+      "gene": "ABI2",
+      "RAP_ID": "Os01g0513100",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 2
+    },
+    {
+      "gene": "AP4",
+      "RAP_ID": "Os01g0140100",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "regulation",
+      "evidence_sentences": 2
+    },
+    {
+      "gene": "SAP17",
+      "RAP_ID": "Os09g0385700",
+      "trait": "drought",
+      "RTO_ID": "WTO:0000218",
+      "relation": "positive_regulation",
+      "evidence_sentences": 2
+    },
+    {
+      "gene": "LOX1",
+      "RAP_ID": "Os03g0700700",
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "relation": "positive_regulation",
+      "evidence_sentences": 2
+    }
+  ]
+}

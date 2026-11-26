@@ -1,0 +1,31 @@
+﻿Rank,Gene,RAP_ID,Trait,RTO_ID,Relation,Evidence_sentences
+1,WOX11,Os07g0684900,drought tolerance,TO:0000276,positive_regulation,5
+2,WRKY76,Os09g0417600,drought tolerance,TO:0000276,positive_regulation,4
+3,WFP,Os08g0509600,drought tolerance,TO:0000276,positive_regulation,4
+4,DSR2,Os01g0839200,salt in the soil,WTO:0000581,negative_regulation,4
+5,WRKY28,Os06g0649000,salt in the soil,WTO:0000581,positive_regulation,4
+6,SDIR1,Os03g0272300,drought tolerance,TO:0000276,positive_regulation,4
+7,BZIP23,Os02g0766700,drought tolerance,TO:0000276,positive_regulation,3
+8,SALT,Os01g0348900,salt in the soil,WTO:0000581,positive_regulation,3
+9,ERF74,Os05g0497300,drought tolerance,TO:0000276,positive_regulation,3
+10,AP2,Os01g0141000,drought tolerance,TO:0000276,negative_regulation,3
+11,WOX11,Os07g0684900,development,WTO:0000011,regulation,3
+12,CDPK9,Os03g0688300,drought tolerance,TO:0000276,positive_regulation,3
+13,ONAC2,Os03g0815100,drought tolerance,TO:0000276,positive_regulation,3
+14,C3H33,Os05g0128200,drought tolerance,TO:0000276,positive_regulation,3
+15,PTM97-1,Os02g0676400,drought tolerance,TO:0000276,positive_regulation,3
+16,NAC23,Os02g0214500,drought,WTO:0000218,positive_regulation,3
+17,WRKY97,Os12g0116400,drought tolerance,TO:0000276,positive_regulation,3
+18,CIPK17,Os05g0136200,drought tolerance,TO:0000276,positive_regulation,3
+19,HSFA3,Os02g0527300,drought tolerance,TO:0000276,positive_regulation,3
+20,HSP18.0,Os03g0267000,heat,WTO:0000152,positive_regulation,3
+21,BZIP42,Os05g0489700,drought tolerance,TO:0000276,positive_regulation,3
+22,SIDP366,Os06g0693700,salt in the soil,WTO:0000581,positive_regulation,3
+23,BZIP46,Os06g0211200,drought tolerance,TO:0000276,positive_regulation,3
+24,OsMYB4,Os04g0517100,cold,WTO:0000129,positive_regulation,3
+25,NAC120,Os10g0477600,drought tolerance,TO:0000276,negative_regulation,2
+26,DIS1,Os03g0356414,drought,WTO:0000218,negative_regulation,2
+27,ABI2,Os01g0513100,drought tolerance,TO:0000276,positive_regulation,2
+28,AP4,Os01g0140100,drought tolerance,TO:0000276,regulation,2
+29,SAP17,Os09g0385700,drought,WTO:0000218,positive_regulation,2
+30,LOX1,Os03g0700700,drought tolerance,TO:0000276,positive_regulation,2

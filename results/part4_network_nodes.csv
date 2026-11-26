@@ -1,0 +1,61 @@
+node,type,label,weighted_degree,degree
+Os01g0839200,gene,Os01g0839200,15,5
+Os03g0815100,gene,Os03g0815100,10,6
+Os07g0684900,gene,Os07g0684900,9,3
+Os07g0164100,gene,Os07g0164100,9,6
+Os04g0517100,gene,Os04g0517100,9,5
+Os03g0267000,gene,Os03g0267000,7,5
+Os03g0688300,gene,Os03g0688300,7,5
+Os04g0594100,gene,Os04g0594100,7,5
+Os03g0786400,gene,Os03g0786400,7,5
+Os01g0823500,gene,Os01g0823500,7,6
+Os06g0211200,gene,Os06g0211200,7,3
+Os06g0693700,gene,Os06g0693700,7,5
+Os06g0659100,gene,Os06g0659100,6,5
+Os01g0141000,gene,Os01g0141000,6,3
+Os04g0624500,gene,Os04g0624500,6,4
+Os11g0544700,gene,Os11g0544700,6,5
+Os07g0622000,gene,Os07g0622000,6,4
+Os01g0191300,gene,Os01g0191300,6,5
+Os09g0522200,gene,Os09g0522200,6,5
+Os01g0797600,gene,Os01g0797600,6,3
+Os11g0126900,gene,Os11g0126900,6,4
+Os01g0348900,gene,Os01g0348900,5,3
+Os10g0477600,gene,Os10g0477600,5,3
+Os01g0863500,gene,Os01g0863500,5,2
+Os05g0128200,gene,Os05g0128200,5,3
+Os05g0457200,gene,Os05g0457200,5,4
+Os04g0656500,gene,Os04g0656500,5,4
+Os01g0605400,gene,Os01g0605400,5,5
+Os05g0125000,gene,Os05g0125000,5,4
+Os01g0859300,gene,Os01g0859300,5,4
+TO:0000276,trait,drought tolerance,286,196
+WTO:0000218,trait,drought,119,93
+WTO:0000581,trait,salt in the soil,102,71
+WTO:0000021,trait,growth,47,42
+TO:0000164,trait,stress trait,29,27
+WTO:0000011,trait,development,28,23
+WTO:0000071,trait,crop yield,24,19
+TO:0000522,trait,stomatal resistance,22,17
+WTO:0000129,trait,cold,17,14
+TO:0002667,trait,abscisic acid sensitivity,15,15
+TO:0000168,trait,abiotic stress trait,13,12
+WTO:0000152,trait,heat,13,10
+WTO:0000117,trait,water quantity,12,12
+TO:0006001,trait,salt tolerance,12,11
+TO:0000303,trait,cold tolerance,9,7
+WTO:0000062,trait,abiotic stress,6,5
+TO:0000259,trait,heat tolerance,6,6
+TO:0002657,trait,oxidative stress,6,6
+WTO:0000259,trait,response to water deficiency,6,6
+TO:0000207,trait,plant height,6,5
+WTO:0000047,trait,plant density,6,6
+TO:0000615,trait,abscisic acid sensitivity,6,5
+TO:0020097,trait,stomatal opening,5,4
+WTO:0000005,trait,phenotype,5,5
+TO:0000180,trait,spikelet fertility,5,5
+TO:0000112,trait,disease resistance,4,3
+TO:0002759,trait,grain number,4,3
+TO:0000188,trait,drought sensitivity,4,4
+TO:0000227,trait,root length,4,3
+WTO:0000016,trait,early flowering,4,3

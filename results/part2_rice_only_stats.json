@@ -1,0 +1,314 @@
+{
+  "all_candidate_pairs": 9030,
+  "non_rice_candidate_pairs": 1162,
+  "rice_candidate_pairs": 7868,
+  "rice_unique_pairs": 4678,
+  "rice_unique_genes": 1344,
+  "rice_unique_traits": 192,
+  "top_rice_genes": [
+    {
+      "gene": "ONAC2",
+      "RAP_ID": "Os03g0815100",
+      "mentions": 74
+    },
+    {
+      "gene": "DREB1A",
+      "RAP_ID": "Os09g0522200",
+      "mentions": 70
+    },
+    {
+      "gene": "DST",
+      "RAP_ID": "Os03g0786400",
+      "mentions": 63
+    },
+    {
+      "gene": "NAC6",
+      "RAP_ID": "Os01g0884300",
+      "mentions": 63
+    },
+    {
+      "gene": "BZIP23",
+      "RAP_ID": "Os02g0766700",
+      "mentions": 61
+    },
+    {
+      "gene": "GHD7",
+      "RAP_ID": "Os07g0261200",
+      "mentions": 51
+    },
+    {
+      "gene": "LEA3-1",
+      "RAP_ID": "Os05g0542500",
+      "mentions": 49
+    },
+    {
+      "gene": "DREB2A",
+      "RAP_ID": "Os01g0165000",
+      "mentions": 45
+    },
+    {
+      "gene": "NCED3",
+      "RAP_ID": "Os07g0154100",
+      "mentions": 43
+    },
+    {
+      "gene": "HSP18.0",
+      "RAP_ID": "Os03g0267000",
+      "mentions": 41
+    },
+    {
+      "gene": "DRO1",
+      "RAP_ID": "Os09g0439800",
+      "mentions": 41
+    },
+    {
+      "gene": "ERF3",
+      "RAP_ID": "Os01g0797600",
+      "mentions": 41
+    },
+    {
+      "gene": "P5CS",
+      "RAP_ID": "Os05g0455500",
+      "mentions": 37
+    },
+    {
+      "gene": "PIP2A",
+      "RAP_ID": "Os07g0448800",
+      "mentions": 37
+    },
+    {
+      "gene": "ONAC003",
+      "RAP_ID": "Os01g0191300",
+      "mentions": 37
+    },
+    {
+      "gene": "BZIP46",
+      "RAP_ID": "Os06g0211200",
+      "mentions": 36
+    },
+    {
+      "gene": "SAPK2",
+      "RAP_ID": "Os07g0622000",
+      "mentions": 34
+    },
+    {
+      "gene": "ABI5",
+      "RAP_ID": "Os01g0859300",
+      "mentions": 32
+    },
+    {
+      "gene": "D1",
+      "RAP_ID": "Os05g0333200",
+      "mentions": 32
+    },
+    {
+      "gene": "XA21",
+      "RAP_ID": "Os11g0559200",
+      "mentions": 31
+    }
+  ],
+  "top_rice_traits": [
+    {
+      "trait": "drought tolerance",
+      "RTO_ID": "TO:0000276",
+      "mentions": 1744
+    },
+    {
+      "trait": "drought",
+      "RTO_ID": "WTO:0000218",
+      "mentions": 1440
+    },
+    {
+      "trait": "salt in the soil",
+      "RTO_ID": "WTO:0000581",
+      "mentions": 882
+    },
+    {
+      "trait": "growth",
+      "RTO_ID": "WTO:0000021",
+      "mentions": 395
+    },
+    {
+      "trait": "cold",
+      "RTO_ID": "WTO:0000129",
+      "mentions": 325
+    },
+    {
+      "trait": "development",
+      "RTO_ID": "WTO:0000011",
+      "mentions": 292
+    },
+    {
+      "trait": "stress trait",
+      "RTO_ID": "TO:0000164",
+      "mentions": 237
+    },
+    {
+      "trait": "abiotic stress",
+      "RTO_ID": "WTO:0000062",
+      "mentions": 217
+    },
+    {
+      "trait": "heat",
+      "RTO_ID": "WTO:0000152",
+      "mentions": 165
+    },
+    {
+      "trait": "water quantity",
+      "RTO_ID": "WTO:0000117",
+      "mentions": 157
+    },
+    {
+      "trait": "crop yield",
+      "RTO_ID": "WTO:0000071",
+      "mentions": 129
+    },
+    {
+      "trait": "salt tolerance",
+      "RTO_ID": "TO:0006001",
+      "mentions": 117
+    },
+    {
+      "trait": "stomatal resistance",
+      "RTO_ID": "TO:0000522",
+      "mentions": 99
+    },
+    {
+      "trait": "phenotype",
+      "RTO_ID": "WTO:0000005",
+      "mentions": 96
+    },
+    {
+      "trait": "abiotic stress trait",
+      "RTO_ID": "TO:0000168",
+      "mentions": 89
+    },
+    {
+      "trait": "plant height",
+      "RTO_ID": "TO:0000207",
+      "mentions": 70
+    },
+    {
+      "trait": "oxidative stress",
+      "RTO_ID": "TO:0002657",
+      "mentions": 62
+    },
+    {
+      "trait": "leaf rolling",
+      "RTO_ID": "TO:0000085",
+      "mentions": 43
+    },
+    {
+      "trait": "quality",
+      "RTO_ID": "WTO:0000048",
+      "mentions": 42
+    },
+    {
+      "trait": "days to heading",
+      "RTO_ID": "TO:0000137",
+      "mentions": 42
+    }
+  ],
+  "top_rice_pairs": [
+    {
+      "RAP_ID": "Os02g0766700",
+      "RTO_ID": "TO:0000276",
+      "evidence_sentences": 22
+    },
+    {
+      "RAP_ID": "Os03g0786400",
+      "RTO_ID": "WTO:0000218",
+      "evidence_sentences": 20
+    },
+    {
+      "RAP_ID": "Os03g0815100",
+      "RTO_ID": "TO:0000276",
+      "evidence_sentences": 20
+    },
+    {
+      "RAP_ID": "Os01g0165000",
+      "RTO_ID": "WTO:0000218",
+      "evidence_sentences": 16
+    },
+    {
+      "RAP_ID": "Os09g0522200",
+      "RTO_ID": "TO:0000276",
+      "evidence_sentences": 16
+    },
+    {
+      "RAP_ID": "Os03g0815100",
+      "RTO_ID": "WTO:0000218",
+      "evidence_sentences": 16
+    },
+    {
+      "RAP_ID": "Os05g0455500",
+      "RTO_ID": "WTO:0000218",
+      "evidence_sentences": 15
+    },
+    {
+      "RAP_ID": "Os03g0786400",
+      "RTO_ID": "TO:0006001",
+      "evidence_sentences": 15
+    },
+    {
+      "RAP_ID": "Os09g0439800",
+      "RTO_ID": "WTO:0000218",
+      "evidence_sentences": 14
+    },
+    {
+      "RAP_ID": "Os06g0211200",
+      "RTO_ID": "TO:0000276",
+      "evidence_sentences": 14
+    },
+    {
+      "RAP_ID": "Os01g0884300",
+      "RTO_ID": "WTO:0000218",
+      "evidence_sentences": 14
+    },
+    {
+      "RAP_ID": "Os05g0542500",
+      "RTO_ID": "TO:0000276",
+      "evidence_sentences": 13
+    },
+    {
+      "RAP_ID": "Os07g0154100",
+      "RTO_ID": "TO:0000276",
+      "evidence_sentences": 13
+    },
+    {
+      "RAP_ID": "Os05g0542500",
+      "RTO_ID": "WTO:0000218",
+      "evidence_sentences": 13
+    },
+    {
+      "RAP_ID": "Os01g0884300",
+      "RTO_ID": "TO:0000276",
+      "evidence_sentences": 12
+    },
+    {
+      "RAP_ID": "Os01g0797600",
+      "RTO_ID": "WTO:0000218",
+      "evidence_sentences": 12
+    },
+    {
+      "RAP_ID": "Os01g0797600",
+      "RTO_ID": "TO:0000276",
+      "evidence_sentences": 12
+    },
+    {
+      "RAP_ID": "Os01g0839200",
+      "RTO_ID": "WTO:0000581",
+      "evidence_sentences": 11
+    },
+    {
+      "RAP_ID": "Os02g0766700",
+      "RTO_ID": "WTO:0000218",
+      "evidence_sentences": 11
+    },
+    {
+      "RAP_ID": "Os03g0356414",
+      "RTO_ID": "TO:0000276",
+      "evidence_sentences": 11
+    }
+  ]
+}

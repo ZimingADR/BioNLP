@@ -1,0 +1,61 @@
+﻿Type,Rank,Term,Corpus_Freq,Doc_Freq,IDF,TFIDF_Score
+Unigram,1,drought,10819,3079,1.0711,64.8793
+Unigram,2,stress,8951,2535,1.2655,61.1784
+Unigram,3,genes,6272,1829,1.5917,51.6604
+Unigram,4,tolerance,4580,1731,1.6468,43.0203
+Unigram,5,expression,4099,1684,1.6743,37.119
+Unigram,6,gene,3974,1678,1.6778,36.0633
+Unigram,7,abiotic,2643,1312,1.9237,27.211
+Unigram,8,water,2222,899,2.3014,26.5615
+Unigram,9,yield,2133,896,2.3047,25.3363
+Unigram,10,root,1851,605,2.6969,25.2574
+Unigram,11,stresses,2241,1173,2.0356,24.9027
+Unigram,12,aba,1551,589,2.7237,24.1021
+Unigram,13,response,2247,1331,1.9094,23.9796
+Unigram,14,salt,1696,761,2.4679,23.3375
+Unigram,15,conditions,2358,1311,1.9245,23.2954
+Unigram,16,family,1642,720,2.5232,22.057
+Unigram,17,transgenic,1400,587,2.7271,22.0092
+Unigram,18,growth,2076,1227,1.9907,21.9945
+Unigram,19,protein,1684,973,2.2224,21.6296
+Unigram,20,proteins,1448,690,2.5657,20.4229
+Unigram,21,identified,1846,1234,1.985,18.7827
+Unigram,22,development,1630,1051,2.1453,18.6329
+Unigram,23,transcription,1319,769,2.4574,18.4511
+Unigram,24,responses,1552,970,2.2255,18.368
+Unigram,25,resistance,1228,613,2.6838,18.3473
+Unigram,26,lines,1213,577,2.7442,17.6453
+Unigram,27,arabidopsis,1301,741,2.4944,17.596
+Unigram,28,acid,1261,779,2.4445,16.9605
+Unigram,29,traits,1235,565,2.7652,16.8757
+Unigram,30,grain,1083,504,2.8792,16.1197
+Bigram,1,drought stress,2752,1253,1.9697,30.4537
+Bigram,2,drought tolerance,1878,883,2.3193,25.4562
+Bigram,3,abiotic stress,1224,755,2.4758,16.2018
+Bigram,4,stress tolerance,1049,669,2.5965,15.0275
+Bigram,5,abiotic stresses,1039,719,2.5245,14.091
+Bigram,6,gene family,733,365,3.2012,12.0124
+Bigram,7,drought resistance,582,281,3.4619,11.4595
+Bigram,8,grain yield,589,297,3.4067,10.2297
+Bigram,9,transcription factor,533,391,3.1325,10.0633
+Bigram,10,gene expression,593,421,3.0588,9.5702
+Bigram,11,abscisic acid,586,505,2.8773,9.5539
+Bigram,12,transcription factors,554,403,3.1024,9.3701
+Bigram,13,stress responses,591,449,2.9945,9.3673
+Bigram,14,stress conditions,609,447,2.999,9.3524
+Bigram,15,stress response,510,403,3.1024,9.0746
+Bigram,16,salt stress,459,264,3.5241,8.8645
+Bigram,17,drought conditions,349,271,3.498,6.3854
+Bigram,18,water deficit,293,140,4.155,6.255
+Bigram,19,water stress,280,133,4.206,6.1812
+Bigram,20,osmotic stress,275,119,4.3163,6.1618
+Bigram,21,climate change,328,224,3.6877,6.0742
+Bigram,22,expression patterns,342,271,3.498,5.9711
+Bigram,23,wild type,265,198,3.8105,5.703
+Bigram,24,salt tolerance,249,132,4.2134,5.6632
+Bigram,25,candidate genes,281,188,3.862,5.1915
+Bigram,26,arabidopsis thaliana,272,249,3.5823,5.1801
+Bigram,27,differentially expressed,251,204,3.7808,4.9715
+Bigram,28,heat stress,213,110,4.3943,4.8157
+Bigram,29,reactive oxygen,241,219,3.7102,4.7457
+Bigram,30,oxygen species,227,208,3.7615,4.5177

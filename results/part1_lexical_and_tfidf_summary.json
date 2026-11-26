@@ -1,0 +1,467 @@
+{
+  "num_documents": 3306,
+  "num_sentences": 35345,
+  "pubtator_entities_total": 47157,
+  "pubtator_entities_offset_verified": 47156,
+  "ttr_metrics": {
+    "total_tokens_N": 795401,
+    "unique_types_V": 34247,
+    "raw_ttr": 0.0431,
+    "standardized_samples": {
+      "N=1000": {
+        "head_types": 542,
+        "head_ttr": 0.542,
+        "shuf_mean_ttr": 0.5619
+      },
+      "N=5000": {
+        "head_types": 1736,
+        "head_ttr": 0.3472,
+        "shuf_mean_ttr": 0.3639
+      },
+      "N=10000": {
+        "head_types": 2648,
+        "head_ttr": 0.2648,
+        "shuf_mean_ttr": 0.289
+      },
+      "N=50000": {
+        "head_types": 7015,
+        "head_ttr": 0.1403,
+        "shuf_mean_ttr": 0.1565
+      },
+      "N=100000": {
+        "head_types": 10484,
+        "head_ttr": 0.1048,
+        "shuf_mean_ttr": 0.1174
+      },
+      "N=500000": {
+        "head_types": 26221,
+        "head_ttr": 0.0524,
+        "shuf_mean_ttr": 0.0547
+      }
+    }
+  },
+  "top_unigrams_tfidf": [
+    {
+      "term": "drought",
+      "corpus_freq": 10819,
+      "doc_freq": 3079,
+      "idf": 1.0711,
+      "tfidf_score": 64.8793
+    },
+    {
+      "term": "stress",
+      "corpus_freq": 8951,
+      "doc_freq": 2535,
+      "idf": 1.2655,
+      "tfidf_score": 61.1784
+    },
+    {
+      "term": "genes",
+      "corpus_freq": 6272,
+      "doc_freq": 1829,
+      "idf": 1.5917,
+      "tfidf_score": 51.6604
+    },
+    {
+      "term": "tolerance",
+      "corpus_freq": 4580,
+      "doc_freq": 1731,
+      "idf": 1.6468,
+      "tfidf_score": 43.0203
+    },
+    {
+      "term": "expression",
+      "corpus_freq": 4099,
+      "doc_freq": 1684,
+      "idf": 1.6743,
+      "tfidf_score": 37.119
+    },
+    {
+      "term": "gene",
+      "corpus_freq": 3974,
+      "doc_freq": 1678,
+      "idf": 1.6778,
+      "tfidf_score": 36.0633
+    },
+    {
+      "term": "abiotic",
+      "corpus_freq": 2643,
+      "doc_freq": 1312,
+      "idf": 1.9237,
+      "tfidf_score": 27.211
+    },
+    {
+      "term": "water",
+      "corpus_freq": 2222,
+      "doc_freq": 899,
+      "idf": 2.3014,
+      "tfidf_score": 26.5615
+    },
+    {
+      "term": "yield",
+      "corpus_freq": 2133,
+      "doc_freq": 896,
+      "idf": 2.3047,
+      "tfidf_score": 25.3363
+    },
+    {
+      "term": "root",
+      "corpus_freq": 1851,
+      "doc_freq": 605,
+      "idf": 2.6969,
+      "tfidf_score": 25.2574
+    },
+    {
+      "term": "stresses",
+      "corpus_freq": 2241,
+      "doc_freq": 1173,
+      "idf": 2.0356,
+      "tfidf_score": 24.9027
+    },
+    {
+      "term": "aba",
+      "corpus_freq": 1551,
+      "doc_freq": 589,
+      "idf": 2.7237,
+      "tfidf_score": 24.1021
+    },
+    {
+      "term": "response",
+      "corpus_freq": 2247,
+      "doc_freq": 1331,
+      "idf": 1.9094,
+      "tfidf_score": 23.9796
+    },
+    {
+      "term": "salt",
+      "corpus_freq": 1696,
+      "doc_freq": 761,
+      "idf": 2.4679,
+      "tfidf_score": 23.3375
+    },
+    {
+      "term": "conditions",
+      "corpus_freq": 2358,
+      "doc_freq": 1311,
+      "idf": 1.9245,
+      "tfidf_score": 23.2954
+    },
+    {
+      "term": "family",
+      "corpus_freq": 1642,
+      "doc_freq": 720,
+      "idf": 2.5232,
+      "tfidf_score": 22.057
+    },
+    {
+      "term": "transgenic",
+      "corpus_freq": 1400,
+      "doc_freq": 587,
+      "idf": 2.7271,
+      "tfidf_score": 22.0092
+    },
+    {
+      "term": "growth",
+      "corpus_freq": 2076,
+      "doc_freq": 1227,
+      "idf": 1.9907,
+      "tfidf_score": 21.9945
+    },
+    {
+      "term": "protein",
+      "corpus_freq": 1684,
+      "doc_freq": 973,
+      "idf": 2.2224,
+      "tfidf_score": 21.6296
+    },
+    {
+      "term": "proteins",
+      "corpus_freq": 1448,
+      "doc_freq": 690,
+      "idf": 2.5657,
+      "tfidf_score": 20.4229
+    },
+    {
+      "term": "identified",
+      "corpus_freq": 1846,
+      "doc_freq": 1234,
+      "idf": 1.985,
+      "tfidf_score": 18.7827
+    },
+    {
+      "term": "development",
+      "corpus_freq": 1630,
+      "doc_freq": 1051,
+      "idf": 2.1453,
+      "tfidf_score": 18.6329
+    },
+    {
+      "term": "transcription",
+      "corpus_freq": 1319,
+      "doc_freq": 769,
+      "idf": 2.4574,
+      "tfidf_score": 18.4511
+    },
+    {
+      "term": "responses",
+      "corpus_freq": 1552,
+      "doc_freq": 970,
+      "idf": 2.2255,
+      "tfidf_score": 18.368
+    },
+    {
+      "term": "resistance",
+      "corpus_freq": 1228,
+      "doc_freq": 613,
+      "idf": 2.6838,
+      "tfidf_score": 18.3473
+    },
+    {
+      "term": "lines",
+      "corpus_freq": 1213,
+      "doc_freq": 577,
+      "idf": 2.7442,
+      "tfidf_score": 17.6453
+    },
+    {
+      "term": "arabidopsis",
+      "corpus_freq": 1301,
+      "doc_freq": 741,
+      "idf": 2.4944,
+      "tfidf_score": 17.596
+    },
+    {
+      "term": "acid",
+      "corpus_freq": 1261,
+      "doc_freq": 779,
+      "idf": 2.4445,
+      "tfidf_score": 16.9605
+    },
+    {
+      "term": "traits",
+      "corpus_freq": 1235,
+      "doc_freq": 565,
+      "idf": 2.7652,
+      "tfidf_score": 16.8757
+    },
+    {
+      "term": "grain",
+      "corpus_freq": 1083,
+      "doc_freq": 504,
+      "idf": 2.8792,
+      "tfidf_score": 16.1197
+    }
+  ],
+  "top_bigrams_tfidf": [
+    {
+      "term": "drought stress",
+      "corpus_freq": 2752,
+      "doc_freq": 1253,
+      "idf": 1.9697,
+      "tfidf_score": 30.4537
+    },
+    {
+      "term": "drought tolerance",
+      "corpus_freq": 1878,
+      "doc_freq": 883,
+      "idf": 2.3193,
+      "tfidf_score": 25.4562
+    },
+    {
+      "term": "abiotic stress",
+      "corpus_freq": 1224,
+      "doc_freq": 755,
+      "idf": 2.4758,
+      "tfidf_score": 16.2018
+    },
+    {
+      "term": "stress tolerance",
+      "corpus_freq": 1049,
+      "doc_freq": 669,
+      "idf": 2.5965,
+      "tfidf_score": 15.0275
+    },
+    {
+      "term": "abiotic stresses",
+      "corpus_freq": 1039,
+      "doc_freq": 719,
+      "idf": 2.5245,
+      "tfidf_score": 14.091
+    },
+    {
+      "term": "gene family",
+      "corpus_freq": 733,
+      "doc_freq": 365,
+      "idf": 3.2012,
+      "tfidf_score": 12.0124
+    },
+    {
+      "term": "drought resistance",
+      "corpus_freq": 582,
+      "doc_freq": 281,
+      "idf": 3.4619,
+      "tfidf_score": 11.4595
+    },
+    {
+      "term": "grain yield",
+      "corpus_freq": 589,
+      "doc_freq": 297,
+      "idf": 3.4067,
+      "tfidf_score": 10.2297
+    },
+    {
+      "term": "transcription factor",
+      "corpus_freq": 533,
+      "doc_freq": 391,
+      "idf": 3.1325,
+      "tfidf_score": 10.0633
+    },
+    {
+      "term": "gene expression",
+      "corpus_freq": 593,
+      "doc_freq": 421,
+      "idf": 3.0588,
+      "tfidf_score": 9.5702
+    },
+    {
+      "term": "abscisic acid",
+      "corpus_freq": 586,
+      "doc_freq": 505,
+      "idf": 2.8773,
+      "tfidf_score": 9.5539
+    },
+    {
+      "term": "transcription factors",
+      "corpus_freq": 554,
+      "doc_freq": 403,
+      "idf": 3.1024,
+      "tfidf_score": 9.3701
+    },
+    {
+      "term": "stress responses",
+      "corpus_freq": 591,
+      "doc_freq": 449,
+      "idf": 2.9945,
+      "tfidf_score": 9.3673
+    },
+    {
+      "term": "stress conditions",
+      "corpus_freq": 609,
+      "doc_freq": 447,
+      "idf": 2.999,
+      "tfidf_score": 9.3524
+    },
+    {
+      "term": "stress response",
+      "corpus_freq": 510,
+      "doc_freq": 403,
+      "idf": 3.1024,
+      "tfidf_score": 9.0746
+    },
+    {
+      "term": "salt stress",
+      "corpus_freq": 459,
+      "doc_freq": 264,
+      "idf": 3.5241,
+      "tfidf_score": 8.8645
+    },
+    {
+      "term": "drought conditions",
+      "corpus_freq": 349,
+      "doc_freq": 271,
+      "idf": 3.498,
+      "tfidf_score": 6.3854
+    },
+    {
+      "term": "water deficit",
+      "corpus_freq": 293,
+      "doc_freq": 140,
+      "idf": 4.155,
+      "tfidf_score": 6.255
+    },
+    {
+      "term": "water stress",
+      "corpus_freq": 280,
+      "doc_freq": 133,
+      "idf": 4.206,
+      "tfidf_score": 6.1812
+    },
+    {
+      "term": "osmotic stress",
+      "corpus_freq": 275,
+      "doc_freq": 119,
+      "idf": 4.3163,
+      "tfidf_score": 6.1618
+    },
+    {
+      "term": "climate change",
+      "corpus_freq": 328,
+      "doc_freq": 224,
+      "idf": 3.6877,
+      "tfidf_score": 6.0742
+    },
+    {
+      "term": "expression patterns",
+      "corpus_freq": 342,
+      "doc_freq": 271,
+      "idf": 3.498,
+      "tfidf_score": 5.9711
+    },
+    {
+      "term": "wild type",
+      "corpus_freq": 265,
+      "doc_freq": 198,
+      "idf": 3.8105,
+      "tfidf_score": 5.703
+    },
+    {
+      "term": "salt tolerance",
+      "corpus_freq": 249,
+      "doc_freq": 132,
+      "idf": 4.2134,
+      "tfidf_score": 5.6632
+    },
+    {
+      "term": "candidate genes",
+      "corpus_freq": 281,
+      "doc_freq": 188,
+      "idf": 3.862,
+      "tfidf_score": 5.1915
+    },
+    {
+      "term": "arabidopsis thaliana",
+      "corpus_freq": 272,
+      "doc_freq": 249,
+      "idf": 3.5823,
+      "tfidf_score": 5.1801
+    },
+    {
+      "term": "differentially expressed",
+      "corpus_freq": 251,
+      "doc_freq": 204,
+      "idf": 3.7808,
+      "tfidf_score": 4.9715
+    },
+    {
+      "term": "heat stress",
+      "corpus_freq": 213,
+      "doc_freq": 110,
+      "idf": 4.3943,
+      "tfidf_score": 4.8157
+    },
+    {
+      "term": "reactive oxygen",
+      "corpus_freq": 241,
+      "doc_freq": 219,
+      "idf": 3.7102,
+      "tfidf_score": 4.7457
+    },
+    {
+      "term": "oxygen species",
+      "corpus_freq": 227,
+      "doc_freq": 208,
+      "idf": 3.7615,
+      "tfidf_score": 4.5177
+    }
+  ]
+}

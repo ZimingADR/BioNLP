@@ -1,0 +1,70 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ---- 下载缓存（可由 scripts/01 与 scripts/10 重建，不入库）----
+data/pubtator_cache/
+data/ricemind_cache/
+
+# ---- 由 scripts/03 生成的派生词典（原始源文件已入库，可重建）----
+dicts/rice_gene_synonym_to_rap.json
+dicts/rice_gene_dict.tsv
+dicts/rto_trait_synonym_to_id.json
+dicts/rto_trait_dict.tsv
+
+# ---- LaTeX 编译中间产物（保留 main.pdf）----
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+xelatex*.out
+bibtex.out
+texput.log
+
+# ---- 早期迭代稿与打包文件（体积大且已被 paper_final/ 取代）----
+paper_bibm/BIBM-Latex/test_*.tex
+paper_bibm/BIBM-Latex/test_*.pdf
+paper_bibm/BIBM-Latex/pdf_preview/
+paper_bibm/BIBM-Latex/*.aux
+paper_bibm/BIBM-Latex/*.log
+paper_bibm/BIBM-Latex/*.out
+paper_bibm/BIBM-Latex/*.bbl
+paper_bibm/BIBM-Latex/*.blg
+paper_bibm/BIBM-Latex/*.synctex.gz
+*.zip
+*.png.tmp
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 临时产物 ----
+/main.pdf
+/main.aux
+/main.log
+/main.synctex.gz
+/pdflatex_test_page1.png
+/teacher_sample_page1.png
+*.tmp

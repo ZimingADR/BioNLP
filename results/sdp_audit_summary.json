@@ -1,0 +1,221 @@
+{
+  "sample_design": {
+    "seed": 42,
+    "A_population": 884,
+    "B_population": 6984,
+    "A_sample": 50,
+    "B_sample": 50
+  },
+  "gold_positive_in_A": 43,
+  "gold_positive_in_B": 14,
+  "sdp_precision": 0.86,
+  "sdp_precision_95ci": [
+    0.738135428014719,
+    0.9304925473797714
+  ],
+  "sdp_recall_estimate": 0.27993637140248034,
+  "sdp_f1_estimate": 0.42238371446985357,
+  "estimated_tp_total": 760.24,
+  "estimated_missed_total": 1955.5200000000002,
+  "cooccurrence_baseline_precision_unweighted": 0.57,
+  "cooccurrence_baseline_precision_weighted": 0.3451652262328419,
+  "polarity_accuracy": 0.8823529411764706,
+  "polarity_n": 34,
+  "polarity_confusion": {
+    "gold-1_pred-1": 7,
+    "gold-1_pred1": 2,
+    "gold1_pred1": 23,
+    "gold1_pred-1": 2
+  },
+  "error_cases": [
+    {
+      "audit_id": "A01",
+      "type": "SDP_false_positive",
+      "gene": "D1",
+      "trait": "water quantity",
+      "relation": "regulation",
+      "sentence": "The root growth angle (RGA), which determines the direction of root elongation in the soil, affects the area in which roots capture water and nutrients.",
+      "note": "句子主语是 root growth angle，未出现 D1 基因；实体错配"
+    },
+    {
+      "audit_id": "A03",
+      "type": "SDP_false_positive",
+      "gene": "CALA",
+      "trait": "stress trait",
+      "relation": "regulation",
+      "sentence": "OsCaM1.1 can physically interact with multiple Ca2+ channel cyclic nucleotide-gated channel (CNGC) proteins, and overexpression of OsCNGC16 rescued defects of both stress tolerance and stomatal closure in the OsCaM1.1 mutant, indicating that OsCaM1.1 regulates CNGC proteins for its stress tolerance function.",
+      "note": "OsCaM1.1 调控 CNGC 蛋白以支持 stress tolerance 功能，非直接调控性状"
+    },
+    {
+      "audit_id": "A17",
+      "type": "SDP_false_positive",
+      "gene": "SST",
+      "trait": "crop yield",
+      "relation": "regulation",
+      "sentence": "The SPL transcription factor OsSPL10 regulates rice tillering via the auxin signaling pathway to stabilize grain yield under drought stress.",
+      "note": "OsSPL10 调控分蘖以稳定产量，不是直接正向调控产量"
+    },
+    {
+      "audit_id": "A18",
+      "type": "SDP_false_positive",
+      "gene": "MYB59",
+      "trait": "drought tolerance",
+      "relation": "negative_regulation",
+      "sentence": "Accordingly, OsHHO3 directly represses ABA-catabolic genes as well as other negative regulators of drought tolerance.",
+      "note": "OsHHO3 抑制耐旱负调控因子，属间接正向；SDP 负向不成立"
+    },
+    {
+      "audit_id": "A22",
+      "type": "SDP_false_positive",
+      "gene": "SAPK2",
+      "trait": "salt in the soil",
+      "relation": "regulation",
+      "sentence": "We also found that SAPK1 and SAPK2 affected the osmotic potential following salt stress by promoting the generation of osmotically active metabolites such as proline.",
+      "note": "SAPK2 影响 salt 下 osmotic potential，非直接耐盐性状"
+    },
+    {
+      "audit_id": "A45",
+      "type": "SDP_false_positive",
+      "gene": "UGT85E1",
+      "trait": "drought tolerance",
+      "relation": "positive_regulation",
+      "sentence": "Further studies indicated that UGT85E1 overexpression induced ABA accumulation, stomatal closure, enhanced reactive oxygen species (ROS) scavenging capacity, increased proline and sugar contents, and upregulated expression of stress-related genes under drought stress conditions.",
+      "note": "UGT85E1 诱导 ABA/气孔关闭，未直接测定 drought tolerance"
+    },
+    {
+      "audit_id": "A48",
+      "type": "SDP_false_positive",
+      "gene": "DI19-3",
+      "trait": "submergence sensitivity",
+      "relation": "positive_regulation",
+      "sentence": "A transcriptome analysis of <i>OsDi19-3</i> transgenic plants revealed 224 upregulated and 167 downregulated genes (log<sub>2</sub>(OE/WT) > 1, <i>p</i>-value < 0.05), including multiple stress-responsive genes.",
+      "note": "转录组差异基因列表，未给出 submergence sensitivity 表型"
+    },
+    {
+      "audit_id": "B05",
+      "type": "SDP_false_negative",
+      "gene": "SRL1",
+      "trait": "leaf rolling",
+      "relation": "association",
+      "sentence": "CLD1/SRL1 encodes a glycophosphatidylinositol (GPI)-anchored membrane protein that modulates leaf rolling and other aspects of rice growth and development.",
+      "note": "CLD1/SRL1 modulates leaf rolling，方向未知；SDP 漏检"
+    },
+    {
+      "audit_id": "B06",
+      "type": "SDP_false_negative",
+      "gene": "MIR319A",
+      "trait": "salt in the soil",
+      "relation": "association",
+      "sentence": "Transgenic creeping bentgrass (Agrostis stolonifera) overexpressing a rice miR319, Osa-miR319a, exhibited enhanced salt and drought tolerance.",
+      "note": "水稻 miR319 在 bentgrass 中增强 salt/drought tolerance；SDP 漏检"
+    },
+    {
+      "audit_id": "B09",
+      "type": "SDP_false_negative",
+      "gene": "PP2C1",
+      "trait": "salt in the soil",
+      "relation": "association",
+      "sentence": "In addition, the OsPP2C68 knockout mutants exhibited altered synthesis of osmolytes and antioxidant enzymes under drought and high salinity stress, along with the differential expression of genes associated with drought and salt stress responses, enhancing rice tolerance to drought and salt.",
+      "note": "OsPP2C68 knockout 增强耐盐 → 基因负向；SDP 漏检"
+    },
+    {
+      "audit_id": "B12",
+      "type": "SDP_false_negative",
+      "gene": "NHX1",
+      "trait": "spikelet fertility",
+      "relation": "association",
+      "sentence": "In the field drought resistance testing of T2 families derived from the T1 families with relatively lower yield decrease, transgenic families of seven constructs (HVA22P:CBF3, Actin1:NPK1, HVA22P:NPK1, Actin1:LOS5, HVA22P:LOS5, Actin1:ZAT10, and HVA22P:ZAT10) showed significantly higher yield per plant than WT, and families of nine constructs (Actin1:CBF3, HVA22P:CBF3, HVA22P:SOS2, HVA22P:NPK1, Actin1:LOS5, HVA22P:LOS5, Actin1:ZAT10, HVA22P:ZAT10, and Actin1:NHX1) had higher spikelet fertility than WT.",
+      "note": "Actin1:NHX1 提高 spikelet fertility；SDP 漏检"
+    },
+    {
+      "audit_id": "B16",
+      "type": "SDP_false_negative",
+      "gene": "HST1",
+      "trait": "salt in the soil",
+      "relation": "association",
+      "sentence": "HST1 encodes the DST transcription factor, which also regulates drought and salinity tolerance.",
+      "note": "HST1 encodes DST，DST regulates drought/salinity tolerance；SDP 漏检"
+    },
+    {
+      "audit_id": "B19",
+      "type": "SDP_false_negative",
+      "gene": "NTRC",
+      "trait": "growth",
+      "relation": "association",
+      "sentence": "An Arabidopsis NTRC knock-out mutant showed growth inhibition and hypersensitivity to methyl viologen, drought, and salt stress.",
+      "note": "NTRC knockout 抑制生长 → 基因正向调控 growth；SDP 漏检"
+    },
+    {
+      "audit_id": "B22",
+      "type": "SDP_false_negative",
+      "gene": "NAT9",
+      "trait": "drought tolerance",
+      "relation": "excluded_direction",
+      "sentence": "This study highlights the dual role of OsNAT9 in regulating seed vigor and drought tolerance by maintaining the homeostasis of AsA pools and reducing ROS accumulation.",
+      "note": "OsNAT9 regulates seed vigor and drought tolerance；SDP 漏检"
+    },
+    {
+      "audit_id": "B26",
+      "type": "SDP_false_negative",
+      "gene": "HDA704",
+      "trait": "salt tolerance",
+      "relation": "excluded_direction",
+      "sentence": "Overexpression of HDA704 in transgenic rice promoted stomatal closure, decreased the number of stomata and slowed down the rate of water loss, consequently resulting in increased drought and salt tolerance.",
+      "note": "HDA704 overexpression increased salt/drought tolerance；SDP 漏检"
+    },
+    {
+      "audit_id": "B28",
+      "type": "SDP_false_negative",
+      "gene": "BIRF1",
+      "trait": "disease resistance",
+      "relation": "excluded_direction",
+      "sentence": "Transgenic tobacco plants that constitutively express OsBIRF1 exhibit enhanced disease resistance against tobacco mosaic virus and Pseudomonas syringae pv.",
+      "note": "OsBIRF1 transgenic tobacco enhanced disease resistance；SDP 漏检"
+    },
+    {
+      "audit_id": "B29",
+      "type": "SDP_false_negative",
+      "gene": "PUB67",
+      "trait": "drought tolerance",
+      "relation": "excluded_direction",
+      "sentence": "A U-box E3 ubiquitin ligase OsPUB67 is positively involved in drought tolerance in rice.",
+      "note": "OsPUB67 positively involved in drought tolerance；SDP 漏检"
+    },
+    {
+      "audit_id": "B31",
+      "type": "SDP_false_negative",
+      "gene": "WSI76",
+      "trait": "drought tolerance",
+      "relation": "excluded_direction",
+      "sentence": "Transgenic rice plants, in which type II D. antarctica GolS2 (DaGolS2) and rice GolS2 (OsGolS2) were constitutively expressed, were markedly tolerant to cold and drought stress as compared to the wild-type rice plants.",
+      "note": "OsGolS2 transgenic rice tolerant to drought；SDP 漏检"
+    },
+    {
+      "audit_id": "B32",
+      "type": "SDP_false_negative",
+      "gene": "SAPK8",
+      "trait": "drought",
+      "relation": "excluded_direction",
+      "sentence": "Our results provide evidence for OsSAPK8 acting as a positive regulator in cold, drought, and salt stress responses.",
+      "note": "OsSAPK8 positive regulator of drought stress responses；SDP 漏检"
+    },
+    {
+      "audit_id": "B33",
+      "type": "SDP_false_negative",
+      "gene": "HST1",
+      "trait": "heat",
+      "relation": "excluded_direction",
+      "sentence": "Here, we report a rice heat stress-tolerant 1 (hst1) mutant with increased heat tolerance.",
+      "note": "hst1 mutant increased heat tolerance → 基因负向；SDP 漏检"
+    },
+    {
+      "audit_id": "B38",
+      "type": "SDP_false_negative",
+      "gene": "NAC122",
+      "trait": "drought",
+      "relation": "excluded_respectively",
+      "sentence": "More importantly, the RCc3:OsNAC10 plants showed significantly enhanced drought tolerance at the reproductive stage, increasing grain yield by 25% to 42% and by 5% to 14% over controls in the field under drought and normal conditions, respectively.",
+      "note": "OsNAC10 增强 drought tolerance；SDP 漏检"
+    }
+  ]
+}

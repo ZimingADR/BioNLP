@@ -1,0 +1,142 @@
+% !TEX root = human.tex
+% ======================================================================
+% BIBM / IEEE 课程论文模板（支持中英文混排）
+% 适用课程：《生物文本挖掘与知识发现》等
+% 阶段性论文（提交日-2）：文献获取、词汇统计与水稻基因-性状词典归一化
+% 作者：易子茗（2024317240212，生信2402）
+% 编译方式：xelatex -> bibtex -> xelatex -> xelatex
+% 依赖宏包：IEEEtran.cls（BIBM 官方模板，请与本文件放同一目录）
+% ======================================================================
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% ---------- 基础宏包 ----------
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% ---------- 双栏浮动体参数 ----------
+\setcounter{dbltopnumber}{2}
+\renewcommand{\dbltopfraction}{0.90}
+\renewcommand{\dblfloatpagefraction}{0.80}
+\setlength{\dbltextfloatsep}{5pt plus 1pt minus 1pt}
+\setlength{\textfloatsep}{5pt plus 1pt minus 1pt}
+\setlength{\floatsep}{5pt plus 1pt minus 1pt}
+\setlength{\dblfloatsep}{5pt plus 1pt minus 1pt}
+
+
+% ---------- 页码设置 ----------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ---------- 页脚左下角灰色水印 ----------
+% \fancyfoot[L]{%
+% \scriptsize\color{gray}%
+% \begin{tabular}[b]{@{}l@{}}
+% 课程论文支持使用 Agent 生成内容，\\
+% 这只是起点。人工内容审查\\
+% 和驾驭才是终点。%
+% \end{tabular}%
+% }
+% \setlength{\footskip}{36pt}
+
+% \fancypagestyle{plain}{%
+% \fancyhf{}%
+% \fancyfoot[C]{\thepage}%
+% \fancyfoot[L]{%
+% \scriptsize\color{gray}%
+% \begin{tabular}[b]{@{}l@{}}
+% 课程论文支持使用 Agent 生成内容，\\
+% 这只是开始。人工内容审查\\
+% 和驾驭才是终点。%
+% \end{tabular}%
+% }%
+% \renewcommand{\headrulewidth}{0pt}%
+% \renewcommand{\footrulewidth}{0pt}%
+% }
+% \fancypagestyle{IEEEtitlepagestyle}{%
+% \fancyhf{}%
+% \fancyfoot[C]{\thepage}%
+% \fancyfoot[L]{%
+% \scriptsize\color{gray}%
+% \begin{tabular}[b]{@{}l@{}}
+% 课程论文支持使用 Agent 生成内容，\\
+% 这只是开始。人工内容审查\\
+% 和驾驭才是终点。%
+% \end{tabular}%
+% }%
+% \renewcommand{\headrulewidth}{0pt}%
+% \renewcommand{\footrulewidth}{0pt}%
+% }
+
+% ---------- 行号设置 ----------
+\usepackage[switch]{lineno}
+\pagewiselinenumbers
+
+% ---------- 中文支持（pdflatex 与 xelatex 均兼容） ----------
+\usepackage[UTF8]{ctex}
+\setmainfont{Times New Roman}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+% ======================================================================
+% 标题 / 作者 / 单位
+% ======================================================================
+\title{基于PubMed文献挖掘与水稻性状本体的水稻抗旱基因-性状关联知识发现}
+
+\author{
+\IEEEauthorblockN{易子茗}
+\IEEEauthorblockA{
+\textit{2024317240212} \\
+\textit{华中农业大学信息学院} \\
+代码仓库: \url{https://github.com/ZimingADR/BioNLP}}
+}
+
+\maketitle
+
+% ======================================================================
+% 摘要 / 关键词
+% ======================================================================
+\begin{abstract}
+水稻作为全球过半人口的主粮，其抗旱分子机制的解析是气候变化下保障粮食安全的核心课题。然而，蕴藏在海量文献中的抗旱基因与性状知识高度异质，且通用 BioNLP 工具在农学专用命名上存在显著的跨领域特征偏移。为此，本文提出了一套融合水稻基因注释数据库、水稻遗传资源库及水稻性状本体的高精度文献挖掘与知识发现框架。……
+\end{abstract}
+
+\begin{IEEEkeywords}
+列出了, 一些, 关键词
+\end{IEEEkeywords}
+
+\section{引言}
+
+水稻（\textit{Oryza sativa} L.）是维系全球半数以上人口生存的核心主粮作物。随着全球气候极端化加剧，干旱逆境已成为制约水稻稳产高产的首要非生物胁迫。深入解析水稻抗旱功能基因与农艺表型性状之间的级联调控网络，是培育抗旱节水新品种的重大科学基石。在过去数十年间，国内外学者围绕脱落酸（ABA）信号转导、抗氧化防御、渗透调节及深根构型克隆了大量关键抗旱基因。然而，这些蕴含高价值实验结论的“基因--性状”调控证据大多以非结构化英文自由文本的形式分散在数以万计的学术文献摘要中，人工逐篇阅读与汇总耗时费力，且极易因命名体系演化而遗漏关键证据。
+
+将通用生物医学文本挖掘（BioNLP）工具直接迁移至水稻等作物领域时，面临着显著的\textbf{跨领域特征偏移（Domain Shift）}瓶颈，主要体现为三重矛盾：（1）\textbf{检索查全率与跨学科歧义冲突}：英文词元“Rice”既是水稻俗名，亦是常见英美姓氏与大学校名；同时干旱表述存在 \texttt{drought tolerance}、\texttt{drought stress}、\texttt{drought resistance} 等多种变体，单一检索极易造成文献严重漏检；（2）\textbf{通用 NER 模型缺乏农学表型维度}：NCBI PubTator~\cite{wei2024pubtator3} 等通用系统主要面向人类疾病与医学语料训练，其内置实体仅涵盖基因、化学物、疾病与物种，完全缺失农作物表型性状（Trait）维度；（3）\textbf{水稻基因多源异构命名与农学缩写同形冲突}：同一水稻基因常跨越历史生理生化命名、CGSNL 标准命名与基因组注释编号（例如华农明星抗旱基因 \texttt{SNAC1}，又名 \texttt{OsNAC9}、\texttt{ONAC2}，其 RAP-DB 唯一编号为 \texttt{Os03g0815100}）；反之，植物生理学高频缩写（如脱落酸 \texttt{ABA}、过氧化氢酶 \texttt{CAT}）、育种世代符号（\texttt{M1}--\texttt{M5}）以及农学产量单位（$\text{t ha}^{-1}$ 中的 \texttt{ha-1}）又恰与冷门突变体基因符号同名，若仅凭字面字典匹配将引入海量假阳性。
+
+\section{材料与方法}
+
+
+\section{结果}
+
+
+\section{讨论}
+
+
+\section*{Acknowledgment}
+{\small 说了一段感谢的话。}
+
+
+
+\end{document}

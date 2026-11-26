@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-11-25",
+  "corpus": {
+    "pubmed_hits": 3311,
+    "pubtator_docs": 3306,
+    "sentences": 35345,
+    "tokens": 795401,
+    "types": 34247,
+    "raw_ttr": 0.0431
+  },
+  "entities": {
+    "total_mentions": 42617,
+    "rap_mapped_gene_mentions": 10708,
+    "trait_mentions": 29966,
+    "pubtator_gene_mentions": 1767,
+    "pubtator_mapped_to_rap": 473,
+    "rice_candidate_pairs": 7868,
+    "rice_unique_pairs": 4678,
+    "rice_unique_genes": 1344,
+    "rice_unique_traits": 190
+  },
+  "sdp": {
+    "causal": 884,
+    "unique_causal_pairs": 693,
+    "positive": 575,
+    "negative": 150,
+    "neutral": 159,
+    "association": 1379,
+    "excluded_direction": 5489,
+    "excluded_respectively": 48,
+    "no_effect": 35,
+    "unsupported": 33,
+    "confidence": {
+      "high": 640,
+      "medium": 957,
+      "low": 6271
+    }
+  },
+  "audit": {
+    "sample_size": 100,
+    "precision": 0.86,
+    "precision_95ci": [
+      0.738135428014719,
+      0.9304925473797714
+    ],
+    "recall": 0.27993637140248034,
+    "f1": 0.42238371446985357,
+    "baseline_precision": 0.3451652262328419,
+    "polarity_accuracy": 0.8823529411764706,
+    "polarity_n": 34,
+    "confusion": {
+      "gold-1_pred-1": 7,
+      "gold-1_pred1": 2,
+      "gold1_pred1": 23,
+      "gold1_pred-1": 2
+    }
+  },
+  "enrichment": {
+    "top100_significant": 53,
+    "top50_significant": 46,
+    "top20_significant": 40,
+    "core14_significant": 68
+  },
+  "ricemind": {
+    "coverage": 0.99,
+    "stress_annotated": 85,
+    "drought_annotated": 13,
+    "aba_annotated": 5,
+    "novel_candidates": 13,
+    "network_nodes": 457,
+    "network_edges": 693
+  }
+}

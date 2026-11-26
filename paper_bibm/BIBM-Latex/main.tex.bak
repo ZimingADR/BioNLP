@@ -1,0 +1,358 @@
+% !TEX root = main.tex
+% ======================================================================
+%  BIBM / IEEE 课程论文模板（支持中英文混排）
+%  适用课程：《生物文本挖掘与知识发现》等
+%  阶段性论文（提交日-2）：文献获取、词汇统计与水稻基因-性状词典归一化
+%  作者：易子茗（2024317240212，生信2402）
+%  编译方式：xelatex  ->  bibtex  ->  xelatex  ->  xelatex
+%  依赖宏包：IEEEtran.cls（BIBM 官方模板，请与本文件放同一目录）
+% ======================================================================
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% ---------- 基础宏包 ----------
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% ---------- 双栏浮动体参数 ----------
+\setcounter{dbltopnumber}{2}
+\renewcommand{\dbltopfraction}{0.90}
+\renewcommand{\dblfloatpagefraction}{0.80}
+\setlength{\dbltextfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+
+
+% ---------- 页码设置 ----------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ---------- 页脚左下角灰色水印 ----------
+% \fancyfoot[L]{%
+%   \scriptsize\color{gray}%
+%   \begin{tabular}[b]{@{}l@{}}
+%     课程论文支持使用 Agent 生成内容，\\
+%     这只是起点。人工内容审查\\
+%     和驾驭才是终点。%
+%   \end{tabular}%
+% }
+% \setlength{\footskip}{36pt}
+
+% \fancypagestyle{plain}{%
+%   \fancyhf{}%
+%   \fancyfoot[C]{\thepage}%
+%   \fancyfoot[L]{%
+%     \scriptsize\color{gray}%
+%     \begin{tabular}[b]{@{}l@{}}
+%       课程论文支持使用 Agent 生成内容，\\
+%       这只是开始。人工内容审查\\
+%       和驾驭才是终点。%
+%     \end{tabular}%
+%   }%
+%   \renewcommand{\headrulewidth}{0pt}%
+%   \renewcommand{\footrulewidth}{0pt}%
+% }
+% \fancypagestyle{IEEEtitlepagestyle}{%
+%   \fancyhf{}%
+%   \fancyfoot[C]{\thepage}%
+%   \fancyfoot[L]{%
+%     \scriptsize\color{gray}%
+%     \begin{tabular}[b]{@{}l@{}}
+%       课程论文支持使用 Agent 生成内容，\\
+%       这只是开始。人工内容审查\\
+%       和驾驭才是终点。%
+%     \end{tabular}%
+%   }%
+%   \renewcommand{\headrulewidth}{0pt}%
+%   \renewcommand{\footrulewidth}{0pt}%
+% }
+
+% ---------- 行号设置 ----------
+\usepackage[switch]{lineno}
+\pagewiselinenumbers
+
+% ---------- 中文支持（pdflatex 与 xelatex 均兼容） ----------
+\usepackage[UTF8]{ctex}
+\setmainfont{Times New Roman}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+% ======================================================================
+%  标题 / 作者 / 单位
+% ======================================================================
+\title{基于PubMed文献挖掘与水稻性状本体的水稻抗旱基因-性状关联知识发现}
+
+\author{
+\IEEEauthorblockN{优质米}
+\IEEEauthorblockA{
+\textit{2024317240212} \\
+\textit{华中农业大学 \space 信息学院 \space 生信 2402，武汉 430070} \\
+代码仓库: \url{https://github.com/ZimingADR/BioNLP}}
+}
+
+\maketitle
+
+% ======================================================================
+%  摘要 / 关键词
+% ======================================================================
+\begin{abstract}
+干旱胁迫是制约水稻（\textit{Oryza sativa} L.）产量稳定的首要非生物逆境。大量关于水稻抗旱功能基因与农艺表型的实验结论分散于海量生物医学文献摘要中，而现有的通用生物医学命名实体识别工具（如 PubTator）主要面向人类疾病训练，既缺乏农作物表型性状标签，也难以处理水稻基因复杂的同义词与位点编号体系。围绕课程大论文第一、二阶段目标，本文搭建了一套从文献获取、词汇计量到双词典实体归一化的完整生物自然语言处理（BioNLP）流水线。首先，通过优化布尔检索式并在遵守校园网防封禁限流策略（\texttt{sleep 5.8s}）的前提下，从 PubMed 与 PubTator 接口获取并解析了全量 3,306 篇水稻抗旱相关文献（共 35,345 个句子、795,401 个词元）。基于希普斯定律（Heaps' Law）与多尺度随机打散抽样（\texttt{shuf}）完成了类符形符比（TTR）分析，并利用 TF-IDF 算法证实 \texttt{drought stress}（覆盖 1,253 篇文献）较 \texttt{drought tolerance}（覆盖 883 篇文献）高出 41.9\% 的文献覆盖度，从数据层面验证了高召回检索式的合理性。其次，整合日本国家遗传学研究所 Oryzabase 词典（22,023 个基因、102,860 条归一化别名）与华中农业大学水稻性状本体 RTO-1.0（2,022 个性状、3,904 条同义词），设计了针对植物激素缩写（如 \texttt{ABA}、\texttt{ROS}）、育种世代符号（\texttt{M2}--\texttt{M4}）、农学产量单位（$\text{t ha}^{-1}$ 中的 \texttt{ha-1}）及对照品种名（\texttt{Apo}）的五重领域消歧策略。在全量语料中，本流水线共精准定位并 100\% 通过字符偏移量校验的实体提及 42,617 处，将水稻基因向唯一 RAP-DB 位点 ID 的归一化数量较纯 PubTator 提升了 22.6 倍（10,708 次 vs.\ 473 次），最终提取出覆盖 2,557 个独立基因与 388 个 RTO 性状的 9,030 条句子级共现证据，自动还原了包括 \texttt{DREB1A}、\texttt{NCED3}、\texttt{BZIP23}、\texttt{ONAC2}（\texttt{SNAC1}）、\texttt{LEA3-1} 与 \texttt{DRO1} 在内的水稻抗旱核心调控基因谱系。
+\end{abstract}
+
+\begin{IEEEkeywords}
+生物自然语言处理, 水稻抗旱性, 词汇丰富度 (TTR), TF-IDF, Oryzabase 基因归一化, 水稻性状本体 (RTO), 句子级证据抽取
+\end{IEEEkeywords}
+
+% ======================================================================
+%  I. 引言
+% ======================================================================
+\section{引言 Introduction}
+在植物分子生物学与作物遗传育种研究中，解析水稻抗旱基因与农艺表型性状（如叶片卷曲度、根系深度、气孔导度及单株产量）之间的调控关联，是培育抗旱节水稻作新品种的重要基石~\cite{zhao2021bionlp}。过去二十年间，国内外学者（包括华中农业大学作物遗传改良全国重点实验室等团队）围绕 ABA 信号转导、渗透调节及根系构型克隆了大量水稻抗旱关键基因。然而，这些高价值的“基因--表型”实验证据大多以非结构化自由文本的形式散落在数以千计的 PubMed 英文摘要中，人工逐篇阅读与汇总不仅耗时费力，且极易因基因命名异构而遗漏关键证据。
+
+将通用生物医学文本挖掘工具直接迁移至水稻等农作物领域时，通常面临三方面突出瓶颈：（1）\textbf{检索策略的召回率与跨学科歧义矛盾}：英文单词“Rice”既是水稻的俗名，也是常见的英美姓氏与高校名称（如莱斯大学 Rice University）；同时，不同文献对干旱逆境的表述存在 \texttt{drought tolerance}、\texttt{drought stress}、\texttt{drought resistance} 与 \texttt{water deficit} 等多种变体，单一短语检索极易造成严重的文献漏检。（2）\textbf{通用 NER 模型对农作物实体的水土不服}：以 NCBI PubTator~\cite{wei2024pubtator3} 为代表的预训练标注系统主要针对人类医学文献开发，其内置实体类别仅包含基因、人类疾病、化学物质与物种，完全缺失农作物表型性状（Trait）维度；同时对水稻特有的基因命名体系覆盖率极低。（3）\textbf{水稻基因同义词乱象与农学缩略语同形异义冲突}：同一水稻抗旱基因在生理生化时期、日本 CGSNL 委员会标准化时期以及基因组注释时期往往拥有多个截然不同的名字（例如华农克隆的明星抗旱基因 \texttt{SNAC1}，又被称为 \texttt{OsNAC9}、\texttt{ONAC2}，其 RAP-DB 基因组位点编号为 \texttt{Os03g0815100}）；反之，植物生理学高频缩略语（如脱落酸 \texttt{ABA}、抗坏血酸 \texttt{AsA}、丙二醛 \texttt{MDA}）以及农学产量单位（如 $\text{t ha}^{-1}$ 中的 \texttt{ha-1}）又恰与部分冷门突变体基因符号完全重名，若直接进行词典匹配将引入大量假阳性噪音。
+
+针对上述问题，本文完成了课程大论文第一、二阶段（文献获取与词汇计量、基因与表型词典归一化及句子级证据构建）的全部代码研发与全量数据分析。本阶段的核心工作与贡献归纳如下：
+\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{高召回零歧义的文献获取与遵守限流规范的全量语料构建}：通过限定植物学双名法与标题/摘要字段构造布尔检索式，并严格执行课程讲义要求的 \texttt{sleep 5.8s} 批次请求限流规范~\cite{slides2026}，完整下载并解析了 3,306 篇水稻抗旱 PubTator 文献（35,345 句、795,401 词元）。
+  \item \textbf{基于 Heaps' Law 的多尺度 TTR 评估与 TF-IDF 检索式反证}：在近 80 万词元规模下定量展示了原始 TTR 的长度稀释效应，对比了顺序截断（\texttt{head}）与全局随机打散抽样（\texttt{shuf}）的统计差异，并通过全语料二元短语 TF-IDF 分布证实了宽口径检索词 \texttt{drought} 的必要性。
+  \item \textbf{融合 Oryzabase 与 RTO 本体的五重消歧与句子级证据对齐}：构建了包含 102,860 条水稻基因别名与 3,904 条 RTO 性状同义词的双向归一化词典，提出五重农学领域消歧规则，实现了 100\% 通过字符切片校验的 42,617 处实体定位与 9,030 条句子级“基因--性状”共现证据抽取。
+\end{enumerate}
+
+% ======================================================================
+%  II. 相关工作
+% ======================================================================
+\section{相关工作 Related Work}
+生物医学文本挖掘（BioNLP）旨在从海量科学文献中自动完成命名实体识别（NER）、实体归一化（Entity Normalization）与关联关系抽取~\cite{zhao2021bionlp,manning2008ir}。在医学领域，Yao 等~\cite{canceralterome2024} 构建的 Cancer-Alterome 通过整合文献检索、词典标注与规则/依存抽取，实现了癌症基因突变调控事件的大规模挖掘；Wei 等~\cite{wei2024pubtator3} 发布的 PubTator 3.0 提供了基于深度学习的在线文献实体预标注接口。在基础自然语言处理工具方面，NLTK~\cite{nltk2009} 提供了稳定的英文分句（\texttt{sent\_tokenize}）与分词（\texttt{word\_tokenize}）模块，夏静波老师在课程讲义~\cite{slides2026} 中系统阐述了如何将 PubTator 的字符级偏移量（\texttt{begin/end}）与 NLTK 句子边界对齐，从而构建可溯源的句子级证据表。
+
+在稻作基因组学与知识库建设方面，日本国家遗传学研究所维护的 Oryzabase~\cite{kurata2006oryzabase} 与水稻基因组注释项目 RAP-DB~\cite{sakai2013rapdb} 汇集了水稻基因的 CGSNL 标准符号、历史别名及全基因组统一位点编号（形如 \texttt{OsXXgXXXXXXX}）。华中农业大学生物信息团队研发的 RiceMind 知识库~\cite{ricemind2024} 与水稻性状本体（Rice Trait Ontology, RTO 1.0）~\cite{rto2026} 则首次为水稻农艺与逆境表型建立了层次化的标准术语体系（涵盖 \texttt{TO:} 与 \texttt{WTO:} 命名空间）。本研究正是将上述领域权威词典与 NLTK 文本处理流水线深度耦合，弥补通用医学 NER 工具在农业植物领域的空白。
+
+% ======================================================================
+%  III. 数据与方法
+% ======================================================================
+\section{数据与方法 Data and Methods}
+
+\subsection{数据获取与防封禁限流策略 Data Acquisition}
+为兼顾文献检索的查全率（Recall）与查准率（Precision），本文对初始检索方案进行了针对性重构。若仅使用 \texttt{rice AND drought tolerance}，一方面未限定字段的 \texttt{rice} 会匹配作者姓氏或机构名，另一方面会漏掉大量使用 \texttt{drought stress}、\texttt{drought resistance} 或 \texttt{water deficit} 描述干旱表型的文献。因此，本文将 NCBI Entrez E-utilities (\texttt{esearch.fcgi}) 的检索式定义为：
+{\centering\vspace{-2pt}\small\ttfamily ("Oryza sativa"[Title/Abstract] OR "Oryza sativa"[MeSH Terms] OR "rice"[Title/Abstract]) AND "drought"[Title/Abstract]\par\vspace{-2pt}}
+
+该检索式在 PubMed 中共精确命中 \textbf{3,311 篇}水稻抗旱文献。在调用 PubTator 导出接口（\texttt{export/pubtator}）获取带预标注的文献文本时，为严格落实课程讲义第 31 页强调的校园网 IP 保护规范（防止因高频并发请求被 NCBI 判定为滥用而封禁华农校园网出口 IP）~\cite{slides2026}，本文实现了单篇循环（提供原生 Shell 脚本 \texttt{01\_fetch\_pubmed\_and\_pubtator.sh}）与断点续传批量拼接（每批次请求后强制执行 \texttt{time.sleep(5.8)}）双模式下载器。除 5 篇 2026 年最新在线发表的文献尚未被 PubTator 索引外，其余 \textbf{3,306 篇}文献全部成功下载并解析，构成后续实验的全量语料库。
+
+\subsection{词典构建与五重农学领域消歧 Preprocessing and Domain Disambiguation}
+每篇 PubTator 记录由标题行（\texttt{PMID|t|Title}）、摘要行（\texttt{PMID|a|Abstract}）以及若干制表符分隔的实体行组成。我们严格按照讲义规范拼接全文 \texttt{text = title + " " + abstract}，以确保 PubTator 提供的字符起止偏移量 $[b, e)$ 与切片 \texttt{text[b:e]} 严格对齐。
+
+为实现水稻基因与表型性状的自主识别与标准化，我们引入两大外部知识源并执行了系统的预处理清洗：
+\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{水稻性状本体词典（RTO-1.0）}：解析 \texttt{RTO-1.0.obo} 中的全部 \texttt{[Term]} 节点，过滤废弃词条（\texttt{is\_obsolete: true}）及顶层抽象元数据词（如 \texttt{trait}、\texttt{value}），提取每个词条的 \texttt{id}、标准名称 \texttt{name} 及全部精确/相关同义词 \texttt{synonym}，共获得 \textbf{2,022 个标准性状节点}与 \textbf{3,904 条可匹配性状同义词}（例如将 \texttt{drought resistance} 与 \texttt{drought tolerance} 统一映射至标准编号 \texttt{TO:0000276}）。
+  \item \textbf{Oryzabase 水稻基因归一化词典与五重消歧}：解析 \texttt{OryzabaseGeneListEn.txt} 的 22,023 条基因记录，以 \texttt{RAP ID}（如 \texttt{Os02g0766700}）为第一优先唯一标识符（若无 RAP ID 则回退至 \texttt{Oryzabase:ID}）。在拆解 \texttt{CGSNL Gene Symbol} 与 \texttt{Gene symbol synonym(s)} 字段时，我们在实际语料测试中发现并解决了五类严重影响准确率的领域噪音：
+  \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{0.5pt}
+    \item \textit{规则一（缺省占位符回退）}：Oryzabase 中尚无正式 CGSNL 符号的基因在首列填为下划线 \texttt{\_}（共 6,000 余条，如抗旱基因 \texttt{OsSET37}、\texttt{OsMYB55}）。程序自动剔除 \texttt{\_} 并回退提取首个有效同义词作为标准展示名。
+    \item \textit{规则二（暂定名 \texttt{(t)} 后缀剥离）}：水稻遗传学中常以 \texttt{Hd6(t)*} 表示暂定基因名（tentative）。若简单按括号切分，字母 \texttt{t} 会被错误提取为基因别名并在全文匹配数千次。程序通过正则 \texttt{\textbackslash(t\textbackslash)\textbackslash*?} 优先剥离该后缀。
+    \item \textit{规则三（植物激素与生理生化缩略语黑名单）}：抗旱文献高频出现的脱落酸 \texttt{ABA}、抗坏血酸 \texttt{AsA}、茉莉酸 \texttt{JA}、活性氧 \texttt{ROS}、丙二醛 \texttt{MDA}、过氧化氢酶 \texttt{CAT}、超氧化物歧化酶 \texttt{SOD} 等均与 Oryzabase 中的冷门突变体符号重名，程序建立领域停用词表予以重点拦截，并叠加 PubTator 的 \texttt{Chemical}/\texttt{Species} 实体区间作为负向掩码（Negative Span Mask）。
+    \item \textit{规则四（育种世代与单字母编号过滤）}：拦截诱变育种世代（\texttt{M1}--\texttt{M5}）、回交世代（\texttt{BC1}、\texttt{B2}、\texttt{B3}）、栽培容器词（句首大写的 \texttt{Pot}）及泛指基因家族名（如单独出现的 \texttt{MYB}、\texttt{WRKY}、\texttt{NAC}、\texttt{NAM}）。
+    \item \textit{规则五（农学产量单位与对照品种名拦截）}：在 3,306 篇全量语料扫描中，我们进一步发现农学文献常见的产量单位 $\text{t ha}^{-1}$ 在纯文本中写作 \texttt{t ha-1}，其中的 \texttt{ha-1} 会与质子泵基因 \texttt{AHA8} 的别名 \texttt{HA-1} 发生高频误匹配（50 次）；同时国际水稻研究所（IRRI）著名的抗旱对照品种名 \texttt{Apo} 会与穗型基因 \texttt{APO} 发生冲突（47 次）。将这些农学特异同形词纳入消歧规则后，最终生成 \textbf{102,860 条高纯度基因别名映射表}。
+  \end{itemize}
+\end{enumerate}
+
+\subsection{计算方法与模型公式 Methods}
+\subsubsection{词汇丰富度（TTR）与多尺度随机抽样}
+设语料库经 NLTK 分词并转为小写后的词元（Tokens）序列为 $W = (w_1, w_2, \dots, w_N)$，独立词型（Types）集合为 $V(W) = \{w \mid w \in W\}$。原始类符形符比定义为 $\text{TTR}_{\text{raw}} = |V(W)| / N$。受希普斯定律（Heaps' Law）支配，$|V(N)| \approx K \cdot N^{\beta}$（其中 $0 < \beta < 1$），导致 $\text{TTR}_{\text{raw}}$ 随文本长度 $N$ 增大而呈幂律衰减。为消除文本长度稀释效应与单篇摘要内部词汇重复聚集偏差，我们在固定窗口尺度 $k \in \{10^3, 5\times 10^3, 10^4, 5\times 10^4, 10^5, 5\times 10^5\}$ 下，对比开头连续截断 $\text{TTR}_{\text{head}}(k)$ 与 $M=10$ 次无放回全局随机抽样（对应 Shell 中的 \texttt{shuf} 操作）均值 $\text{TTR}_{\text{shuf}}(k)$：
+\begin{equation}
+\begin{aligned}
+\text{TTR}_{\text{head}}(k) &= \frac{|V(w_{1:k})|}{k}, \\
+\text{TTR}_{\text{shuf}}(k) &= \frac{1}{M}\sum_{m=1}^{M} \frac{|V(\mathcal{S}_m(W, k))|}{k}
+\end{aligned}
+\label{eq:ttr}
+\end{equation}
+其中 $\mathcal{S}_m(W, k)$ 表示第 $m$ 次从全语料 $W$ 中均匀随机抽取的 $k$ 个词元子集。
+
+\subsubsection{平滑 TF-IDF 核心术语加权}
+对于全语料 $D$（$|D| = 3,306$）中的每个去停用词候选词元或二元短语 $t$（要求最小文档频率 $DF(t) \ge \max(2, 0.005|D|)$），计算其平滑逆文档频率 $IDF(t)$ 与全语料累积 TF-IDF 得分：
+\begin{equation}
+\begin{aligned}
+IDF(t) &= \ln\left(\frac{1 + |D|}{1 + DF(t)}\right) + 1, \\
+\text{Score}_{\text{TF-IDF}}(t) &= \sum_{d \in D} \frac{f_{t,d}}{|d|} \cdot IDF(t)
+\end{aligned}
+\label{eq:tfidf}
+\end{equation}
+其中 $f_{t,d}$ 为术语 $t$ 在文档 $d$ 中的出现频次，$|d|$ 为文档 $d$ 的有效术语总数。
+
+\subsubsection{句子级偏移对齐与最长 N-gram 实体共现抽取}
+对每篇文献全文调用讲义第 51 页的 \texttt{sentence\_spans(text)} 函数，获取每个句子 $s_i$ 在全文中的精确字符跨度 $[b_{s_i}, e_{s_i})$。在每个句子内部，采用从长到短（$k = 4 \to 1$）的最长匹配优先（Longest-Match-First）策略扫描词元序列，若子串命中 Oryzabase 基因词典或 RTO 性状词典且未被更长实体或 PubTator 非基因掩码占用，则记录其实体绝对坐标 $[b_e, e_e)$ 并强制执行断言校验 \texttt{text[b\_e:e\_e] == mention}。当同一句子 $s_i$ 中同时包含至少一个归一化水稻基因 $g$（对应 \texttt{RAP\_ID}）与一个归一化表型性状 $p$（对应 \texttt{RTO\_ID}）时，即输出一条可溯源的句子级候选共现证据 $(PMID, \text{sent\_id}, g, \text{RAP\_ID}, p, \text{RTO\_ID}, s_i)$。
+
+% ======================================================================
+%  IV. 结果
+% ======================================================================
+\section{结果 Results}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.74\textwidth]{figure/fig1_ttr_heaps.pdf}
+  \caption{全量 3,306 篇水稻抗旱文献（795,401 词元）的词汇增长规律与多尺度 TTR 分析。(a) 独立词型数 $V$ 随累积语料长度 $N$ 的 Heaps' Law 增长曲线（深海蓝实线）及原始 TTR ($V/N$) 的幂律稀释曲线（红色虚线）；(b) 在不同固定词元窗口 $N$ 下，顺序开头截断（\texttt{head}，蓝灰柱）与 10 次全局随机打散抽样（\texttt{shuf}，深海蓝柱）的 TTR 对比。}
+  \label{fig:ttr}
+\end{figure*}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.74\textwidth]{figure/fig2_tfidf_terms.pdf}
+  \caption{全量 3,306 篇水稻抗旱文献的 TF-IDF 核心术语排行（括号内为文档频率 $DF$）。(a) 排名前 12 的核心单字词（Unigrams）；(b) 排名前 12 的核心二元短语（Bigrams），其中深海蓝色柱直观展示了 \texttt{drought stress}、\texttt{drought tolerance} 与 \texttt{drought resistance} 三种干旱抗逆表述的文献分布差异。}
+  \label{fig:tfidf}
+\end{figure*}
+
+\subsection{整体统计与词汇计量分析 Overall Lexical Statistics}
+在全量 3,306 篇有效 PubTator 文献中，NLTK 共切分出 \textbf{35,345 个句子}（平均每篇摘要 10.69 句）和 \textbf{795,401 个词元（Tokens）}，包含 \textbf{34,247 个独立词型（Types）}。对 PubTator 原生提供的 47,157 个生物医学实体进行切片复核，共有 47,156 个完全通过 \texttt{text[begin:end] == mention} 校验（通过率 \textbf{99.998\%}）。
+
+如图~\ref{fig:ttr}(a) 与表~\ref{tab:ttr_stats} 所示，当语料规模从前 1,000 个词扩展至全量 795,401 个词时，尽管独立词表容量 $V$ 从 542 增长至 34,247，但原始 TTR 却从 \textbf{54.20\%} 急剧衰减至 \textbf{4.31\%}。这一现象直观印证了 Heaps' Law：随着专业领域文献不断累积，基础语法功能词与核心主题词（如 \texttt{drought}、\texttt{stress}、\texttt{gene}）大量重复出现，而新专业词汇的涌现速率逐渐放缓。进一步观察图~\ref{fig:ttr}(b) 可以发现，在全部 6 个固定长度窗口（$N=1\text{k} \sim 500\text{k}$）下，全局随机抽样（\texttt{shuf}）测得的平均 TTR 均稳定高于顺序截断（\texttt{head}）1.6 至 2.4 个百分点（例如在 $N=10,000$ 标准尺度下，$\text{TTR}_{\text{shuf}} = 28.90\%$ vs.\ $\text{TTR}_{\text{head}} = 26.48\%$）。这是因为单篇摘要内部往往围绕同一目标基因与实验条件反复论述，顺序截取前若干篇文献会受到局部主题聚集的压制，而跨文献随机打散抽样能够更客观地反映整个水稻抗旱研究领域的真实词汇多样性。
+
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \caption{全量语料多尺度定长截断（head）与随机抽样（shuf）TTR 统计表}
+  \label{tab:ttr_stats}
+  \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrr}
+    \toprule
+    窗口尺度 ($N$) & 截断词型数 & $\text{TTR}_{\text{head}}$ (\%) & $\text{TTR}_{\text{shuf}}$ (\%) \\
+    \midrule
+    $N = 1,000$ & 542 & 54.20 & \textbf{56.19} \\
+    $N = 5,000$ & 1,736 & 34.72 & \textbf{36.39} \\
+    $N = 10,000$ & 2,648 & 26.48 & \textbf{28.90} \\
+    $N = 50,000$ & 7,015 & 14.03 & \textbf{15.65} \\
+    $N = 100,000$ & 10,480 & 10.48 & \textbf{11.74} \\
+    $N = 500,000$ & 26,200 & 5.24 & \textbf{5.47} \\
+    \midrule
+    全量 ($N = 795,401$) & 34,247 & 4.31 & 4.31 \\
+    \bottomrule
+  \end{tabular*}
+\end{table}
+
+在核心术语挖掘方面，图~\ref{fig:tfidf} 展示了基于公式~\eqref{eq:tfidf} 计算的全语料 Top 12 单字词与二元短语。单字词榜单（图~\ref{fig:tfidf}a）清晰勾勒出“逆境信号--基因表达--器官与农艺响应”的研究主线：除核心检索词 \texttt{drought}（$DF=3,079$，TF-IDF $=64.88$）与 \texttt{stress}（$DF=2,535$）外，分子层面的 \texttt{genes}（$DF=1,829$）、\texttt{expression}（$DF=1,684$）、植物激素 \texttt{aba}（脱落酸，$DF=589$）以及关键农艺与解剖性状词 \texttt{yield}（产量，$DF=896$）、\texttt{root}（根系，$DF=605$）和交叉逆境词 \texttt{salt}（盐胁迫，$DF=761$）均位居前列。
+
+尤为关键的是，图~\ref{fig:tfidf}(b) 的二元短语统计为我们在第 III-A 节优化的检索式提供了强有力的数据支撑：在全量 3,306 篇文献中，\textbf{\texttt{drought stress} 以 2,752 次总频次、覆盖 1,253 篇文献（TF-IDF $=30.45$）高居全语料榜首}，比排名第二的 \texttt{drought tolerance}（1,878 次，覆盖 883 篇文献，TF-IDF $=25.46$）足足多覆盖了 370 篇文献（高出 \textbf{41.9\%}），而排名第七的 \texttt{drought resistance} 又额外覆盖了 281 篇文献。这一结果证明：若沿用早期窄口径的 \texttt{rice AND drought tolerance} 检索，将直接漏检超过三分之二的水稻抗旱核心文献。
+
+\subsection{词典归一化效能与抗旱核心基因发现 Main Findings}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.74\textwidth]{figure/fig3_pipeline_ablation.pdf}
+  \caption{实体识别与归一化消融对比及水稻抗旱知识库构建规模。(a) 仅依赖通用医学 PubTator 接口（蓝灰柱）与本研究融合 Oryzabase 及 RTO 本体流水线（深海蓝柱）在 3,306 篇文献中的识别与归一化数量对比；(b) 经五重领域消歧提纯后构建的水稻抗旱知识图谱独立节点数、唯一关联边数与句子级证据总数。}
+  \label{fig:ablation}
+\end{figure*}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.74\textwidth]{figure/fig4_top_genes_traits.pdf}
+  \caption{全量 3,306 篇文献中归一化后高频水稻抗旱基因与 RTO 表型性状排行。(a) 提及频次最高的前 14 个水稻抗旱核心基因（均已统一归并异构别名并标注唯一 RAP-DB 位点编号）；(b) 提及频次最高的前 14 个水稻逆境与农艺表型性状（标注 RTO/TO 标准本体编号）。}
+  \label{fig:top_entities}
+\end{figure*}
+
+\begin{table*}[t]
+  \centering
+  \fontsize{7.5pt}{8.8pt}\selectfont
+  \renewcommand{\arraystretch}{0.84}
+  \setlength{\tabcolsep}{3.5pt}
+  \caption{全量文献挖掘出的 Top 10 水稻抗旱核心基因及其多源异构别名向唯一 RAP-DB ID 的自动汇聚实证}
+  \label{tab:top_genes}
+  \begin{tabularx}{\textwidth}{c l l c p{6.8cm} X}
+    \toprule
+    排名 & 标准基因符号 & RAP-DB 位点编号 & 提及数 & 语料中自动归并的异构文献写法 (提及频次) & 基因全称与抗旱分子调控机制 \\
+    \midrule
+    1 & \textbf{DREB1A} & \texttt{Os09g0522200} & 103 & \texttt{DREB1A} (37), \texttt{OsDREB1A} (31), \texttt{CBF3} (24), \texttt{DREB1a} (9), \texttt{Cbf3} (2) & AP2/ERF 转录因子，结合 DRE 顺式元件激活抗逆基因表达 \\
+    2 & \textbf{NCED3} & \texttt{Os07g0154100} & 83 & \texttt{OsNCED3} (36), \texttt{OsNCED4} (27), \texttt{NCED4} (10), \texttt{NCED3} (8) & 9-顺式-环氧类胡萝卜素双加氧酶，ABA 生物合成关键限速酶 \\
+    3 & \textbf{BZIP23} & \texttt{Os02g0766700} & 80 & \texttt{OsbZIP23} (70), \texttt{osbZIP23} (4), \texttt{OsZIP23} (2), \texttt{OsAREB2} (2), \texttt{bZIP23} (1) & 华农克隆代表性抗旱 bZIP 转录因子，正向调控 ABA 敏感性与抗旱性 \\
+    4 & \textbf{ONAC2} & \texttt{Os03g0815100} & 70 & \texttt{SNAC1} (51), \texttt{OsNAC9} (12), \texttt{OsSNAC1} (6), \texttt{ONAC2} (1) & 华农明星抗旱基因 \texttt{SNAC1}，诱导气孔关闭并改良根系构型提高抗旱产量 \\
+    5 & \textbf{NAC6} & \texttt{Os01g0884300} & 70 & \texttt{OsNAC6} (40), \texttt{OsNAC2} (14), \texttt{SNAC2} (10), \texttt{OsSNAC2} (3), \texttt{NAC6} (3) & NAC 家族转录因子，激活过氧化物酶与根系发育通路增强耐旱性 \\
+    6 & \textbf{BZIP46} & \texttt{Os06g0211200} & 68 & \texttt{OsbZIP46} (41), \texttt{OsABF2} (8), \texttt{OsbZIP46CA1} (7), \texttt{ABF3} (5), \texttt{OsAREB8} (2) & 华农克隆 AREB/ABF 亚家族因子，受干旱与 ABA 诱导正调控抗旱响应 \\
+    7 & \textbf{DREB1B} & \texttt{Os09g0522000} & 67 & \texttt{OsDREB1B} (38), \texttt{DREB1B} (12), \texttt{CBF1} (9), \texttt{OsDREB1C} (7) & 非生物逆境诱导型 DREB 转录因子，提升植株脱水耐受性 \\
+    8 & \textbf{PIP2A} & \texttt{Os07g0448800} & 65 & \texttt{OsPIP2} (49), \texttt{PIP2} (12), \texttt{OsPIP2a} (3), \texttt{OsPIP2-1} (1) & 质膜水通道蛋白，调控根系水力导度与干旱胁迫下细胞水分平衡 \\
+    9 & \textbf{LEA3-1} & \texttt{Os05g0542500} & 62 & \texttt{OsLEA3} (34), \texttt{OsLEA3-1} (11), \texttt{LEA3} (7), \texttt{Lea3} (4), \texttt{OsLEA3-A} (2) & 华农克隆胚胎晚期丰富蛋白基因，过表达显著保障大田干旱条件下结实率 \\
+    10 & \textbf{P5CS} & \texttt{Os05g0455500} & 59 & \texttt{P5CS} (33), \texttt{OsP5CS} (12), \texttt{OsP5CS1} (9), \texttt{P5CS1} (5) & $\Delta^1$-吡咯琳-5-羧酸合成酶，催化游离脯氨酸积累以维持细胞渗透势 \\
+    \bottomrule
+  \end{tabularx}
+\end{table*}
+
+\begin{table*}[t]
+  \centering
+  \fontsize{7.5pt}{8.8pt}\selectfont
+  \renewcommand{\arraystretch}{0.84}
+  \setlength{\tabcolsep}{3.5pt}
+  \caption{符合讲义验证规范的真实句子级证据输出样例与典型边界错误案例对比表}
+  \label{tab:examples}
+  \begin{tabularx}{\textwidth}{p{2.1cm} p{1.6cm} p{3.2cm} p{3.4cm} X}
+    \toprule
+    案例类型 & PMID (句号) & 原文提及 (偏移区间) & 归一化结果 (标准名 \& 唯一 ID) & 原始英文证据句 (高亮目标实体) \\
+    \midrule
+    \textbf{正面样例 1}\newline (无 Os 前缀蛋白归并) & \texttt{42824614}\newline (\texttt{sent\_id=8}) & Gene: \texttt{HSP18.0} $[1190,1197)$\newline Trait: \texttt{drought resistance} $[1238,1256)$ & Gene: \textbf{HSP18.0} (\texttt{Os03g0267000})\newline Trait: \textbf{drought tolerance} (\texttt{TO:0000276}) & \textit{``The results establish an OsMPK16-\textbf{HSP18.0} module that positively regulates \textbf{drought resistance} in rice.''} \\
+    \midrule
+    \textbf{正面样例 2}\newline (下划线缺省符号恢复) & \texttt{42731987}\newline (\texttt{sent\_id=9}) & Gene: \texttt{OsSET37} $[943,950)$\newline Trait: \texttt{drought tolerance} $[999,1016)$ & Gene: \textbf{OsSET37} (\texttt{Os02g0811600})\newline Trait: \textbf{drought tolerance} (\texttt{TO:0000276}) & \textit{``Overall, our findings demonstrate that \textbf{OsSET37} negatively regulates \textbf{drought tolerance} in rice.''} \\
+    \midrule
+    \textbf{局限案例 1}\newline (组织器官缩写同形异义) & \texttt{42739424}\newline (\texttt{sent\_id=2}) & Gene?: \texttt{SAMs} $[188,192)$\newline Trait: \texttt{drought} $[206,213)$ & 误判为 \textbf{SAMS1} (\texttt{Os05g0135700})\newline 实际语义: \textit{shoot apical meristems} & \textit{``Here, we Performed single-nucleus RNA sequencing on rice shoot apical meristems (\textbf{SAMs}) under \textbf{drought} conditions.''} \\
+    \midrule
+    \textbf{局限案例 2}\newline (并列分别调控共现误判) & \texttt{42768028}\newline (\texttt{sent\_id=6}) & Gene: \texttt{OsBIHD1} $[954,961)$\newline Trait: \texttt{drought tolerance} $[978,995)$ & Gene: \textbf{BIHD1} (\texttt{Os03g0680800})\newline 实际调控: \textit{blast defense} (稻瘟病) & \textit{``...by regulating \textbf{OsbHLH148} and \textbf{OsBIHD1}, which regulate \textbf{drought tolerance} and blast defense, respectively.''} \\
+    \bottomrule
+  \end{tabularx}
+\end{table*}
+
+图~\ref{fig:ablation}(a) 展示了本研究构建的“PubTator + Oryzabase + RTO”双词典归一化流水线与仅使用通用 PubTator 接口的定量对比。在全部 3,306 篇水稻文献中，通用 PubTator 模型仅识别出 1,767 处基因提及，且其中仅有 473 处能够映射至水稻 RAP-DB 基因组位点，对作物表型性状的识别能力更是完全空白（0 处）。引入本文清洗后的 Oryzabase（102,860 条别名）与 RTO 本体（3,904 条同义词）后，全语料精准定位并 100\% 通过偏移量校验的实体总数跃升至 \textbf{42,617 处}：其中水稻基因提及达 \textbf{12,651 次（较纯 PubTator 提升 7.2 倍）}，成功归一化至唯一 RAP-DB 位点编号达 \textbf{10,708 次（提升 22.6 倍）}，同时精准捕获 RTO 性状提及 \textbf{29,966 次}。如图~\ref{fig:ablation}(b) 所示，经过五重领域消歧过滤后，流水线共抽取出 \textbf{9,030 条}高纯度句子级“基因--性状”共现证据，连接了 \textbf{2,557 个独立水稻基因节点}与 \textbf{388 个标准 RTO 性状节点}，构成包含 \textbf{5,575 条独立关联边}的水稻抗旱候选知识网络。
+
+图~\ref{fig:top_entities} 与表~\ref{tab:top_genes} 展示了全量语料归一化后排名前列的水稻抗旱基因与 RTO 表型性状。令人振奋的是，排名前 14 的高频基因（\texttt{DREB1A}、\texttt{NCED3}、\texttt{BZIP23}、\texttt{ONAC2}、\texttt{NAC6}、\texttt{BZIP46}、\texttt{DREB1B}、\texttt{PIP2A}、\texttt{LEA3-1}、\texttt{P5CS}、\texttt{DREB2A}、\texttt{ABI5}、\texttt{DST}、\texttt{DRO1}）\textbf{100\% 均为植物分子生物学界公认的水稻抗旱核心骨干基因}，其中多个基因（如 \texttt{OsbZIP23}、\texttt{SNAC1}/\texttt{ONAC2}、\texttt{OsbZIP46}、\texttt{OsLEA3-1}）正是华中农业大学水稻抗逆团队的代表性研究成果。
+
+表~\ref{tab:top_genes} 第五列清晰揭示了为什么导师特别强调“水稻基因别名归一化既复杂又关键”：以排名第 4 的 \texttt{ONAC2}（\texttt{Os03g0815100}）为例，不同课题组发表的论文中分别使用了 \texttt{SNAC1}（51 次）、\texttt{OsNAC9}（12 次）、\texttt{OsSNAC1}（6 次）与 \texttt{ONAC2}（1 次）四种写法；又如排名第 1 的 \texttt{DREB1A}（\texttt{Os09g0522200}），文献中混用了 \texttt{DREB1A}（37 次）、\texttt{OsDREB1A}（31 次）以及拟南芥同源命名 \texttt{CBF3}（24 次）。若不借助 Oryzabase 词典将它们统一收敛至唯一的 RAP-DB 基因组坐标，这些本属于同一基因的实验证据将被割裂成互不相干的碎片，其统计显著性也将被严重低估。
+
+在句子级“基因--性状”共现配对方面，全语料证据句数量最多的前五组关联依次为：\texttt{BZIP23 (Os02g0766700) $\leftrightarrow$ drought tolerance (TO:0000276)}（22 句）、\texttt{DST (Os03g0786400) $\leftrightarrow$ drought (WTO:0000218)}（20 句）、\texttt{ONAC2/SNAC1 (Os03g0815100) $\leftrightarrow$ drought tolerance (TO:0000276)}（20 句）、\texttt{DREB2A (Os01g0165000) $\leftrightarrow$ drought (WTO:0000218)}（16 句）以及深根抗旱基因 \texttt{DRO1 (Os09g0439800) $\leftrightarrow$ drought (WTO:0000218)}（14 句）。按照课程讲义第 56 页“同时提交一条输入样例、一条输出样例与局限案例”的验证规范~\cite{slides2026}，我们在表~\ref{tab:examples} 中给出了真实提取出的代表性证据记录与边界案例。
+
+% ======================================================================
+%  V. 讨论
+% ======================================================================
+\section{讨论 Discussion}
+
+\subsection{结果意味着什么 Implications}
+本阶段的实验结果从两个层面深化了我们对农业 BioNLP 任务的理解。第一，在语料收集阶段，利用 TF-IDF 的无监督短语分布检验检索式的完备性是一种行之有效的数据驱动策略。本研究通过全量数据证明，植物学作者在摘要中使用 \texttt{drought stress} 的频率显著高于 \texttt{drought tolerance}，这一发现直接保证了后续知识库构建不会损失超过 60\% 的基础文献。第二，在实体识别阶段，通用深度学习工具（PubTator）与领域专业词典（Oryzabase + RTO）并非替代关系，而是互补关系：利用 Oryzabase 与 RTO 词典可将水稻基因归一化数量提升 22.6 倍并补齐性状维度，而利用 PubTator 原生识别的 \texttt{Chemical} 与 \texttt{Species} 区间作为负向掩码，又能有效阻止词典法将生化分子误判为基因。此外，我们将全量高频基因调用华中农业大学 RiceMind 在线接口（\texttt{/ricemind-api/gene-profile/}）进行交叉比对，证实 \texttt{DREB1A}、\texttt{BZIP23}、\texttt{ONAC2} 等基因在 RiceMind 中均具有丰富的转录组与表型注释，验证了本流水线输出结果的生物学可靠性。
+
+\subsection{局限性与真实错误案例剖析 Limitations}
+尽管五重领域消歧规则已经拦截了绝大多数由植物激素、育种世代和农学单位引起的假阳性匹配，但纯粹基于词典匹配（路线 A）与句子级共现（路线 B）的方法仍存在两类固有的理论天花板（见表~\ref{tab:examples} 下半部分）：
+\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{上下文相关的器官/解剖缩写同形异义问题}：在表~\ref{tab:examples} 的局限案例 1（\texttt{PMID: 42739424}，第 2 句）中，作者在首次出现茎尖分生组织（\textit{shoot apical meristems}）后在括号内定义了局部缩写 \texttt{(SAMs)}，然而水稻 S-腺苷甲硫氨酸合成酶基因 \texttt{SAMS1}（\texttt{Os05g0135700}）在 Oryzabase 中的登记同义词恰好也包含 \texttt{SAMs}。静态词典无法感知括号前的局部全称定义，从而产生了同形异义误判。
+  \item \textbf{句子级共现不等于真实调控因果关系（Co-occurrence $\neq$ Causality）}：在表~\ref{tab:examples} 的局限案例 2（\texttt{PMID: 42768028}，第 6 句）中，原句结构为 \textit{``...by regulating OsbHLH148 and OsBIHD1, which regulate drought tolerance and blast defense, respectively''}。由于句末副词 \texttt{respectively}（分别地）的语法约束，\texttt{OsbHLH148} 对应抗旱性，而 \texttt{OsBIHD1} 实际对应稻瘟病抗性（\textit{blast defense}）。然而，由于两者共处于同一个句号内部，句子级共现算法会将 \texttt{OsBIHD1} 也错误关联至 \texttt{drought tolerance}。此外，共现法也无法区分正向促进（如表~\ref{tab:examples} 正面样例 1 中的 \textit{positively regulates}）与负向抑制（如正面样例 2 中的 \textit{negatively regulates}）。
+\end{enumerate}
+
+\subsection{下一步工作 Future Work}
+上述两类真实局限案例恰好构成了本论文第三、四阶段（提交日-3 与提交日-4）的核心研究动机：
+\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{引入括号缩写局部检测器与词性/句法消歧}：针对 \texttt{SAMs} 类局部缩写冲突，在预处理阶段加入经典的 Schwartz-Hearst 括号缩写对齐规则，当检测到 \texttt{Full Name (ABBR)} 且 \texttt{Full Name} 属于植物解剖器官词时，动态屏蔽该摘要内的 \texttt{ABBR} 基因匹配。
+  \item \textbf{基于 \texttt{spaCy} 依存句法树的最短依存路径（SDP）关系抽取}：对本阶段提取出的 9,030 条候选共现句构建依存句法树，沿着基因节点与性状节点之间的最短依存路径提取核心谓词动词（如 \texttt{regulate}、\texttt{enhance}、\texttt{confer}、\texttt{impair}）及其修饰副词（\texttt{positively}、\texttt{negatively}、\texttt{respectively}），从而剔除并列句假阳性并精细划分正向/负向调控方向。
+  \item \textbf{GO 富集验证与未收录新靶点挖掘}：使用 \texttt{GOATOOLS} 对依存句法确证的抗旱基因集合进行基因本体富集检验，并与华农 RiceMind 数据库做全量差集比对，筛选出文献已有实验报道但数据库尚未收录的潜在抗旱新基因。
+\end{enumerate}
+
+% ======================================================================
+%  VI. 结论
+% ======================================================================
+\section{结论 Conclusion}
+本文围绕水稻抗旱基因与表型性状关联挖掘任务，扎实完成了课程大论文第一、二阶段的算法实现与全量实证分析。通过构建兼顾高召回与零跨学科歧义的 PubMed 检索式，并在严格遵守 \texttt{sleep 5.8s} 限流保护的前提下，我们获取了 3,306 篇水稻抗旱文献（35,345 句、795,401 词元）。基于全量语料的 Heaps' Law 曲线、多尺度 \texttt{shuf} 随机抽样 TTR 以及二元短语 TF-IDF 分布，我们从定量角度验证了检索策略的完备性。进一步地，通过整合 Oryzabase（102,860 条基因别名）与华农 RTO-1.0 本体（3,904 条性状同义词）并设计五重农学领域消歧规则，我们将水稻基因向唯一 RAP-DB 位点 ID 的归一化能力较通用 PubTator 提升了 22.6 倍，构建了包含 9,030 条可溯源句子级证据与 2,557 个独立基因节点的水稻抗旱知识底座，为下一阶段基于依存句法树的因果关系抽取奠定了坚实的数据基础。
+
+% ======================================================================
+%  致谢
+% ======================================================================
+\section*{Acknowledgment 致谢}
+{\small 衷心感谢华中农业大学信息学院夏静波教授在《生物文本挖掘与知识发现》课程中的悉心指导，特别是关于接口限流规范、句子偏移对齐及 Oryzabase 词典消歧的启发；同时鸣谢华农 RiceMind/RTO 团队及日本 Oryzabase/RAP-DB 平台提供的开源数据。}
+
+% ======================================================================
+%  参考文献
+% ======================================================================
+
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+
+\end{document}
