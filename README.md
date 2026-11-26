@@ -66,7 +66,8 @@ PubMed 检索 (3,311) ─► PubTator 标注 (3,306) ─► NLTK 分句分词 (3
 │  └─ unindexed_pmids.tsv               # 5 篇尚未被 PubTator 索引的文献题录
 ├─ dicts/
 │  ├─ OryzabaseGeneListEn.txt           # Oryzabase 基因命名词典原始文件
-│  └─ RTO-1.0.obo                       # 水稻性状本体 Rice Trait Ontology
+│  ├─ RTO-1.0.obo                       # 水稻性状本体 Rice Trait Ontology
+│  └─ RiceMind_TO_RTO_background.gmt    # 富集背景集（N=2,218 基因 / 272 个 TO/RTO 条目）
 ├─ results/
 │  ├─ key_numbers.json                  # 机器可读关键数字
 │  ├─ README.md / DATA_DICTIONARY.md     # 结果索引与字段字典
@@ -166,6 +167,7 @@ xelatex main.tex
 | 文献标注 | [PubTator](https://www.ncbi.nlm.nih.gov/research/pubtator/) | 公开 API，遵守 `sleep 5.8s` 限速 |
 | 基因词典 | [Oryzabase](https://shigen.nig.ac.jp/rice/oryzabase/) | `dicts/OryzabaseGeneListEn.txt` |
 | 性状本体 | Rice Trait Ontology (RTO-1.0) | `dicts/RTO-1.0.obo` |
+| 富集背景集 | 由 lab03 任务③构建 | `dicts/RiceMind_TO_RTO_background.gmt`（2,218 基因 / 272 条目） |
 | 外部验证 | [RiceMind](http://ricemind.gao-lab.org/) | 交叉验证与注释缺口分析 |
 
 代码以 MIT 许可发布，供课程学习与后续研究使用；第三方词典与文献标注的版权归各自来源所有。

@@ -4,7 +4,7 @@ Step 9 (阶段四): 基于 SDP 高置信基因集的 TO/RTO 超几何富集分�
 ==========================================================================
 输入:
   - results/sdp_relations.tsv                       阶段三 SDP 关系
-  - lab03/task3_to_enrichment/results/RiceMind_TO_RTO_background.gmt
+  - dicts/RiceMind_TO_RTO_background.gmt
       （已由 lab03 任务③构建并验证：N=2,218 背景基因，272 个 TO/RTO 条目）
 
 方法（严格复现白板“坛子抽球”四步）:
@@ -29,10 +29,13 @@ import numpy as np
 from scipy.stats import hypergeom
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-LAB03_DIR = BASE_DIR.parent / "lab03"
 RESULTS_DIR = BASE_DIR / "results"
 SDP_FILE = RESULTS_DIR / "sdp_relations.tsv"
-GMT_FILE = LAB03_DIR / "task3_to_enrichment" / "results" / "RiceMind_TO_RTO_background.gmt"
+# 背景基因集已随仓库提供（原为 lab03 课程实验产物），保证 clone 后可直接复现
+GMT_FILE = BASE_DIR / "dicts" / "RiceMind_TO_RTO_background.gmt"
+if not GMT_FILE.exists():
+    # 兼容旧布局：仓库内缺失时回退到同级 lab03 目录
+    GMT_FILE = BASE_DIR.parent / "lab03" / "task3_to_enrichment" / "results" / "RiceMind_TO_RTO_background.gmt"
 
 CAUSAL = {"positive_regulation", "negative_regulation", "regulation"}
 
